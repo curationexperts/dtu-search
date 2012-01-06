@@ -1,4 +1,4 @@
 class Metastore < ActiveRecord::Base
-  set_table_name 'metastore.metastore'
+  set_table_name 'public.metastore'
 
 end
