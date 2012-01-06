@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require "rubygems"
+require "amqp"
+
+
+begin
+  AMQP.start("amqp://localhost:5672") do |connection, open_ok|
+    puts "Connection open"
+    channel = AMQP::Channel.new(connection)
+    exchange = channel.fanout("amq.fanout")
+
+    channel.queue("search.index") do |queue, declare_ok|
+      queue.bind(exchange)
+      puts "Bound. Reading a messages..."
+      10.times do
+        queue.pop do |metadata, payload|
+          if payload
+            puts "Fetched a message: #{payload.inspect}, content_type: #{metadata.content_type}."
+          else
+            puts "No messages in the queue"
+            connection.close { EventMachine.stop }
+          end
+        end
+      end
+    end
+  end
+
+rescue AMQP::TCPConnectionFailed => e
+  puts "Caught AMQP::TCPConnectionFailed => TCP connection failed."
+end
