@@ -12,9 +12,14 @@ buff = BufferedIndexer.new
     
 
 while msg = q.pop
-  puts "Fetched a message: #{msg.inspect}"
-  m = Metastore.find(msg)
-  buff.add(JournalEncoder.solrize(m.xml))
+  list = [msg]
+  9.times do
+    list << q.pop
+  end
+  l = Metastore.find(list)
+  l.each do |m|
+    buff.add(JournalEncoder.solrize(m.xml))
+  end
 end
 buff.flush
 
