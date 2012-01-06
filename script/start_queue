@@ -4,12 +4,9 @@
 require File.join(File.dirname(__FILE__), '../config/environment.rb')
 extend ActiveSupport::Benchmarkable
 
-require "rubygems"
-require "carrot"
-
 q = Carrot.queue('search.index')
 
-Metastore.limit(1).each do |m|
+Metastore.limit(100000).each do |m|
   q.publish(m.id)
 end
 

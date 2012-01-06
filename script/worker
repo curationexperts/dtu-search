@@ -1,14 +1,21 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require "rubygems"
-require "carrot"
+require File.join(File.dirname(__FILE__), '../config/environment.rb')
+require 'buffered_indexer'
+require 'journal_encoder'
 
 q = Carrot.queue('search.index')
 
+encoder = JournalEncoder.new
+buff = BufferedIndexer.new
+    
 
-  while msg = q.pop
-    puts "Fetched a message: #{msg.inspect}"
-  end
+while msg = q.pop
+  puts "Fetched a message: #{msg.inspect}"
+  m = Metastore.find(msg)
+  buff.add(JournalEncoder.solrize(m.xml))
+end
+buff.flush
 
 Carrot.stop
