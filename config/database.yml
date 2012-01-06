@@ -15,6 +15,7 @@ test:
   username: dtu_search_test
   database: dtu_search_test
   password: XJ9fNWA16m
+  host: localhost
   pool: 5
   timeout: 5000
 

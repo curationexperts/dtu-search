@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+  <sf:localinfo>
+    <sf:systemno>26863313</sf:systemno>
+    <sf:source>swets</sf:source>
+    <sf:cdate>19700101</sf:cdate>
+    <sf:udate>20100706</sf:udate>
+    <sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid>
+    <sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref>
+    <sf:key>2004102797887465</sf:key>
+    <sf:oldkey>002072332004614403791174775022</sf:oldkey>
+    <sf:rank>18017011332264339</sf:rank>
+    <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+    <sf:dedupkey>9837852</sf:dedupkey>
+  </sf:localinfo>
+  <sf:recordid>
+    <sf:accessnr>2004102797887465</sf:accessnr>
+  </sf:recordid>
+  <sf:article>
+    <sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile</sf:title>
+  </sf:article>
+  <sf:author>
+    <sf:name>Khalifa, Nehad</sf:name>
+  </sf:author>
+  <sf:journal>
+    <sf:issn>00207233</sf:issn>
+    <sf:eissn>10290400</sf:eissn>
+    <sf:coden>IJEVAW</sf:coden>
+    <sf:title>International Journal of Environmental Studies - Sections A and B</sf:title>
+    <sf:atitle>The International journal of environmental studies</sf:atitle>
+    <sf:vol>61</sf:vol>
+    <sf:issue>4</sf:issue>
+    <sf:year>2004</sf:year>
+    <sf:page>403</sf:page>
+    <sf:ppage>10</sf:ppage>
+    <sf:titleid>39399675</sf:titleid>
+  </sf:journal>
+</sf:art>
