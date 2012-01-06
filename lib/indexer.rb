@@ -1,14 +1,21 @@
 class Indexer
+  extend ActiveSupport::Benchmarkable
 
   def self.run
     require 'buffered_indexer'
     require 'journal_encoder'
-    file = File.join('spec', 'fixtures', 'records.txt')
     encoder = JournalEncoder.new
     buff = BufferedIndexer.new
-    raise "File does not exist: #{file}" unless File.exist?(file)
-    File.open(file).each do |l|
-      buff.add(JournalEncoder.solrize(l))
+    count = 0
+    Metastore.find_in_batches do |batch|
+      count +=1
+      puts "Batch ##{count}"
+      benchmark "ingest 1000 documents" do
+        batch.each do |l|
+          buff.add(JournalEncoder.solrize(l.xml))
+        end
+      end
+      break if (count == 100)
     end
     buff.flush
  end
