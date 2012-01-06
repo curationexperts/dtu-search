@@ -21,7 +21,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'amqp'
+gem 'carrot'
 
 # Use unicorn as the web server
 # gem 'unicorn'

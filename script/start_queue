@@ -5,25 +5,12 @@ require File.join(File.dirname(__FILE__), '../config/environment.rb')
 extend ActiveSupport::Benchmarkable
 
 require "rubygems"
-require "amqp"
+require "carrot"
 
+q = Carrot.queue('search.index')
 
-begin
-  AMQP.start("amqp://localhost:5672") do |connection, open_ok|
-    puts "Connection open"
-    channel = AMQP::Channel.new(connection)
-    exchange = channel.fanout("amq.fanout")
-
-    channel.queue("search.index") do |queue, declare_ok|
-      queue.bind(exchange)
-      puts "Bound. Publishing a message..."
-      Metastore.limit(100000).each do |m|
-        exchange.publish(m.id)
-      end
-      connection.close { EventMachine.stop }
-    end
-  end
-
-rescue AMQP::TCPConnectionFailed => e
-  puts "Caught AMQP::TCPConnectionFailed => TCP connection failed."
+Metastore.limit(1).each do |m|
+  q.publish(m.id)
 end
+
+Carrot.stop
