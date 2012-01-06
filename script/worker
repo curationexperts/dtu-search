@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require File.join(File.dirname(__FILE__), '../config/environment.rb')
+puts Dir.pwd
+require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
 require 'buffered_indexer'
 require 'journal_encoder'
 
@@ -13,7 +14,7 @@ buff = BufferedIndexer.new
 
 while msg = q.pop
   list = [msg]
-  9.times do
+  99.times do
     list << q.pop
   end
   l = Metastore.find(list)

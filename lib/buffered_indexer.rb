@@ -1,5 +1,5 @@
 class BufferedIndexer 
-  BUFFER_SIZE=1000
+  BUFFER_SIZE=10000
 
   def initialize
     @count = 0

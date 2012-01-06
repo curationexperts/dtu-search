@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+p1 = fork { system 'script/worker' } 
+p2 = fork { system 'script/worker' } 
+
+Process.waitpid(p1)
+Process.waitpid(p2)
