@@ -13,6 +13,8 @@ class JournalEncoder
 
   def self.identifier(doc)
     doc['id'] = doc['localinfo_key_t']
+    doc['journal_title_facet'] = doc['journal_title_t']
+    doc['article_title_s'] = doc['article_title_t']
   end
 
   def self.types(doc)

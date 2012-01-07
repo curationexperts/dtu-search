@@ -24,7 +24,7 @@ gem 'jquery-rails'
 gem 'carrot'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
 # http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug
 #https://gist.github.com/1331533

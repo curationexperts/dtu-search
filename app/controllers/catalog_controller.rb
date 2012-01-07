@@ -12,12 +12,12 @@ class CatalogController < ApplicationController
     }
 
     # solr field configuration for search results/index views
-    config.index.show_link = 'article_title_t' #'title_display'
+    config.index.show_link = 'article_title_s' #'title_display'
     config.index.record_display_type = 'format'
 
     # solr field configuration for document/show views
     config.show.html_title = 'article_title_t'
-    config.show.heading = 'article_title_t'
+    config.show.heading = 'article_title_s'
     config.show.display_type = 'format'
 
     # solr fields that will be treated as facets by the blacklight application
@@ -36,7 +36,7 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
-    config.add_facet_field 'journal_title_t', :label => 'Journal Title', :limit => 20 
+    config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20 
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -53,9 +53,9 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 
     #config.add_show_field 'title_display', :label => 'Title:' 
-    config.add_index_field 'article_title_t', :label => 'Article Title:' 
-    config.add_index_field 'journal_title_t', :label => 'Journal Title:' 
-    config.add_index_field 'author_name_t', :label => 'Author:' 
+    config.add_show_field 'article_title_t', :label => 'Article Title:' 
+    config.add_show_field 'journal_title_t', :label => 'Journal Title:' 
+    config.add_show_field 'author_name_t', :label => 'Author:' 
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
