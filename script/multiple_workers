@@ -3,6 +3,22 @@
 
 p1 = fork { system 'script/worker' } 
 p2 = fork { system 'script/worker' } 
+p3 = fork { system 'script/worker' } 
+p4 = fork { system 'script/worker' } 
+p5 = fork { system 'script/worker' } 
+p6 = fork { system 'script/worker' } 
+p7 = fork { system 'script/worker' } 
+p8 = fork { system 'script/worker' } 
+p9 = fork { system 'script/worker' } 
+p10 = fork { system 'script/worker' } 
 
 Process.waitpid(p1)
 Process.waitpid(p2)
+Process.waitpid(p3)
+Process.waitpid(p4)
+Process.waitpid(p5)
+Process.waitpid(p6)
+Process.waitpid(p7)
+Process.waitpid(p8)
+Process.waitpid(p9)
+Process.waitpid(p10)
