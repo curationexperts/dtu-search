@@ -6,8 +6,19 @@ extend ActiveSupport::Benchmarkable
 
 q = Carrot.queue('search.index')
 
-Metastore.connection.execute("SELECT id FROM #{Metastore.table_name} limit 1000000").each do |m|
-  q.publish(m['id'])
+
+sql = "SELECT id FROM #{Metastore.table_name} limit 1000000"
+conn = Metastore.connection
+conn.execute("declare csr cursor for #{sql}")
+
+while rows = conn.execute("fetch 20 from csr")
+  rows.each do |m|
+puts m['id']
+#  q.publish(m['id'])
+  end
 end
+
+conn.execute('close csr')
+
 
 Carrot.stop
