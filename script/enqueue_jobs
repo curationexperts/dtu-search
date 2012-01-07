@@ -6,7 +6,7 @@ extend ActiveSupport::Benchmarkable
 
 q = Carrot.queue('search.index')
 
-Metastore.connection.execute("SELECT id FROM metastore limit 1000000").each do |m|
+Metastore.connection.execute("SELECT id FROM #{Metastore.table_name} limit 1000000").each do |m|
   q.publish(m['id'])
 end
 
