@@ -1,6 +1,6 @@
 class BufferedIndexer 
   BUFFER_SIZE=1000
-  COMMIT_EVERY =10
+  COMMIT_EVERY =5
 
 
 

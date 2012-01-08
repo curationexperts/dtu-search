@@ -3,7 +3,6 @@
 
 SELECT_SIZE = 100
 
-puts Dir.pwd
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
 require 'buffered_indexer'
 require 'journal_encoder'
@@ -13,6 +12,8 @@ q = Carrot.queue('search.index')
 
 encoder = JournalEncoder.new
 buff = BufferedIndexer.new
+
+trap("SIGINT") { buff.flush(true) }
 
 while msg = q.pop
   list = [msg]
