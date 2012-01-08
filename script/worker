@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-SELECT_SIZE = 50
+SELECT_SIZE = 100
 
 puts Dir.pwd
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))

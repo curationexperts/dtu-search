@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-NUM = 6 
+NUM = 4 
 
 workers = []
 NUM.times do |n|
