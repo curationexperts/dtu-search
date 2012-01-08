@@ -14,6 +14,7 @@
 /log/*.log
 /tmp
 /jetty/jettywrapper.log
+/jetty/logs/*
 
 # Ignore vim tempfiles
 *.swp
