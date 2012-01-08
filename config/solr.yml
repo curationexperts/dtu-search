@@ -18,5 +18,6 @@ test: &test
 production:
   jetty_path: './jetty'
   url: http://mediashelf2.dtic.dk:8983/solr
+  read_timeout: 60 #seconds 60 is default
 cucumber:
   <<: *test
