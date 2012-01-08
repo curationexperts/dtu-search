@@ -6,7 +6,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), '../config/environmen
 require 'buffered_indexer'
 require 'journal_encoder'
 
-q = Carrot.queue('search.index')
+q = Carrot.queue('search.index', :host=>'mediashelf1.dtic.dk')
 
 encoder = JournalEncoder.new
 buff = BufferedIndexer.new
