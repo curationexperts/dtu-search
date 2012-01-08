@@ -24,6 +24,6 @@ while msg = q.pop
     buff.add(JournalEncoder.solrize(m.xml))
   end
 end
-buff.flush
+buff.flush(true)
 
 Carrot.stop
