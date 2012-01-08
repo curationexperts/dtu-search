@@ -3,4 +3,5 @@ default:
   java_opts:
     - "-XX:MaxPermSize=128M"
     - "-Xms512m"
-    - "-Xmx4096m"
+    - "-Xmx16384m"
+    - "-Djava.util.logging.config.file=logging.properties"
