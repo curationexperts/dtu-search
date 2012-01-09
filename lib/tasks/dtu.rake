@@ -9,5 +9,6 @@ task :solrize_fixtures => :environment do
       buff.add(JournalEncoder.solrize(l))
     end
     buff.flush
+    Blacklight.solr.commit
   
 end  
