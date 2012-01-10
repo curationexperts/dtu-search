@@ -1,0 +1,20 @@
+<%# default partial to display solr document fields in catalog show view -%>
+  <div class="cover-image" record_id="00207233,10290400" type="journal" title="<%= render_document_show_field_value :document => document, :field => 'journal_title_t' %>">
+    <img class="cover-image normal-view" src="http://dtu-ftc.cvt.dk/coverimage/<%= render_document_show_field_value :document => document, :field => 'journal_issn_t' %>" alt="<%= render_document_show_field_value :document => document, :field => 'journal_title_t' %>">
+  </div>
+  <h1 class="short-view"><span class="document-type">[Article] </span>
+    <a class="fulltext" target="_blank" href="http://sfx.cvt.dk/sfx_local?rft.jtitle=<%= CGI.escape document['journal_title_t'].first %>&amp;rft.issn=<%=document['journal_issn_t'].first %>&amp;rft.pages=<%=document['journal_page_t'].first %>&amp;rft.spage=<%=document['journal_page_t'].first %>&amp;rft.volume=<%=document['journal_vol_t'].first %>&amp;rft.issue=<%=document['journal_issue_t'] %>&amp;rft.date=<%=document['journal_year_t'] %>&amp;rft.atitle=<%= CGI.escape document['article_title_s'] %>&amp;rft.doi=<%= CGI.escape document['recordid_doi_t'].first %>&amp;rft.au=<%= CGI.escape document['author_name_t'].first %>&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary"><%= render_document_show_field_value :document => document, :field => 'article_title_s' %></a>
+  </h1>
+  <div class="host-publication short-view">
+    <%= link_to(render_document_show_field_value( :document => document, :field => 'journal_title_t'), add_facet_params_and_redirect('journal_title_facet', document['journal_title_t'].first)) %> -
+      <%= render_document_show_field_value :document => document, :field => 'journal_year_t' %>, 
+      Volume <%= render_document_show_field_value :document => document, :field => 'journal_vol_t' %>, 
+      Issue <%= render_document_show_field_value :document => document, :field => 'journal_issue_t' %>, 
+      pp. <%= render_document_show_field_value :document => document, :field => 'journal_page_t' %>
+  </div>
+  
+  <p class="authors short-view">
+    <%= document['author_name_t'].map {|author| link_to(author, add_facet_params_and_redirect('author_name_facet', author)) }.join(' • ').html_safe %>
+    <p class="abstract"><%= render_document_show_field_value :document => document, :field => 'abstract_text_t' %></p>
+    
+    <ul class="tools short-view"><li><a class="disabled" target="_blank" title="Download full text" href="http://redirect.cvt.dk/?url=<%= CGI.escape("http://digitallibrary.dtu.dk/sfxp/resolve?rft.jtitle=#{CGI.escape document['journal_title_t'].first}&amp;rft.issn=#{document['journal_issn_t'].first}&amp;rft.pages=#{document['journal_page_t'].first}&amp;rft.spage=#{document['journal_page_t'].first}&amp;rft.volume=#{document['journal_vol_t'].first}&amp;rft.issue=#{document['journal_issue_t'] }&amp;rft.date=#{document['journal_year_t'] }&amp;rft.atitle=#{CGI.escape document['article_title_s'] }&amp;rft.doi=#{CGI.escape document['recordid_doi_t'].first}&amp;rft.au=#{CGI.escape document['author_name_t'].first }&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary") %>"><span class="download-disabled"></span>Full text</a></li>

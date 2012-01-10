@@ -37,6 +37,7 @@ class CatalogController < ApplicationController
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
     config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20 
+    config.add_facet_field 'author_name_facet', :label => 'Author', :limit => 20 
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -56,6 +57,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'article_title_t', :label => 'Article Title:' 
     config.add_show_field 'journal_title_t', :label => 'Journal Title:' 
     config.add_show_field 'author_name_t', :label => 'Author:' 
+    config.add_show_field 'abstract_text_t', :label => 'Abstract:' 
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -76,7 +78,7 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise. 
     
     config.add_search_field 'all_fields', :label => 'All Fields' do |field|
-      field.solr_parameters = { :qf => 'article_title_t author_name_t' }
+      field.solr_parameters = { :qf => 'article_title_t author_name_t abstract_text_t' }
     end
     
 
