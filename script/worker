@@ -27,7 +27,7 @@ while msg = q.pop
       buff.add(doc)
     rescue SystemExit, Interrupt
       raise
-    rescue Exception => e
+    rescue Exception => exception
       puts "Caught #{exception.class}, see log"
       logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")
       logger.flush
