@@ -25,7 +25,7 @@ while msg = q.pop
     begin
       doc = JournalEncoder.solrize(m.xml)
       buff.add(doc)
-    rescue SystemExit, Interrupt
+    rescue SystemExit, Interrupt, SignalException
       raise
     rescue Exception => exception
       puts "Caught #{exception.class}, see log"

@@ -5,6 +5,8 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+  layout 'application'
+
   configure_blacklight do |config|
     config.default_solr_params = { 
       :qt => 'search',
