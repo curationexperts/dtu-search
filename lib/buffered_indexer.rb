@@ -1,12 +1,12 @@
 class BufferedIndexer 
   BUFFER_SIZE=1000
-  COMMIT_EVERY =5
+#  COMMIT_EVERY =5
 
 
 
   def initialize
     @count = 0
-    @batch_count = 0
+#    @batch_count = 0
     @docs = []
   end
 
@@ -14,11 +14,11 @@ class BufferedIndexer
     solr.add @docs
     @docs = []
     @count = 0
-    @batch_count += 1
-    if commit || @batch_count > COMMIT_EVERY
-      solr.commit
-      @batch_count =0
-    end
+#    @batch_count += 1
+#    if commit || @batch_count > COMMIT_EVERY
+#      solr.commit
+#      @batch_count =0
+#    end
   end
 
   def add(doc)

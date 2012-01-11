@@ -13,7 +13,7 @@ q = Carrot.queue('search.index')
 encoder = JournalEncoder.new
 buff = BufferedIndexer.new
 
-trap("SIGINT") { buff.flush(true) }
+trap("SIGINT") { print "Finishing writes..."; buff.flush(true); puts "Done." }
 
 while msg = q.pop
   list = [msg]
