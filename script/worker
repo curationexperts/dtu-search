@@ -22,7 +22,13 @@ while msg = q.pop
   end
   l = Metastore.find(list)
   l.each do |m|
-    buff.add(JournalEncoder.solrize(m.xml))
+    begin
+      doc = JournalEncoder.solrize(m.xml)
+      buff.add(doc)
+    rescue Exception => e
+      puts "Caught error, see log"
+      logger.error "Error solrizing\n#{e.message}"
+    end
   end
 end
 buff.flush(true)
