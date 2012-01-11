@@ -25,8 +25,10 @@ while msg = q.pop
     begin
       doc = JournalEncoder.solrize(m.xml)
       buff.add(doc)
+    rescue SystemExit, Interrupt
+      raise
     rescue Exception => e
-      puts "Caught error, see log"
+      puts "Caught #{exception.class}, see log"
       logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")
       logger.flush
     end
