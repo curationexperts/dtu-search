@@ -1,10 +1,541 @@
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>26863313</sf:systemno><sf:source>swets</sf:source><sf:cdate>19700101</sf:cdate><sf:udate>20100706</sf:udate><sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid><sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref><sf:key>2004102797887465</sf:key><sf:oldkey>002072332004614403791174775022</sf:oldkey><sf:rank>18017011332264339</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837852</sf:dedupkey></sf:localinfo><sf:recordid><sf:accessnr>2004102797887465</sf:accessnr></sf:recordid><sf:article><sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile</sf:title></sf:article><sf:author><sf:name>Khalifa, Nehad</sf:name></sf:author><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies - Sections A and B</sf:title><sf:atitle>The International journal of environmental studies</sf:atitle><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>403</sf:page><sf:ppage>10</sf:ppage><sf:titleid>39399675</sf:titleid></sf:journal></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>105209735</sf:systemno><sf:source>compendex</sf:source><sf:cdate>19700821</sf:cdate><sf:udate>20101117</sf:udate><sf:fileid>2004/20081214102244.compendex.cpx::xml</sf:fileid><sf:orderref>/compendex/00207233/2004/61/4/0</sf:orderref><sf:key>PUI39123498</sf:key><sf:oldkey>002072332004614403791174775022</sf:oldkey><sf:rank>18017011332264339</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837852</sf:dedupkey></sf:localinfo><sf:recordid><sf:artid>2004378346973</sf:artid><sf:rectypecode>ar</sf:rectypecode><sf:rectypetxt>Journal Article</sf:rectypetxt><sf:copyright>Copyright 2007 Elsevier B.V., All rights reserved.</sf:copyright><sf:doi>10.1080/0020723032000143337</sf:doi></sf:recordid><sf:article><sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile</sf:title><sf:nrref>47</sf:nrref><sf:language>English</sf:language><sf:isolanguage>eng</sf:isolanguage></sf:article><sf:abstract><sf:text>The responses of River Nile phytoplankton to different zooplankton communities have been analyzed. Different communities have been made up of natural Nile water of rotifers and small cladocerans, rotifers after exclusion of macrozooplankton by size fraction and large cladocerans plus small cladocerans and rotifers. A set of experiments in enclosures were designed to determine the short-term effects produced by these zooplankton assemblages on phytoplankton structure. The phytoplankton community are made up of Bacillariophyceae. Cyanophyceae and Chlorophyceae, as the main algal groups. It seems that, grazing does not play a leading role in controlling phytoplankton production and its standing stock in the River Nile.</sf:text><sf:language>English</sf:language><sf:isolanguage>eng</sf:isolanguage></sf:abstract><sf:author><sf:name>Khalifa, Nehad</sf:name></sf:author><sf:affiliation><sf:name>Natl. Inst. of Oceanogr. and Fish. Cairo</sf:name></sf:affiliation><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVA</sf:coden><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies</sf:title><sf:atitle>Int. J. Environ. Stud.</sf:atitle><sf:atitle>The International journal of environmental studies</sf:atitle><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>403-412</sf:page><sf:publisher>Taylor and Francis Ltd.</sf:publisher></sf:journal><sf:class><sf:text>407.2</sf:text><sf:text>453.1</sf:text><sf:text>454</sf:text><sf:text>461.9</sf:text></sf:class><sf:ctrlt><sf:text>Algae</sf:text><sf:text>Biodiversity</sf:text><sf:text>Microorganisms</sf:text><sf:text>Rivers</sf:text><sf:text>Plants (botany)</sf:text><sf:text>T</sf:text></sf:ctrlt><sf:uctrlt><sf:text>Phytoplankatons</sf:text><sf:text>Zooplanktons</sf:text></sf:uctrlt></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>200064933</sf:systemno><sf:source>ebsco</sf:source><sf:package>afh</sf:package><sf:cdate>20091005</sf:cdate><sf:udate>20110216</sf:udate><sf:fileid>2009/20091005084747.ebsco_afh.ebsco::sgm</sf:fileid><sf:orderref>/ebsco/00207233/2004/61/4/0</sf:orderref><sf:key>AFH:14577375</sf:key><sf:oldkey>002072332004614403791174775022</sf:oldkey><sf:rank>18017011332264339</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837852</sf:dedupkey></sf:localinfo><sf:recordid><sf:artid>14577375</sf:artid></sf:recordid><sf:article><sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the river nile.</sf:title></sf:article><sf:author><sf:name>Khalifa, Nehad</sf:name></sf:author><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies</sf:title><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>403</sf:page><sf:ppage>10</sf:ppage></sf:journal><sf:ctrlt><sf:text>PHYTOPLANKTON</sf:text></sf:ctrlt></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>26863314</sf:systemno><sf:source>swets</sf:source><sf:cdate>19700101</sf:cdate><sf:udate>20100706</sf:udate><sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid><sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref><sf:key>2004102797887466</sf:key><sf:oldkey>0020723320046144131053351735691</sf:oldkey><sf:rank>18017011332264349</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837854</sf:dedupkey></sf:localinfo><sf:recordid><sf:accessnr>2004102797887466</sf:accessnr></sf:recordid><sf:article><sf:title>HPLC determination of polycyclic aromatic hydrocarbons (PAHs) in the littoral urban sewage area of cortiou (Marseille, France)</sf:title></sf:article><sf:author><sf:name>Sarrazin, Luc</sf:name></sf:author><sf:author><sf:name>Diana, Catherine</sf:name></sf:author><sf:author><sf:name>Schembri, Therese</sf:name></sf:author><sf:author><sf:name>Rebouillon, Pierre</sf:name></sf:author><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies - Sections A and B</sf:title><sf:atitle>The International journal of environmental studies</sf:atitle><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>413</sf:page><sf:ppage>14</sf:ppage><sf:titleid>39399675</sf:titleid></sf:journal></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>105209736</sf:systemno><sf:source>compendex</sf:source><sf:cdate>19700821</sf:cdate><sf:udate>20101117</sf:udate><sf:fileid>2004/20081214102244.compendex.cpx::xml</sf:fileid><sf:orderref>/compendex/00207233/2004/61/4/0</sf:orderref><sf:key>PUI39123499</sf:key><sf:oldkey>0020723320046144131053351735691</sf:oldkey><sf:rank>18017011332264349</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837854</sf:dedupkey></sf:localinfo><sf:recordid><sf:artid>2004378346974</sf:artid><sf:rectypecode>ar</sf:rectypecode><sf:rectypetxt>Journal Article</sf:rectypetxt><sf:copyright>Copyright 2007 Elsevier B.V., All rights reserved.</sf:copyright><sf:doi>10.1080/00207230410001693110</sf:doi></sf:recordid><sf:article><sf:title>HPLC determination of Polycyclic Aromatic Hydrocarbons (PAHs) in the littoral urban sewage area of Cortiou (Marseille, France)</sf:title><sf:nrref>23</sf:nrref><sf:language>English</sf:language><sf:isolanguage>eng</sf:isolanguage></sf:article><sf:abstract><sf:text>A selective method for determining polycyclic aromatic hydrocarbons (PAHs) in sediments using solid-phase extraction and RP-HPLC with fluorescence and UV detection is described. The complete analytical method is used to surface sediments from the creek of Cortiou (France). Sewage from the urban area of Marseille is delivered to the creek. PAH levels in sediments (μg/g) range between 2.251 μg/g (for the benzo(a)anthracene) and &lt;0.001 μg/g. The flux of pollution provided by the outfall is preferentially oriented from East to West by the Liguro-Provençal current. The significant values are mainly confined on a perimeter of 2 km around the outfall. The phenanthrene/ anthracene and fluoranthene/pyrene ratios indicate pyrolytic and petrogenic contamination. The particulate size observations concerning the sediments show that oxygenated sandy zones, where eliminating mechanisms (desorption, biodegradation) take place, are mainly located on the Chèvres plateau and around Jarre, Plane and Riou Islands.</sf:text><sf:language>English</sf:language><sf:isolanguage>eng</sf:isolanguage></sf:abstract><sf:author><sf:name>Sarrazin, Luc</sf:name></sf:author><sf:author><sf:name>Diana, Catherine</sf:name></sf:author><sf:author><sf:name>Schembri, Thérèse</sf:name></sf:author><sf:author><sf:name>Rebouillon, Pierre</sf:name></sf:author><sf:affiliation><sf:name>Lab. d'Hydrol. Molysmologie A. Faculté de Pharmacie 13385 Marseille Cedex 5</sf:name></sf:affiliation><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVA</sf:coden><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies</sf:title><sf:atitle>Int. J. Environ. Stud.</sf:atitle><sf:atitle>The International journal of environmental studies</sf:atitle><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>413-425</sf:page><sf:publisher>Taylor and Francis Ltd.</sf:publisher></sf:journal><sf:class><sf:text>452.2</sf:text><sf:text>461.8</sf:text><sf:text>483</sf:text><sf:text>801</sf:text><sf:text>802.3</sf:text><sf:text>804.1</sf:text></sf:class><sf:ctrlt><sf:text>Biodegradation</sf:text><sf:text>Desorption</sf:text><sf:text>Fluorine compounds</sf:text><sf:text>High performance liquid chromatography</sf:text><sf:text>Sediments</sf:text><sf:text>Sewage treatment</sf:text><sf:text>Polycyclic aromatic hydrocarbons</sf:text><sf:text>T</sf:text></sf:ctrlt><sf:uctrlt><sf:text>Pyrenes</sf:text><sf:text>Surface sediments</sf:text></sf:uctrlt></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>200064934</sf:systemno><sf:source>ebsco</sf:source><sf:package>afh</sf:package><sf:cdate>20091005</sf:cdate><sf:udate>20110216</sf:udate><sf:fileid>2009/20091005084747.ebsco_afh.ebsco::sgm</sf:fileid><sf:orderref>/ebsco/00207233/2004/61/4/0</sf:orderref><sf:key>AFH:14577382</sf:key><sf:oldkey>0020723320046144131053351735691</sf:oldkey><sf:rank>18017011332264349</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837854</sf:dedupkey></sf:localinfo><sf:recordid><sf:artid>14577382</sf:artid></sf:recordid><sf:article><sf:title>HPLC DETERMINATION OF POLYCYCLIC AROMATIC HYDROCARBONS (PAHs) IN THE LITTORAL URBAN SEWAGE AREA OF CORTIOU (MARSEILLE, FRANCE).</sf:title></sf:article><sf:author><sf:name>Sarrazin, Luc</sf:name></sf:author><sf:author><sf:name>Diana, Catherine</sf:name></sf:author><sf:author><sf:name>Schembri, Thérèse</sf:name></sf:author><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies</sf:title><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>413</sf:page><sf:ppage>13</sf:ppage></sf:journal><sf:ctrlt><sf:text>POLYCYCLIC aromatic hydrocarbons</sf:text></sf:ctrlt></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>26863315</sf:systemno><sf:source>swets</sf:source><sf:cdate>19700101</sf:cdate><sf:udate>20100706</sf:udate><sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid><sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref><sf:key>2004102797887467</sf:key><sf:oldkey>002072332004614427492839671734</sf:oldkey><sf:rank>18017011332264363</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837855</sf:dedupkey></sf:localinfo><sf:recordid><sf:accessnr>2004102797887467</sf:accessnr></sf:recordid><sf:article><sf:title>Impact of diesel policy banning on PM levels in urban areas</sf:title></sf:article><sf:author><sf:name>El-Fadel, Mutasem</sf:name></sf:author><sf:author><sf:name>Aldeen, Raja Abou Fakher</sf:name></sf:author><sf:author><sf:name>Maroun, Rania</sf:name></sf:author><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies - Sections A and B</sf:title><sf:atitle>The International journal of environmental studies</sf:atitle><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>427</sf:page><sf:ppage>10</sf:ppage><sf:titleid>39399675</sf:titleid></sf:journal></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>105209737</sf:systemno><sf:source>compendex</sf:source><sf:cdate>19700821</sf:cdate><sf:udate>20101117</sf:udate><sf:fileid>2004/20081214102244.compendex.cpx::xml</sf:fileid><sf:orderref>/compendex/00207233/2004/61/4/0</sf:orderref><sf:key>PUI39123500</sf:key><sf:oldkey>002072332004614427492839671734</sf:oldkey><sf:rank>18017011332264363</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837855</sf:dedupkey></sf:localinfo><sf:recordid><sf:artid>2004378346975</sf:artid><sf:rectypecode>ar</sf:rectypecode><sf:rectypetxt>Journal Article</sf:rectypetxt><sf:copyright>Copyright 2007 Elsevier B.V., All rights reserved.</sf:copyright><sf:doi>10.1080/0020723042000189886</sf:doi></sf:recordid><sf:article><sf:title>Impact of diesel policy banning on PM levels in urban areas</sf:title><sf:nrref>17</sf:nrref><sf:language>English</sf:language><sf:isolanguage>eng</sf:isolanguage></sf:article><sf:abstract><sf:text>Increased use of diesel engine in on-road vehicles presents a serious health concern, particularly in traffic-congested urban areas. Diesel exhaust contains various gaseous and particulate pollutants, which, at high concentrations, pose adverse health effects. In this respect, various policy measures are being adopted worldwide to curtail emissions from diesel engines. This paper presents an assessment of diesel engine policy banning in the Greater Beirut Area. For this purpose, particulate matter levels in the air were measured after the ban and compared with concentrations reported prior to the ban. Health-based socio-economic benefits associated with improvement in air quality were then estimated using the long-term decrease of particulate matter as an indicator.</sf:text><sf:language>English</sf:language><sf:isolanguage>eng</sf:isolanguage></sf:abstract><sf:author><sf:name>El-Fadel, Mutasem</sf:name></sf:author><sf:author><sf:name>Aldeen, Raja Abou Fakher</sf:name></sf:author><sf:author><sf:name>Maroun, Rania</sf:name></sf:author><sf:affiliation><sf:name>Dept. of Civ. and Environ. Eng. American University of Beirut Beirut</sf:name></sf:affiliation><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVA</sf:coden><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies</sf:title><sf:atitle>Int. J. Environ. Stud.</sf:atitle><sf:atitle>The International journal of environmental studies</sf:atitle><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>427-436</sf:page><sf:publisher>Taylor and Francis Ltd.</sf:publisher></sf:journal><sf:class><sf:text>451.2</sf:text><sf:text>454.2</sf:text><sf:text>461.7</sf:text><sf:text>612.2</sf:text><sf:text>901.4</sf:text></sf:class><sf:ctrlt><sf:text>Air pollution control</sf:text><sf:text>Air quality</sf:text><sf:text>Diesel engines</sf:text><sf:text>Economic and social effects</sf:text><sf:text>Health hazards</sf:text><sf:text>Public policy</sf:text><sf:text>Environmental protection</sf:text><sf:text>T</sf:text><sf:text>X</sf:text></sf:ctrlt><sf:uctrlt><sf:text>Particulate pollutants</sf:text><sf:text>Traffic congestion</sf:text></sf:uctrlt></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>200064935</sf:systemno><sf:source>ebsco</sf:source><sf:package>afh</sf:package><sf:cdate>20091005</sf:cdate><sf:udate>20110216</sf:udate><sf:fileid>2009/20091005084747.ebsco_afh.ebsco::sgm</sf:fileid><sf:orderref>/ebsco/00207233/2004/61/4/0</sf:orderref><sf:key>AFH:14577391</sf:key><sf:oldkey>002072332004614427492839671734</sf:oldkey><sf:rank>18017011332264363</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837855</sf:dedupkey></sf:localinfo><sf:recordid><sf:artid>14577391</sf:artid></sf:recordid><sf:article><sf:title>Impact of diesel policy banning on pm levels in urban areas.</sf:title></sf:article><sf:author><sf:name>El-Fadel, Mutasem</sf:name></sf:author><sf:author><sf:name>Aldeen, Raja Abou Fakher</sf:name></sf:author><sf:author><sf:name>Maroun, Rania</sf:name></sf:author><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies</sf:title><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>427</sf:page><sf:ppage>10</sf:ppage></sf:journal><sf:ctrlt><sf:text>AIR</sf:text><sf:text>Pollution</sf:text></sf:ctrlt></sf:art>
- <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd"><sf:localinfo><sf:systemno>26863316</sf:systemno><sf:source>swets</sf:source><sf:cdate>19700101</sf:cdate><sf:udate>20100706</sf:udate><sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid><sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref><sf:key>2004102797887468</sf:key><sf:oldkey>002072332004614437125178447792</sf:oldkey><sf:rank>18017011332264373</sf:rank><sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey><sf:dedupkey>9837857</sf:dedupkey></sf:localinfo><sf:recordid><sf:accessnr>2004102797887468</sf:accessnr></sf:recordid><sf:article><sf:title>Worldwide intercomparison on the determination of chlorinated pesticides, PCBs and petroleum hydrocarbons in a mussel tissue homogenate, IAEA-142</sf:title></sf:article><sf:author><sf:name>Villeneuve, J P</sf:name></sf:author><sf:author><sf:name>Carvalho, F P</sf:name></sf:author><sf:author><sf:name>Horvat, M</sf:name></sf:author><sf:author><sf:name>Cattini, C</sf:name></sf:author><sf:journal><sf:issn>00207233</sf:issn><sf:eissn>10290400</sf:eissn><sf:coden>IJEVAW</sf:coden><sf:title>International Journal of Environmental Studies - Sections A and B</sf:title><sf:atitle>The International journal of environmental studies</sf:atitle><sf:vol>61</sf:vol><sf:issue>4</sf:issue><sf:year>2004</sf:year><sf:page>437</sf:page><sf:ppage>16</sf:ppage><sf:titleid>39399675</sf:titleid></sf:journal></sf:art>
+<?xml version="1.0"?>
+<docs>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>26863313</sf:systemno>
+      <sf:source>swets</sf:source>
+      <sf:cdate>19700101</sf:cdate>
+      <sf:udate>20100706</sf:udate>
+      <sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid>
+      <sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>2004102797887465</sf:key>
+      <sf:oldkey>002072332004614403791174775022</sf:oldkey>
+      <sf:rank>18017011332264339</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837852</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:accessnr>2004102797887465</sf:accessnr>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile</sf:title>
+    </sf:article>
+    <sf:author>
+      <sf:name>Khalifa, Nehad</sf:name>
+    </sf:author>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies - Sections A and B</sf:title>
+      <sf:atitle>The International journal of environmental studies</sf:atitle>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>403</sf:page>
+      <sf:ppage>10</sf:ppage>
+      <sf:titleid>39399675</sf:titleid>
+    </sf:journal>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>105209735</sf:systemno>
+      <sf:source>compendex</sf:source>
+      <sf:cdate>19700821</sf:cdate>
+      <sf:udate>20101117</sf:udate>
+      <sf:fileid>2004/20081214102244.compendex.cpx::xml</sf:fileid>
+      <sf:orderref>/compendex/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>PUI39123498</sf:key>
+      <sf:oldkey>002072332004614403791174775022</sf:oldkey>
+      <sf:rank>18017011332264339</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837852</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:artid>2004378346973</sf:artid>
+      <sf:rectypecode>ar</sf:rectypecode>
+      <sf:rectypetxt>Journal Article</sf:rectypetxt>
+      <sf:copyright>Copyright 2007 Elsevier B.V., All rights reserved.</sf:copyright>
+      <sf:doi>10.1080/0020723032000143337</sf:doi>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile</sf:title>
+      <sf:nrref>47</sf:nrref>
+      <sf:language>English</sf:language>
+      <sf:isolanguage>eng</sf:isolanguage>
+    </sf:article>
+    <sf:abstract>
+      <sf:text>The responses of River Nile phytoplankton to different zooplankton communities have been analyzed. Different communities have been made up of natural Nile water of rotifers and small cladocerans, rotifers after exclusion of macrozooplankton by size fraction and large cladocerans plus small cladocerans and rotifers. A set of experiments in enclosures were designed to determine the short-term effects produced by these zooplankton assemblages on phytoplankton structure. The phytoplankton community are made up of Bacillariophyceae. Cyanophyceae and Chlorophyceae, as the main algal groups. It seems that, grazing does not play a leading role in controlling phytoplankton production and its standing stock in the River Nile.</sf:text>
+      <sf:language>English</sf:language>
+      <sf:isolanguage>eng</sf:isolanguage>
+    </sf:abstract>
+    <sf:author>
+      <sf:name>Khalifa, Nehad</sf:name>
+    </sf:author>
+    <sf:affiliation>
+      <sf:name>Natl. Inst. of Oceanogr. and Fish. Cairo</sf:name>
+    </sf:affiliation>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVA</sf:coden>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies</sf:title>
+      <sf:atitle>Int. J. Environ. Stud.</sf:atitle>
+      <sf:atitle>The International journal of environmental studies</sf:atitle>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>403-412</sf:page>
+      <sf:publisher>Taylor and Francis Ltd.</sf:publisher>
+    </sf:journal>
+    <sf:class>
+      <sf:text>407.2</sf:text>
+      <sf:text>453.1</sf:text>
+      <sf:text>454</sf:text>
+      <sf:text>461.9</sf:text>
+    </sf:class>
+    <sf:ctrlt>
+      <sf:text>Algae</sf:text>
+      <sf:text>Biodiversity</sf:text>
+      <sf:text>Microorganisms</sf:text>
+      <sf:text>Rivers</sf:text>
+      <sf:text>Plants (botany)</sf:text>
+      <sf:text>T</sf:text>
+    </sf:ctrlt>
+    <sf:uctrlt>
+      <sf:text>Phytoplankatons</sf:text>
+      <sf:text>Zooplanktons</sf:text>
+    </sf:uctrlt>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>200064933</sf:systemno>
+      <sf:source>ebsco</sf:source>
+      <sf:package>afh</sf:package>
+      <sf:cdate>20091005</sf:cdate>
+      <sf:udate>20110216</sf:udate>
+      <sf:fileid>2009/20091005084747.ebsco_afh.ebsco::sgm</sf:fileid>
+      <sf:orderref>/ebsco/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>AFH:14577375</sf:key>
+      <sf:oldkey>002072332004614403791174775022</sf:oldkey>
+      <sf:rank>18017011332264339</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837852</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:artid>14577375</sf:artid>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the river nile.</sf:title>
+    </sf:article>
+    <sf:author>
+      <sf:name>Khalifa, Nehad</sf:name>
+    </sf:author>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies</sf:title>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>403</sf:page>
+      <sf:ppage>10</sf:ppage>
+    </sf:journal>
+    <sf:ctrlt>
+      <sf:text>PHYTOPLANKTON</sf:text>
+    </sf:ctrlt>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>26863314</sf:systemno>
+      <sf:source>swets</sf:source>
+      <sf:cdate>19700101</sf:cdate>
+      <sf:udate>20100706</sf:udate>
+      <sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid>
+      <sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>2004102797887466</sf:key>
+      <sf:oldkey>0020723320046144131053351735691</sf:oldkey>
+      <sf:rank>18017011332264349</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837854</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:accessnr>2004102797887466</sf:accessnr>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>HPLC determination of polycyclic aromatic hydrocarbons (PAHs) in the littoral urban sewage area of cortiou (Marseille, France)</sf:title>
+    </sf:article>
+    <sf:author>
+      <sf:name>Sarrazin, Luc</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Diana, Catherine</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Schembri, Therese</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Rebouillon, Pierre</sf:name>
+    </sf:author>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies - Sections A and B</sf:title>
+      <sf:atitle>The International journal of environmental studies</sf:atitle>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>413</sf:page>
+      <sf:ppage>14</sf:ppage>
+      <sf:titleid>39399675</sf:titleid>
+    </sf:journal>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>105209736</sf:systemno>
+      <sf:source>compendex</sf:source>
+      <sf:cdate>19700821</sf:cdate>
+      <sf:udate>20101117</sf:udate>
+      <sf:fileid>2004/20081214102244.compendex.cpx::xml</sf:fileid>
+      <sf:orderref>/compendex/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>PUI39123499</sf:key>
+      <sf:oldkey>0020723320046144131053351735691</sf:oldkey>
+      <sf:rank>18017011332264349</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837854</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:artid>2004378346974</sf:artid>
+      <sf:rectypecode>ar</sf:rectypecode>
+      <sf:rectypetxt>Journal Article</sf:rectypetxt>
+      <sf:copyright>Copyright 2007 Elsevier B.V., All rights reserved.</sf:copyright>
+      <sf:doi>10.1080/00207230410001693110</sf:doi>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>HPLC determination of Polycyclic Aromatic Hydrocarbons (PAHs) in the littoral urban sewage area of Cortiou (Marseille, France)</sf:title>
+      <sf:nrref>23</sf:nrref>
+      <sf:language>English</sf:language>
+      <sf:isolanguage>eng</sf:isolanguage>
+    </sf:article>
+    <sf:abstract>
+      <sf:text>A selective method for determining polycyclic aromatic hydrocarbons (PAHs) in sediments using solid-phase extraction and RP-HPLC with fluorescence and UV detection is described. The complete analytical method is used to surface sediments from the creek of Cortiou (France). Sewage from the urban area of Marseille is delivered to the creek. PAH levels in sediments (&#x3BC;g/g) range between 2.251 &#x3BC;g/g (for the benzo(a)anthracene) and &lt;0.001 &#x3BC;g/g. The flux of pollution provided by the outfall is preferentially oriented from East to West by the Liguro-Provenc&#x327;al current. The significant values are mainly confined on a perimeter of 2 km around the outfall. The phenanthrene/ anthracene and fluoranthene/pyrene ratios indicate pyrolytic and petrogenic contamination. The particulate size observations concerning the sediments show that oxygenated sandy zones, where eliminating mechanisms (desorption, biodegradation) take place, are mainly located on the Che&#x300;vres plateau and around Jarre, Plane and Riou Islands.</sf:text>
+      <sf:language>English</sf:language>
+      <sf:isolanguage>eng</sf:isolanguage>
+    </sf:abstract>
+    <sf:author>
+      <sf:name>Sarrazin, Luc</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Diana, Catherine</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Schembri, The&#x301;re&#x300;se</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Rebouillon, Pierre</sf:name>
+    </sf:author>
+    <sf:affiliation>
+      <sf:name>Lab. d'Hydrol. Molysmologie A. Faculte&#x301; de Pharmacie 13385 Marseille Cedex 5</sf:name>
+    </sf:affiliation>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVA</sf:coden>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies</sf:title>
+      <sf:atitle>Int. J. Environ. Stud.</sf:atitle>
+      <sf:atitle>The International journal of environmental studies</sf:atitle>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>413-425</sf:page>
+      <sf:publisher>Taylor and Francis Ltd.</sf:publisher>
+    </sf:journal>
+    <sf:class>
+      <sf:text>452.2</sf:text>
+      <sf:text>461.8</sf:text>
+      <sf:text>483</sf:text>
+      <sf:text>801</sf:text>
+      <sf:text>802.3</sf:text>
+      <sf:text>804.1</sf:text>
+    </sf:class>
+    <sf:ctrlt>
+      <sf:text>Biodegradation</sf:text>
+      <sf:text>Desorption</sf:text>
+      <sf:text>Fluorine compounds</sf:text>
+      <sf:text>High performance liquid chromatography</sf:text>
+      <sf:text>Sediments</sf:text>
+      <sf:text>Sewage treatment</sf:text>
+      <sf:text>Polycyclic aromatic hydrocarbons</sf:text>
+      <sf:text>T</sf:text>
+    </sf:ctrlt>
+    <sf:uctrlt>
+      <sf:text>Pyrenes</sf:text>
+      <sf:text>Surface sediments</sf:text>
+    </sf:uctrlt>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>200064934</sf:systemno>
+      <sf:source>ebsco</sf:source>
+      <sf:package>afh</sf:package>
+      <sf:cdate>20091005</sf:cdate>
+      <sf:udate>20110216</sf:udate>
+      <sf:fileid>2009/20091005084747.ebsco_afh.ebsco::sgm</sf:fileid>
+      <sf:orderref>/ebsco/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>AFH:14577382</sf:key>
+      <sf:oldkey>0020723320046144131053351735691</sf:oldkey>
+      <sf:rank>18017011332264349</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837854</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:artid>14577382</sf:artid>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>HPLC DETERMINATION OF POLYCYCLIC AROMATIC HYDROCARBONS (PAHs) IN THE LITTORAL URBAN SEWAGE AREA OF CORTIOU (MARSEILLE, FRANCE).</sf:title>
+    </sf:article>
+    <sf:author>
+      <sf:name>Sarrazin, Luc</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Diana, Catherine</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Schembri, Th&#xE9;r&#xE8;se</sf:name>
+    </sf:author>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies</sf:title>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>413</sf:page>
+      <sf:ppage>13</sf:ppage>
+    </sf:journal>
+    <sf:ctrlt>
+      <sf:text>POLYCYCLIC aromatic hydrocarbons</sf:text>
+    </sf:ctrlt>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>26863315</sf:systemno>
+      <sf:source>swets</sf:source>
+      <sf:cdate>19700101</sf:cdate>
+      <sf:udate>20100706</sf:udate>
+      <sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid>
+      <sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>2004102797887467</sf:key>
+      <sf:oldkey>002072332004614427492839671734</sf:oldkey>
+      <sf:rank>18017011332264363</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837855</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:accessnr>2004102797887467</sf:accessnr>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>Impact of diesel policy banning on PM levels in urban areas</sf:title>
+    </sf:article>
+    <sf:author>
+      <sf:name>El-Fadel, Mutasem</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Aldeen, Raja Abou Fakher</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Maroun, Rania</sf:name>
+    </sf:author>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies - Sections A and B</sf:title>
+      <sf:atitle>The International journal of environmental studies</sf:atitle>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>427</sf:page>
+      <sf:ppage>10</sf:ppage>
+      <sf:titleid>39399675</sf:titleid>
+    </sf:journal>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>105209737</sf:systemno>
+      <sf:source>compendex</sf:source>
+      <sf:cdate>19700821</sf:cdate>
+      <sf:udate>20101117</sf:udate>
+      <sf:fileid>2004/20081214102244.compendex.cpx::xml</sf:fileid>
+      <sf:orderref>/compendex/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>PUI39123500</sf:key>
+      <sf:oldkey>002072332004614427492839671734</sf:oldkey>
+      <sf:rank>18017011332264363</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837855</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:artid>2004378346975</sf:artid>
+      <sf:rectypecode>ar</sf:rectypecode>
+      <sf:rectypetxt>Journal Article</sf:rectypetxt>
+      <sf:copyright>Copyright 2007 Elsevier B.V., All rights reserved.</sf:copyright>
+      <sf:doi>10.1080/0020723042000189886</sf:doi>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>Impact of diesel policy banning on PM levels in urban areas</sf:title>
+      <sf:nrref>17</sf:nrref>
+      <sf:language>English</sf:language>
+      <sf:isolanguage>eng</sf:isolanguage>
+    </sf:article>
+    <sf:abstract>
+      <sf:text>Increased use of diesel engine in on-road vehicles presents a serious health concern, particularly in traffic-congested urban areas. Diesel exhaust contains various gaseous and particulate pollutants, which, at high concentrations, pose adverse health effects. In this respect, various policy measures are being adopted worldwide to curtail emissions from diesel engines. This paper presents an assessment of diesel engine policy banning in the Greater Beirut Area. For this purpose, particulate matter levels in the air were measured after the ban and compared with concentrations reported prior to the ban. Health-based socio-economic benefits associated with improvement in air quality were then estimated using the long-term decrease of particulate matter as an indicator.</sf:text>
+      <sf:language>English</sf:language>
+      <sf:isolanguage>eng</sf:isolanguage>
+    </sf:abstract>
+    <sf:author>
+      <sf:name>El-Fadel, Mutasem</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Aldeen, Raja Abou Fakher</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Maroun, Rania</sf:name>
+    </sf:author>
+    <sf:affiliation>
+      <sf:name>Dept. of Civ. and Environ. Eng. American University of Beirut Beirut</sf:name>
+    </sf:affiliation>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVA</sf:coden>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies</sf:title>
+      <sf:atitle>Int. J. Environ. Stud.</sf:atitle>
+      <sf:atitle>The International journal of environmental studies</sf:atitle>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>427-436</sf:page>
+      <sf:publisher>Taylor and Francis Ltd.</sf:publisher>
+    </sf:journal>
+    <sf:class>
+      <sf:text>451.2</sf:text>
+      <sf:text>454.2</sf:text>
+      <sf:text>461.7</sf:text>
+      <sf:text>612.2</sf:text>
+      <sf:text>901.4</sf:text>
+    </sf:class>
+    <sf:ctrlt>
+      <sf:text>Air pollution control</sf:text>
+      <sf:text>Air quality</sf:text>
+      <sf:text>Diesel engines</sf:text>
+      <sf:text>Economic and social effects</sf:text>
+      <sf:text>Health hazards</sf:text>
+      <sf:text>Public policy</sf:text>
+      <sf:text>Environmental protection</sf:text>
+      <sf:text>T</sf:text>
+      <sf:text>X</sf:text>
+    </sf:ctrlt>
+    <sf:uctrlt>
+      <sf:text>Particulate pollutants</sf:text>
+      <sf:text>Traffic congestion</sf:text>
+    </sf:uctrlt>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>200064935</sf:systemno>
+      <sf:source>ebsco</sf:source>
+      <sf:package>afh</sf:package>
+      <sf:cdate>20091005</sf:cdate>
+      <sf:udate>20110216</sf:udate>
+      <sf:fileid>2009/20091005084747.ebsco_afh.ebsco::sgm</sf:fileid>
+      <sf:orderref>/ebsco/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>AFH:14577391</sf:key>
+      <sf:oldkey>002072332004614427492839671734</sf:oldkey>
+      <sf:rank>18017011332264363</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837855</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:artid>14577391</sf:artid>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>Impact of diesel policy banning on pm levels in urban areas.</sf:title>
+    </sf:article>
+    <sf:author>
+      <sf:name>El-Fadel, Mutasem</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Aldeen, Raja Abou Fakher</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Maroun, Rania</sf:name>
+    </sf:author>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies</sf:title>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>427</sf:page>
+      <sf:ppage>10</sf:ppage>
+    </sf:journal>
+    <sf:ctrlt>
+      <sf:text>AIR</sf:text>
+      <sf:text>Pollution</sf:text>
+    </sf:ctrlt>
+  </sf:art>
+  <sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+    <sf:localinfo>
+      <sf:systemno>26863316</sf:systemno>
+      <sf:source>swets</sf:source>
+      <sf:cdate>19700101</sf:cdate>
+      <sf:udate>20100706</sf:udate>
+      <sf:fileid>2004/20080201135044.swets_old.swetscan::asc</sf:fileid>
+      <sf:orderref>/swets/00207233/2004/61/4/0</sf:orderref>
+      <sf:key>2004102797887468</sf:key>
+      <sf:oldkey>002072332004614437125178447792</sf:oldkey>
+      <sf:rank>18017011332264373</sf:rank>
+      <sf:jobrokey>00207233|000016|000061|000004|</sf:jobrokey>
+      <sf:dedupkey>9837857</sf:dedupkey>
+    </sf:localinfo>
+    <sf:recordid>
+      <sf:accessnr>2004102797887468</sf:accessnr>
+    </sf:recordid>
+    <sf:article>
+      <sf:title>Worldwide intercomparison on the determination of chlorinated pesticides, PCBs and petroleum hydrocarbons in a mussel tissue homogenate, IAEA-142</sf:title>
+    </sf:article>
+    <sf:author>
+      <sf:name>Villeneuve, J P</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Carvalho, F P</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Horvat, M</sf:name>
+    </sf:author>
+    <sf:author>
+      <sf:name>Cattini, C</sf:name>
+    </sf:author>
+    <sf:journal>
+      <sf:issn>00207233</sf:issn>
+      <sf:eissn>10290400</sf:eissn>
+      <sf:coden>IJEVAW</sf:coden>
+      <sf:title>International Journal of Environmental Studies - Sections A and B</sf:title>
+      <sf:atitle>The International journal of environmental studies</sf:atitle>
+      <sf:vol>61</sf:vol>
+      <sf:issue>4</sf:issue>
+      <sf:year>2004</sf:year>
+      <sf:page>437</sf:page>
+      <sf:ppage>16</sf:ppage>
+      <sf:titleid>39399675</sf:titleid>
+    </sf:journal>
+  </sf:art>
+</docs>

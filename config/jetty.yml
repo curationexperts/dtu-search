@@ -5,3 +5,4 @@ default:
     - "-Xms512m"
     - "-Xmx16384m"
     - "-Djava.util.logging.config.file=logging.properties"
+    - "-server"
