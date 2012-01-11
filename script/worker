@@ -27,7 +27,7 @@ while msg = q.pop
       buff.add(doc)
     rescue Exception => e
       puts "Caught error, see log"
-      logger.error "Error solrizing\n#{e.message}"
+      logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")
       logger.flush
     end
   end
