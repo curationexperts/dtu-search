@@ -11,9 +11,18 @@ Thread.current[:carrot] = Carrot.new(:host=>'mediashelf1.dtic.dk')
 q = Carrot.queue('search.index')
 
 encoder = JournalEncoder.new
-buff = BufferedIndexer.new
+@buff = BufferedIndexer.new
 
-trap("SIGINT") { print "Finishing writes..."; buff.flush(true); puts "Done."; exit; }
+def shutdown_cleanly
+  print "Finishing writes..."
+  @buff.flush(true)
+  puts "Done."
+  exit
+end
+
+Signal.trap("INT") { shutdown_cleanly }
+Signal.trap("TERM") { shutdown_cleanly }
+Signal.trap("KILL") { shutdown_cleanly }
 
 while msg = q.pop
   list = [msg]
@@ -24,7 +33,7 @@ while msg = q.pop
   l.each do |m|
     begin
       doc = JournalEncoder.solrize(m.xml)
-      buff.add(doc)
+      @buff.add(doc)
     rescue SystemExit, Interrupt, SignalException
       raise
     rescue Exception => exception
@@ -34,6 +43,6 @@ while msg = q.pop
     end
   end
 end
-buff.flush(true)
+@buff.flush(true)
 
 Carrot.stop
