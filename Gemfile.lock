@@ -44,7 +44,7 @@ GEM
       unicode
     builder (3.0.0)
     carrot (1.2.0)
-    childprocess (0.2.5)
+    childprocess (0.2.8)
       ffi (~> 1.0.6)
     chunky_png (1.2.5)
     coffee-rails (3.1.1)
@@ -71,7 +71,7 @@ GEM
     fssm (0.2.8)
     hike (1.2.1)
     i18n (0.6.0)
-    jettywrapper (1.2.0)
+    jettywrapper (1.2.1)
       activesupport (>= 3.0.0)
       childprocess
       i18n
