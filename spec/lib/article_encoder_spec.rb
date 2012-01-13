@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-require 'journal_encoder'
+require 'article_encoder'
 
-describe JournalEncoder do
+describe ArticleEncoder do
 
   describe "add"  do
     it "should work" do
-      doc = JournalEncoder.solrize(File.open("spec/fixtures/first.xml"))
+      doc = ArticleEncoder.solrize(File.open("spec/fixtures/first_article.xml"))
       doc['format'].should == 'article'
       doc['id'].should == '2004102797887465'
     end
@@ -24,7 +24,7 @@ describe JournalEncoder do
             <sf:name>Maroun, Rania</sf:name>
           </sf:author>
       </people>") 
-      result = JournalEncoder.hashify(ns.root.children)
+      result = ArticleEncoder.hashify(ns.root.children)
       result['author_name_t'].should == ['El-Fadel, Mutasem', 'Aldeen, Raja Abou Fakher', 'Maroun, Rania']
     end
   end
