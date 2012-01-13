@@ -8,6 +8,36 @@ body {
   height: auto;
 }
 
+#sortAndPerPage {
+  label {
+    float: none;
+  }
+  form#sort_form {
+    margin-left: 10px;
+  }
+  form.per_page {
+    margin-left: 20px;
+    display: inline-block;
+    float: none;
+  }
+}
+
+.tools {
+  clear:left;
+
+  label.toggle_folder {
+    float:none;
+  }
+  .documentFunctions {
+    margin-top: -7px;
+  }
+}
+
+.document {
+  margin-bottom:20px;
+  padding-bottom: 10px;
+}
+
 .btn.primary {
   background-color: #900;
   background-image: -moz-linear-gradient(center top , #500, #900);
@@ -24,7 +54,11 @@ input:focus, textarea:focus {
 }
 
 .appliedFilter {
-    background: none repeat scroll 0 0 #900;
+    background-color: #900;
+    background-image: -moz-linear-gradient(center top , #500, #900);
+    background-image: -webkit-linear-gradient(top, #500, #900);
+    background-image: -o-linear-gradient(top, #500, #900);
+    background-image: linear-gradient(top, #500, #900);
     border: 1px solid #500;
     color: white;
 }
@@ -33,6 +67,11 @@ input:focus, textarea:focus {
     background: url("/assets/delete.png") no-repeat scroll center center transparent;
     border-bottom: medium none;
     border-left: 1px solid #500;
+}
+
+.appliedFilter .queryName, .appliedFilter .filterName {
+    background: url("/assets/arrow.png") no-repeat right 2px;
+    padding-right: 9px;
 }
 
 #main_container {
@@ -54,6 +93,11 @@ h1 {
 h2 {
   font-size: 1em;
 
+}
+
+.index_title a:link, .index_title a:visited, .index_title a:active {
+  color: #282828;
+  font-size: 14px;
 }
 
 a:link, a:visited, a:active {
