@@ -1,0 +1,17 @@
+
+Notes in wiki: https://github.com/mediashelf/dtu-search/wiki
+
+h2. Setup
+
+Install postgres.  See https://github.com/mediashelf/dtu-search/wiki/Database-Setup
+
+<pre>brew install postgres</pre>
+
+h2. Install
+
+<pre>
+  bundle install
+  rake jetty:start
+  rake index:articles  # Indexes 10 articles from spec/fixtures/records.txt
+  unicorn_rails  # instead of rails server.  Default port: 8080
+</pre>
