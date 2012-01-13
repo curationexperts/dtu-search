@@ -1,14 +1,13 @@
 require 'spec_helper'
 
-require 'article_encoder'
-
-describe ArticleEncoder do
+describe DTU::ArticleEncoder do
 
   describe "add"  do
     it "should work" do
-      doc = ArticleEncoder.solrize(File.open("spec/fixtures/first_article.xml"))
+      doc = DTU::ArticleEncoder.solrize(File.open("spec/fixtures/first_article.xml"))
       doc['format'].should == 'article'
       doc['id'].should == '2004102797887465'
+      doc['title_s'].should == 'Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile'
     end
   end
   describe "#hashify" do
@@ -24,7 +23,7 @@ describe ArticleEncoder do
             <sf:name>Maroun, Rania</sf:name>
           </sf:author>
       </people>") 
-      result = ArticleEncoder.hashify(ns.root.children)
+      result = DTU::ArticleEncoder.hashify(ns.root.children)
       result['author_name_t'].should == ['El-Fadel, Mutasem', 'Aldeen, Raja Abou Fakher', 'Maroun, Rania']
     end
   end

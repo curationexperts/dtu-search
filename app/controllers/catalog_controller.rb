@@ -14,12 +14,12 @@ class CatalogController < ApplicationController
     }
 
     # solr field configuration for search results/index views
-    config.index.show_link = 'article_title_s' #'title_display'
+    config.index.show_link = 'title_s' #'title_display'
     config.index.record_display_type = 'format'
 
     # solr field configuration for document/show views
-    config.show.html_title = 'article_title_s'
-    config.show.heading = 'article_title_s'
+    config.show.html_title = 'title_s'
+    config.show.heading = 'title_s'
     config.show.display_type = 'format'
 
     # solr fields that will be treated as facets by the blacklight application
@@ -40,6 +40,7 @@ class CatalogController < ApplicationController
     # app code to actually have it echo'd back to see it.  
     config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20 
     config.add_facet_field 'author_name_facet', :label => 'Author', :limit => 20 
+    config.add_facet_field 'format', :label => 'Format', :limit => 20 
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request

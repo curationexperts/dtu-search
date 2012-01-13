@@ -1,0 +1,33 @@
+<document type="journal">
+  <header>
+    <id type="issn">00000043</id>
+    <create-date>20091203</create-date>
+    <update-date>20091203</update-date>
+    <title>Irregular serials + annuals</title>
+    <title-normalized>irregular serials annuals</title-normalized>
+    <holdings>ill</holdings>
+  </header>
+  <entry name="tiborder_ill" local-id="12949438">
+    <title>Irregular serials + annuals</title>
+    <issn>00000043</issn>
+    <title-normalized>irregular serials annuals</title-normalized>
+    <issn-normalized>00000043</issn-normalized>
+    <publisher>
+      <name>Bowker</name>
+      <location>New York, NY [u.a.]</location>
+    </publisher>
+    <holdings>
+      <interval shelfmark="!Haus2!AA 9715 @ f">
+        <from>
+          <year>1967</year>
+          <volume>1</volume>
+        </from>
+        <to>
+          <year>1987</year>
+          <volume>13</volume>
+        </to>
+      </interval>
+    </holdings>
+  </entry>
+</document>
+
