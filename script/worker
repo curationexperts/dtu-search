@@ -4,13 +4,12 @@
 SELECT_SIZE = 100
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
-require 'buffered_indexer'
-require 'article_encoder'
+require 'dtu'
 
 Thread.current[:carrot] = Carrot.new(:host=>'mediashelf1.dtic.dk')
 q = Carrot.queue('search.index')
 
-@buff = BufferedIndexer.new
+@buff = DTU::BufferedIndexer.new
 
 def shutdown_cleanly
   print "Finishing writes..."
@@ -31,7 +30,7 @@ while msg = q.pop
   l = Metastore.find(list)
   l.each do |m|
     begin
-      doc = ArticleEncoder.solrize(m.xml)
+      doc = DTU::ArticleEncoder.solrize(m.xml)
       @buff.add(doc)
     rescue SystemExit, Interrupt, SignalException
       raise
