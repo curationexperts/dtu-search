@@ -372,31 +372,112 @@
 
 
   <requestHandler name="search" class="solr.SearchHandler" >
-    <lst name="defaults">
-     <str name="defType">dismax</str>
-       <str name="facet">on</str>
-      <str name="facet.mincount">1</str>
-	<str name="echoParams">explicit</str>
-     <float name="tie">0.01</float>
-     <str name="qf">id^0.8 id_t^0.8 format text^0.3 author_name_t</str>
-     <str name="pf">id^0.9  id_t^0.9 text^0.5</str>
-      <str name="fl">
-        id,text,*
-     </str>
-     <str name="mm">
-        2&lt;-1 5&lt;-2 6&lt;90%
-     </str>
-     <int name="ps">100</int>
-     <str name="q.alt">*:*</str>
-     <!-- example highlighter config, enable per-query with hl=true -->
-     <str name="hl.fl">text features name</str>
-     <!-- for this field, we want no fragmenting, just highlighting -->
-     <str name="f.name.hl.fragsize">0</str>
-     <!-- instructs Solr to return the field itself if no query terms are
-          found -->
-     <str name="f.name.hl.alternateField">name</str>
-     <str name="f.text.hl.fragmenter">regex</str> <!-- defined below -->
-    </lst>
+    <!-- default values for query parameters can be specified, these
+         will be overridden by parameters in the request
+      -->
+     <lst name="defaults">
+       <str name="defType">dismax</str>
+       <str name="echoParams">explicit</str>
+       <int name="rows">10</int>
+
+       <str name="q.alt">*:*</str>
+       <str name="mm">2&lt;-1 5&lt;-2 6&lt;90%</str>
+
+       <!-- this qf and pf are used by default, if not otherwise specified by
+            client. The default blacklight_config will use these for the
+            "keywords" search. See the author_qf/author_pf, title_qf, etc 
+            below, which the default blacklight_config will specify for
+            those searches. You may also be interested in:
+            http://wiki.apache.org/solr/LocalParams
+       -->
+
+       <str name="qf">
+         text
+       </str>
+       <str name="pf">
+         text^10
+       </str>
+       
+       <int name="ps">3</int>
+       <float name="tie">0.01</float>
+
+       <!-- NOT using marc_display because it is large and will slow things down for search results -->
+       <str name="fl">
+         id, 
+         score,
+         format, 
+         *
+       </str>
+
+       <str name="facet">true</str>
+       <str name="facet.mincount">1</str>
+       <str name="facet.limit">10</str>
+       <str name="facet.field">format</str>
+       
+       <str name="spellcheck">true</str>
+       <str name="spellcheck.dictionary">default</str>
+       <str name="spellcheck.onlyMorePopular">true</str>
+       <str name="spellcheck.extendedResults">true</str>
+       <str name="spellcheck.collate">false</str>
+       <str name="spellcheck.count">5</str>
+
+     </lst>
+    <!-- In addition to defaults, "appends" params can be specified
+         to identify values which should be appended to the list of
+         multi-val params from the query (or the existing "defaults").
+      -->
+    <!-- In this example, the param "fq=instock:true" would be appended to
+         any query time fq params the user may specify, as a mechanism for
+         partitioning the index, independent of any user selected filtering
+         that may also be desired (perhaps as a result of faceted searching).
+
+         NOTE: there is *absolutely* nothing a client can do to prevent these
+         "appends" values from being used, so don't use this mechanism
+         unless you are sure you always want it.
+      -->
+    <!--
+       <lst name="appends">
+         <str name="fq">inStock:true</str>
+       </lst>
+      -->
+    <!-- "invariants" are a way of letting the Solr maintainer lock down
+         the options available to Solr clients.  Any params values
+         specified here are used regardless of what values may be specified
+         in either the query, the "defaults", or the "appends" params.
+
+         In this example, the facet.field and facet.query params would
+         be fixed, limiting the facets clients can use.  Faceting is
+         not turned on by default - but if the client does specify
+         facet=true in the request, these are the only facets they
+         will be able to see counts for; regardless of what other
+         facet.field or facet.query params they may specify.
+
+         NOTE: there is *absolutely* nothing a client can do to prevent these
+         "invariants" values from being used, so don't use this mechanism
+         unless you are sure you always want it.
+      -->
+    <!--
+       <lst name="invariants">
+         <str name="facet.field">cat</str>
+         <str name="facet.field">manu_exact</str>
+         <str name="facet.query">price:[* TO 500]</str>
+         <str name="facet.query">price:[500 TO *]</str>
+       </lst>
+      -->
+    <!-- If the default list of SearchComponents is not desired, that
+         list can either be overridden completely, or components can be
+         prepended or appended to the default list.  (see below)
+      -->
+    <!--
+       <arr name="components">
+         <str>nameOfCustomComponent1</str>
+         <str>nameOfCustomComponent2</str>
+       </arr>
+      -->
+    <arr name="last-components">
+      <str>spellcheck</str>
+    </arr>
+      
   </requestHandler>
   
   <requestHandler name="public_search" class="solr.SearchHandler" >

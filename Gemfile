@@ -6,7 +6,7 @@ gem 'pg'
 gem 'blacklight'
 gem 'devise'
 gem 'jettywrapper'
-gem 'solrizer'
+gem 'nokogiri'
 
 gem 'therubyracer'
 

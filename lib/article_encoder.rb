@@ -1,4 +1,4 @@
-class JournalEncoder
+class ArticleEncoder
 
   def self.solrize(xml)
     o = {}

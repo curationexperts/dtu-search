@@ -1,0 +1,51 @@
+body {
+    background: url("/assets/blacklight/bg.png") repeat-x scroll left top #707070;
+    font: 0.7em/1.4 Verdana,"Lucida Grande","Lucida Sans Unicode","Arial Unicode MS",Arial,sans-serif;
+}
+
+#main_container {
+
+ padding: 10px;
+}
+
+#page {
+  border-top: 3px solid #606;
+  background: white;
+  width: 960px;
+}
+
+h1.site_title {
+  background: url("/assets/cloud-grey.png") no-repeat scroll left top transparent;
+  height: 123px;
+  width: 163px;
+}
+#hd {
+  padding: .3em 0;
+}
+
+#bd {
+  margin: 0;
+}
+
+#bd #sidebar {
+  width: 220px;
+  margin-right: 0;
+}
+#bd #main {
+  padding: 0;
+  margin: 0;
+}
+
+.cover-image {
+  float: left;
+  margin-right: 10px;
+}
+
+#facets span.label {
+  white-space: normal;
+  background: none;
+}
+
+label[for=search_field] {
+  float:none
+}

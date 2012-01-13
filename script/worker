@@ -5,15 +5,23 @@ SELECT_SIZE = 100
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
 require 'buffered_indexer'
-require 'journal_encoder'
+require 'article_encoder'
 
 Thread.current[:carrot] = Carrot.new(:host=>'mediashelf1.dtic.dk')
 q = Carrot.queue('search.index')
 
-encoder = JournalEncoder.new
-buff = BufferedIndexer.new
+@buff = BufferedIndexer.new
 
-trap("SIGINT") { print "Finishing writes..."; buff.flush(true); puts "Done."; exit; }
+def shutdown_cleanly
+  print "Finishing writes..."
+  @buff.flush(true)
+  puts "Done."
+  exit
+end
+
+Signal.trap("INT") { shutdown_cleanly }
+Signal.trap("TERM") { shutdown_cleanly }
+Signal.trap("KILL") { shutdown_cleanly }
 
 while msg = q.pop
   list = [msg]
@@ -22,9 +30,18 @@ while msg = q.pop
   end
   l = Metastore.find(list)
   l.each do |m|
-    buff.add(JournalEncoder.solrize(m.xml))
+    begin
+      doc = ArticleEncoder.solrize(m.xml)
+      @buff.add(doc)
+    rescue SystemExit, Interrupt, SignalException
+      raise
+    rescue Exception => exception
+      puts "Caught #{exception.class}, see log"
+      logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")
+      logger.flush
+    end
   end
 end
-buff.flush(true)
+@buff.flush(true)
 
 Carrot.stop

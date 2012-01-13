@@ -5,8 +5,8 @@ class Indexer
 
   def self.run(num)
     require 'buffered_indexer'
-    require 'journal_encoder'
-    encoder = JournalEncoder.new
+    require 'artical_encoder'
+    encoder = ArticleEncoder.new
     buff = BufferedIndexer.new
     count = 0
 
@@ -17,7 +17,7 @@ class Indexer
       puts "Batch ##{count}"
       benchmark "ingest 1000 documents" do
         batch.each do |l|
-          buff.add(JournalEncoder.solrize(l.xml))
+          buff.add(ArticleEncoder.solrize(l.xml))
         end
       end
       break if (count == num_batches)
