@@ -8,6 +8,15 @@ body {
   height: auto;
 }
 
+#startOverLink {
+  background-color: #900;
+  background-image: -moz-linear-gradient(center top , #500, #900);
+  background-image: -webkit-linear-gradient(top, #500, #900);
+  background-image: -o-linear-gradient(top, #500, #900);
+  background-image: linear-gradient(top, #500, #900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#500', endColorstr='#900', GradientType=0);
+}
+
 #sortAndPerPage {
   label {
     float: none;
