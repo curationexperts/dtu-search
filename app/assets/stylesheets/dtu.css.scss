@@ -3,6 +3,38 @@ body {
     font: 0.7em/1.4 Verdana,"Lucida Grande","Lucida Sans Unicode","Arial Unicode MS",Arial,sans-serif;
 }
 
+#q {
+  // There was a problem where the field was too small, this fixed it.
+  height: auto;
+}
+
+.btn.primary {
+  background-color: #900;
+  background-image: -moz-linear-gradient(center top , #500, #900);
+  background-image: -webkit-linear-gradient(top, #500, #900);
+  background-image: -o-linear-gradient(top, #500, #900);
+  background-image: linear-gradient(top, #500, #900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#500', endColorstr='#900', GradientType=0);
+} 
+
+input:focus, textarea:focus {
+    border-color: rgba(236, 168, 82, 0.8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(236, 168, 82, 0.6);
+    outline: 0 none;
+}
+
+.appliedFilter {
+    background: none repeat scroll 0 0 #900;
+    border: 1px solid #500;
+    color: white;
+}
+
+.appliedFilter .btnRemove {
+    background: url("/assets/delete.png") no-repeat scroll center center transparent;
+    border-bottom: medium none;
+    border-left: 1px solid #500;
+}
+
 #main_container {
 
  padding: 10px;
@@ -12,6 +44,24 @@ body {
   border-top: 3px solid #606;
   background: white;
   width: 960px;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: #909090;
+  margin-bottom: auto;
+}
+h2 {
+  font-size: 1em;
+
+}
+
+a:link, a:visited, a:active {
+  color: #900;
+}
+
+#links ul li, #mylibrary ul li {
+  list-style-image: url(/assets/arrow.png)
 }
 
 h1.site_title {
@@ -41,7 +91,7 @@ h1.site_title {
   margin-right: 10px;
 }
 
-#facets span.label {
+#facets .label {
   white-space: normal;
   background: none;
 }
