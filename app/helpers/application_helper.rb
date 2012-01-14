@@ -13,6 +13,7 @@ logger.warn "title_s: " + document['title_s'].inspect
 
     title = CGI.escape document['title_s'] if document['title_s']
     doi = CGI.escape(document['recordid_doi_t'].first) if document['recordid_doi_t'] 
-    "http://sfx.cvt.dk/sfx_local?rft.jtitle=#{CGI.escape document['journal_title_t'].first}&amp;rft.issn=#{document['journal_issn_t'].first }&amp;rft.pages=#{document['journal_page_t'].first }&amp;rft.spage=#{document['journal_page_t'].first }&amp;rft.volume=#{document['journal_vol_t'].first }&amp;rft.issue=#{document['journal_issue_t']}&amp;rft.date=#{document['journal_year_t']}&amp;rft.atitle=#{title}&amp;rft.doi=#{ doi }&amp;rft.au=#{CGI.escape document['author_name_t'].first }&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary".html_safe
+    author = CGI.escape(document['author_name_t'].first) if document['author_name_t'] 
+    "http://sfx.cvt.dk/sfx_local?rft.jtitle=#{CGI.escape document['journal_title_t'].first}&amp;rft.issn=#{document['journal_issn_t'].first }&amp;rft.pages=#{document['journal_page_t'].first }&amp;rft.spage=#{document['journal_page_t'].first }&amp;rft.volume=#{document['journal_vol_t'].first }&amp;rft.issue=#{document['journal_issue_t']}&amp;rft.date=#{document['journal_year_t']}&amp;rft.atitle=#{title}&amp;rft.doi=#{ doi }&amp;rft.au=#{author}&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary".html_safe
   end
 end
