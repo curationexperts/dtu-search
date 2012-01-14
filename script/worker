@@ -30,7 +30,7 @@ while msg = q.pop
   l = Metastore.find(list)
   l.each do |m|
     begin
-      doc = DTU::ArticleEncoder.solrize(m.xml)
+      doc = DTU::ArticleEncoder.solrize(m.id, m.xml)
       @buff.add(doc)
     rescue SystemExit, Interrupt, SignalException
       raise

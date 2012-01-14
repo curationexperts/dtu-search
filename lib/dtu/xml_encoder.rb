@@ -1,11 +1,11 @@
 module DTU
   class XmlEncoder
-    def self.solrize(xml)
+    def self.solrize(id, xml)
       o = {}
       doc = Nokogiri::XML(xml)
 
       o = hashify(doc.root.children)
-      identifier(o)
+      identifier(id, o)
       #puts o.inspect
       o
     end

@@ -4,7 +4,7 @@ describe DTU::ArticleEncoder do
 
   describe "add"  do
     it "should work" do
-      doc = DTU::ArticleEncoder.solrize(File.open("spec/fixtures/first_article.xml"))
+      doc = DTU::ArticleEncoder.solrize('article_fixture', File.open("spec/fixtures/first_article.xml"))
       doc['format'].should == 'article'
       doc['id'].should == '2004102797887465'
       doc['title_s'].should == 'Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile'

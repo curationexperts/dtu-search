@@ -1,8 +1,9 @@
 module DTU
   class JournalEncoder < XmlEncoder
 
-    def self.identifier(doc)
+    def self.identifier(id, doc)
       doc['id'] = doc['header_id_t'].first
+      doc['metastore_id_s'] = id
       doc['format'] = 'journal'
       if doc['entry_title_t'].nil?
         raise "No Journal title for journal #{doc['id']}"

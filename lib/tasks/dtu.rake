@@ -7,7 +7,7 @@ namespace :index do
   task :articles => :environment do
     buff = DTU::BufferedIndexer.new
     Nokogiri::XML(File.open("spec/fixtures/records.txt")).root.xpath('/*/sf:art', {'sf'=>'http://schema.cvt.dk/art_oai_sf/2009'}).each do |l|
-      buff.add(DTU::ArticleEncoder.solrize(l.to_xml))
+      buff.add(DTU::ArticleEncoder.solrize('article_fixture', l.to_xml))
     end
     buff.flush
     Blacklight.solr.commit
@@ -17,7 +17,7 @@ namespace :index do
   task :journals => :environment do
     buff = DTU::BufferedIndexer.new
     Nokogiri::XML(File.open("spec/fixtures/journal.xml")).root.xpath('/documents/document').each do |l|
-      buff.add(DTU::JournalEncoder.solrize(l.to_xml))
+      buff.add(DTU::JournalEncoder.solrize('journal_fixture', l.to_xml))
     end
     buff.flush
     Blacklight.solr.commit
