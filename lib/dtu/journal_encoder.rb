@@ -6,7 +6,7 @@ module DTU
       doc['metastore_id_s'] = id
       doc['format'] = 'journal'
       if doc['entry_title_t'].nil?
-        raise "No Journal title for journal #{doc['id']}"
+        raise "No Journal title for journal #{doc['id']} -- #{id}"
       end
       doc['journal_title_facet'] = doc['entry_title_t'].first
       if doc['entry_publisher_name_t']
