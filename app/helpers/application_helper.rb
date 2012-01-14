@@ -16,4 +16,8 @@ logger.warn "title_s: " + document['title_s'].inspect
     author = CGI.escape(document['author_name_t'].first) if document['author_name_t'] 
     "http://sfx.cvt.dk/sfx_local?rft.jtitle=#{CGI.escape document['journal_title_t'].first}&amp;rft.issn=#{document['journal_issn_t'].first }&amp;rft.pages=#{document['journal_page_t'].first }&amp;rft.spage=#{document['journal_page_t'].first }&amp;rft.volume=#{document['journal_vol_t'].first }&amp;rft.issue=#{document['journal_issue_t']}&amp;rft.date=#{document['journal_year_t']}&amp;rft.atitle=#{title}&amp;rft.doi=#{ doi }&amp;rft.au=#{author}&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary".html_safe
   end
+
+  def show_authors(document)
+    document['author_name_t'].map {|author| link_to(author, add_facet_params_and_redirect('author_name_facet', author)) }.join(' • ').html_safe  if document['author_name_t']
+  end
 end

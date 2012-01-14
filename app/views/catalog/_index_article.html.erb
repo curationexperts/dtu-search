@@ -14,7 +14,7 @@
   </div>
   
   <p class="authors short-view">
-    <%= document['author_name_t'].map {|author| link_to(author, add_facet_params_and_redirect('author_name_facet', author)) }.join(' • ').html_safe %>
+    <%= show_authors(document %>
     <p class="abstract"><%= render_document_show_field_value :document => document, :field => 'abstract_text_t' %></p>
     
     <ul class="tools short-view"><li><a class="disabled" target="_blank" title="Download full text" href="<%= link_to_fulltext(document) %>"><span class="download-disabled"></span>Full text</a></li>
