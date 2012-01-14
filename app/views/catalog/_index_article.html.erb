@@ -1,5 +1,5 @@
 <%# default partial to display solr document fields in catalog show view -%>
-  <div class="cover-image" record_id="00207233,10290400" type="journal" title="<%= render_document_show_field_value :document => document, :field => 'journal_title_t' %>">
+  <div class="cover-image" record_id="<%= document['id'] %>" type="journal" title="<%= render_document_show_field_value :document => document, :field => 'journal_title_t' %>">
     <img class="cover-image normal-view" src="http://dtu-ftc.cvt.dk/coverimage/<%= render_document_show_field_value :document => document, :field => 'journal_issn_t' %>" alt="<%= render_document_show_field_value :document => document, :field => 'journal_title_t' %>">
   </div>
   <h1 class="short-view"><span class="document-type">[Article] </span>
