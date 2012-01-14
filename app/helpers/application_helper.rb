@@ -18,6 +18,6 @@ logger.warn "title_s: " + document['title_s'].inspect
   end
 
   def show_authors(document)
-    document['author_name_t'].map {|author| link_to(author, add_facet_params_and_redirect('author_name_facet', author)) }.join(' • ').html_safe  if document['author_name_t']
+    document['author_name_t'].map {|author| link_to(author, add_facet_params_and_redirect('author_name_facet', author)) }.join(' &#8226; ').html_safe  if document['author_name_t']
   end
 end
