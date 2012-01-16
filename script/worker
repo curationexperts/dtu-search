@@ -32,7 +32,7 @@ while msg = q.pop
     begin
       doc = DTU::ArticleEncoder.solrize(m.id, m.xml)
       @buff.add(doc)
-    rescue SystemExit, Interrupt, SignalException
+    rescue SystemExit, Interrupt, SignalException, RSolr::Error::Http
       raise
     rescue Exception => exception
       puts "Caught #{exception.class}, see log"
