@@ -4,10 +4,13 @@
 require File.join(File.dirname(__FILE__), '../config/environment.rb')
 extend ActiveSupport::Benchmarkable
 
+limit = ARGV[0]
+ 
+limit_query = " LIMIT #{limit}" if limit
+
+sql = "SELECT id FROM #{Metastore.table_name}#{limit_query}"
+
 q = Carrot.queue('search.index')
-
-
-sql = "SELECT id FROM #{Metastore.table_name}"
 conn = Metastore.connection
 ActiveRecord::Base.transaction do
   conn.execute("declare csr cursor for #{sql}")
