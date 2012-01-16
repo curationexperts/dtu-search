@@ -30,6 +30,13 @@ body {
     float: none;
   }
 }
+.pagination {
+  height: auto;
+  margin: auto;
+  a {
+    float:none
+  }
+}
 
 .tools {
   clear:left;
@@ -37,8 +44,10 @@ body {
   label.toggle_folder {
     float:none;
   }
+
   .documentFunctions {
-    margin-top: -7px;
+    margin: -7px 0 0 130px;
+    float: none;
   }
 }
 
@@ -152,3 +161,27 @@ h1.site_title {
 label[for=search_field] {
   float:none
 }
+
+.host-publication, .publisher {
+    color: #6C6C6C;
+}
+
+
+.cover-image {
+  height: 160px;
+  width: 120px;
+
+  .no-image {
+    background-image: url("/assets/no_icon.gif");
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    font-size: 8px;
+    height: 133px;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 3px 5px 3px 20px;
+    width: 75px;
+  }
+}
+
