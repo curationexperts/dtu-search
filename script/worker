@@ -15,7 +15,7 @@ def shutdown_cleanly
   print "Finishing writes..."
   @buff.flush(true)
   puts "Done."
-  exit
+  exit!
 end
 
 Signal.trap("INT") { shutdown_cleanly }
