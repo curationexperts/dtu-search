@@ -148,10 +148,6 @@ h1.site_title {
   margin: 0;
 }
 
-.cover-image {
-  float: left;
-  margin-right: 10px;
-}
 
 #facets .label {
   white-space: normal;
@@ -166,8 +162,17 @@ label[for=search_field] {
     color: #6C6C6C;
 }
 
-
+.authors {
+    color: #6C6C6C;
+    font-size: 0.95em;
+    margin-bottom: 0.5em;
+    padding: 0;
+    position: relative;
+    top: -0.2em;
+}
 .cover-image {
+  float: left;
+  margin-right: 10px;
   height: 160px;
   width: 120px;
 

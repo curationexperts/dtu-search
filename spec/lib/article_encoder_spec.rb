@@ -7,7 +7,7 @@ describe DTU::ArticleEncoder do
       doc = DTU::ArticleEncoder.solrize('article_fixture', File.open("spec/fixtures/first_article.xml"))
       doc['format'].should == 'article'
       doc['id'].should == '2004102797887465'
-      doc['title_s'].should == 'Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile'
+      doc['title_t'].should == ['Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile']
     end
   end
   describe "#hashify" do

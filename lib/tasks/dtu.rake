@@ -25,5 +25,11 @@ namespace :index do
 
   desc "index book fixtures"
   task :books => :environment do
+    buff = DTU::BufferedIndexer.new
+    Nokogiri::XML(File.open("spec/fixtures/book.xml")).root.xpath('/documents/ebk').each do |l|
+      buff.add(DTU::BookEncoder.solrize('book_fixture', l.to_xml))
+    end
+    buff.flush
+    Blacklight.solr.commit
   end
 end

@@ -10,7 +10,7 @@ describe DTU::JournalEncoder do
       doc['entry_holdings_interval_from_year_t'].should == ['1967']
       doc['journal_title_facet'].should == 'Irregular serials + annuals'
       doc['publisher_name_facet'].should == 'Bowker'
-      doc['title_s'].should == 'Irregular serials + annuals'
+      doc['title_t'].should == ['Irregular serials + annuals']
     end
   end
 end

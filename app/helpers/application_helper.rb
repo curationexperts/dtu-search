@@ -9,9 +9,9 @@ logger.warn "page: " + document['journal_page_t'].inspect
 logger.warn "vol: " + document['journal_vol_t'].inspect
 logger.warn "recordid_doi_t: " + document['recordid_doi_t'].inspect
 logger.warn "author_name_t: " + document['author_name_t'].inspect
-logger.warn "title_s: " + document['title_s'].inspect
+logger.warn "title_t: " + document['title_t'].inspect
 
-    title = CGI.escape document['title_s'] if document['title_s']
+    title = CGI.escape document['title_t'].first if document['title_t']
     doi = CGI.escape(document['recordid_doi_t'].first) if document['recordid_doi_t'] 
     author = CGI.escape(document['author_name_t'].first) if document['author_name_t'] 
     issue = document['journal_issue_t'].first if document['journal_issue_t']

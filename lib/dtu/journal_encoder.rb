@@ -8,13 +8,18 @@ module DTU
       if doc['entry_title_t'].nil?
         raise "No Journal title for journal #{doc['id']} -- #{id}"
       end
-      doc['journal_title_facet'] = doc['entry_title_t'].first
+      doc['title_t'] = doc['entry_title_t']
+## Index published date as date
+## Index ingest date as a date
+## Index controlled terms as a facet
+## Index title as a common field
+
+      #doc['journal_title_facet'] = doc['title_t']
       if doc['entry_publisher_name_t']
         #some journal records don't have publisher name
         doc['publisher_name_facet'] = doc['entry_publisher_name_t'].first
       end
         
-      doc['title_s'] = doc['journal_title_facet']
     end
   end
 end
