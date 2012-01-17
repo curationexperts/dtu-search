@@ -9,10 +9,7 @@ module DTU
         raise "No Journal title for journal #{doc['id']} -- #{id}"
       end
       doc['title_t'] = doc['entry_title_t']
-## Index published date as date
-## copy date to date_sort
-## Index ingest date as a date
-## copy ingest date to date_sort
+## copy timestamp to *_sort?
 ## Index controlled terms as a facet
 ## Copy title_t to title_display and title_sort
 

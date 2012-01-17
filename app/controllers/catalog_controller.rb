@@ -42,7 +42,9 @@ class CatalogController < ApplicationController
     # config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20 
     # config.add_facet_field 'author_name_facet', :label => 'Author', :limit => 20 
     config.add_facet_field 'format', :label => 'Format', :limit => 20 
-    config.add_facet_field 'ctrlt_text_t', :label => 'Keywords', :limit => 20 
+    config.add_facet_field 'keywords_facet', :label => 'Keywords', :limit => 20 
+    config.add_facet_field 'pub_date', :label => 'Publication Year' 
+
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request

@@ -8,6 +8,7 @@ module DTU
       doc['author_name_facet'] = doc['author_name_t']
       doc['title_t'] = doc['ebook_title_t']
       doc['pub_date'] = doc['publication_year_t'].first if doc['publication_year_t']
+      doc['keywords_facet'] = doc['ctrlT_term_t']
     end
   end
 end

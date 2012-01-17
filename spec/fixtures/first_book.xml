@@ -30,6 +30,11 @@
     <isbn>0131851373</isbn>
     <pages>p. cm</pages>
   </publication>
+  <ctrlT>
+    <thesaurus>LOC</thesaurus>
+    <term>RFID</term>
+    <term>Radio frequency</term>
+  </ctrlT>
   <uctrlT>
     <term>Electronic books.</term>
   </uctrlT>
