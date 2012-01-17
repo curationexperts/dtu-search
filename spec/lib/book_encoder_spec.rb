@@ -9,6 +9,7 @@ describe DTU::BookEncoder do
       doc['id'].should == '0032316769777'
       doc['title_t'].should == ['Rfid sourcebook [electronic resource] /']
       doc['author_name_t'].should == ['Lahiri, Sandip.', 'Safari Tech Books Online.']
+      doc['pub_date'].should == '2013'
     end
   end
 end

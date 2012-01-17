@@ -1,4 +1,7 @@
 require 'dtu'
+desc "Index all fixtures"
+task :index => 'index:all'
+
 namespace :index do
   desc 'Index fixture objects in the repository.'
   task :all => [:articles, :journals, :books]

@@ -10,9 +10,11 @@ module DTU
       end
       doc['title_t'] = doc['entry_title_t']
 ## Index published date as date
+## copy date to date_sort
 ## Index ingest date as a date
+## copy ingest date to date_sort
 ## Index controlled terms as a facet
-## Index title as a common field
+## Copy title_t to title_display and title_sort
 
       #doc['journal_title_facet'] = doc['title_t']
       if doc['entry_publisher_name_t']

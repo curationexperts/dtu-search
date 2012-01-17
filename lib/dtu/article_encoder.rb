@@ -7,6 +7,7 @@ module DTU
       doc['format'] = 'article'
       doc['author_name_facet'] = doc['author_name_t']
       doc['title_t'] = doc['article_title_t']
+      doc['pub_date'] = doc['journal_year_t'].first if doc['journal_year_t']
       j_title = doc['journal_title_t'] || doc['journal_ctitle_t']
       if j_title.nil?
         raise "No Journal title for article #{doc['id']} -- #{id}"

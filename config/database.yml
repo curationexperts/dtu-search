@@ -14,8 +14,8 @@ development:
 test:
   adapter: postgresql
   username: dtu_search_test
-  database: metastore
-  schema_search_path: dtu_search_test
+  database: metastore_test
+  # schema_search_path: dtu_search_test  #schemas don't work for tests :<
   password: XJ9fNWA16m
   host: localhost
   pool: 5
