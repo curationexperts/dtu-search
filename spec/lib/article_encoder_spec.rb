@@ -8,6 +8,8 @@ describe DTU::ArticleEncoder do
       doc['format'].should == 'article'
       doc['id'].should == '2004102797887465'
       doc['title_t'].should == ['Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile']
+      doc['title_sort'].should == 'Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile'
+      doc['author_sort'].should == 'Khalifa, Nehad'
       doc['keywords_facet'].should == ['Plankton', 'Rotifers']
       doc['pub_date'].should == '2004'
     end

@@ -9,6 +9,7 @@ module DTU
         raise "No Journal title for journal #{doc['id']} -- #{id}"
       end
       doc['title_t'] = doc['entry_title_t']
+      doc['title_sort'] = doc['title_t'].first
 ## copy timestamp to *_sort?
 ## Index controlled terms as a facet
 ## Copy title_t to title_display and title_sort
