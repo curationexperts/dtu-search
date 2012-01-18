@@ -24,7 +24,7 @@ offset_query = " OFFSET #{offset}" if offset
 
 sql = "SELECT id FROM #{Metastore.table_name} ORDER BY id#{limit_query}#{offset_query}"
 
-q = Carrot.queue('search.index')
+q = Carrot.queue(queue_name)
 conn = Metastore.connection
 ActiveRecord::Base.transaction do
   conn.execute("declare csr cursor for #{sql}")
