@@ -5,6 +5,7 @@ module DTU
     autoload :XmlEncoder
     autoload :JournalEncoder
     autoload :ArticleEncoder
+    autoload :BookEncoder
     autoload :BufferedIndexer
   end
   

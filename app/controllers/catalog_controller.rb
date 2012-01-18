@@ -14,12 +14,12 @@ class CatalogController < ApplicationController
     }
 
     # solr field configuration for search results/index views
-    config.index.show_link = 'title_s' #'title_display'
+    config.index.show_link = 'title_t' #'title_display'
     config.index.record_display_type = 'format'
 
     # solr field configuration for document/show views
-    config.show.html_title = 'title_s'
-    config.show.heading = 'title_s'
+    config.show.html_title = 'title_t'
+    config.show.heading = 'title_t'
     config.show.display_type = 'format'
 
     # solr fields that will be treated as facets by the blacklight application
@@ -38,9 +38,13 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
-    config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20 
-    config.add_facet_field 'author_name_facet', :label => 'Author', :limit => 20 
+
+    # config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20 
+    # config.add_facet_field 'author_name_facet', :label => 'Author', :limit => 20 
     config.add_facet_field 'format', :label => 'Format', :limit => 20 
+    config.add_facet_field 'keywords_facet', :label => 'Keywords', :limit => 20 
+    config.add_facet_field 'pub_date', :label => 'Publication Year' 
+
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -81,7 +85,7 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise. 
     
     config.add_search_field 'all_fields', :label => 'All Fields' do |field|
-      field.solr_parameters = { :qf => 'article_title_t author_name_t abstract_text_t' }
+      field.solr_parameters = { :qf => 'ebook_title_t article_title_t entry_title_t author_name_t abstract_text_t abstract_abstract_t' }
     end
     
 

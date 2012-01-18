@@ -3,11 +3,28 @@
 
 require File.join(File.dirname(__FILE__), '../config/environment.rb')
 extend ActiveSupport::Benchmarkable
+if ARGV[0] == '--help'
+  puts "Useage: "
+  puts "\tenqueue_jobs <numberOfRows> <offset> <queue name>"
+  puts "\tenqueue_jobs <numberOfRows> <offset>"
+  puts "\tenqueue_jobs <numberOfRows>\n\n"
+  puts "\tdefault queue name is search.index\n\n"
+  exit
+end
 
-q = Carrot.queue('search.index')
+limit = ARGV[0]
+offset = ARGV[1]
+queue_name = ARGV[2] || 'search.index'
 
 
-sql = "SELECT id FROM #{Metastore.table_name}"
+limit_query = " LIMIT #{limit}" if limit
+offset_query = " OFFSET #{offset}" if offset
+
+ 
+
+sql = "SELECT id FROM #{Metastore.table_name} ORDER BY id#{limit_query}#{offset_query}"
+
+q = Carrot.queue(queue_name)
 conn = Metastore.connection
 ActiveRecord::Base.transaction do
   conn.execute("declare csr cursor for #{sql}")

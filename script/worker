@@ -4,19 +4,18 @@
 SELECT_SIZE = 100
 
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
-require 'buffered_indexer'
-require 'article_encoder'
+require 'dtu'
 
 Thread.current[:carrot] = Carrot.new(:host=>'mediashelf1.dtic.dk')
 q = Carrot.queue('search.index')
 
-@buff = BufferedIndexer.new
+@buff = DTU::BufferedIndexer.new
 
 def shutdown_cleanly
   print "Finishing writes..."
   @buff.flush(true)
   puts "Done."
-  exit
+  exit!
 end
 
 Signal.trap("INT") { shutdown_cleanly }
@@ -31,10 +30,15 @@ while msg = q.pop
   l = Metastore.find(list)
   l.each do |m|
     begin
-      doc = ArticleEncoder.solrize(m.xml)
+      doc = DTU::ArticleEncoder.solrize(m.id, m.xml)
       @buff.add(doc)
     rescue SystemExit, Interrupt, SignalException
       raise
+    rescue RSolr::Error::Http => exception
+      puts "Fatal #{exception.class}, exception see log"
+      logger.fatal( "\n\n#{exception.class} (#{exception.message})\n\n")
+      logger.flush
+      exit!
     rescue Exception => exception
       puts "Caught #{exception.class}, see log"
       logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")

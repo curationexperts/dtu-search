@@ -1,0 +1,27 @@
+<%# default partial to display solr document fields in catalog show view -%>
+  <div class="cover-image" record_id="<%= document['metastore_id_s'] %>" type="book" title="<%= render_document_show_field_value :document => document, :field => 'title_t' %>">
+    <img class="cover-image normal-view" src="http://dtu-ftc.cvt.dk/coverimage/<%= render_document_show_field_value :document => document, :field => 'header_id_t' %>" alt="<%= render_document_show_field_value :document => document, :field => 'title_t' %>">
+  </div>
+  <h1 class="short-view"><span class="document-type">[Book] </span>
+    <a class="fulltext" target="_blank" href="https://docdel.cvt.dk/request?source=dlib.dtu.dk:DTUDigitalLibrary&amp;journal=Accounting%2C%20Auditing%20%26%20Accountability%20Journal&amp;issn=<%= render_document_show_field_value :document => document, :field => 'header_id_t' %>"><%= render_document_show_field_value :document => document, :field => 'title_t' %></a>
+  </h1>
+  <div class="publisher">
+    Published by <%= render_document_show_field_value :document => document, :field => 'publication_publisher_t' %>, <%= render_document_show_field_value :document => document, :field => 'publication_year_t' %>
+  </div>
+  <p class="authors short-view">
+    <%= show_authors(document) %>
+  </p>
+  <p class="abstract">
+    <% if document['abstract_abstract_t'] %>
+      <%= render_document_show_field_value :document => document, :field => 'abstract_abstract_t' %>
+    <% else %>
+      No abstract available
+    <% end %>
+  </p>
+  <ul class="tools short-view">
+    <li>
+      <%= render_index_doc_actions document %>
+    </li>
+
+  </ul>
+

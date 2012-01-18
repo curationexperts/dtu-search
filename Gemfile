@@ -35,7 +35,7 @@ gem 'unicorn'
 #gem "ruby-debug-base19", "0.11.26"
 #gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :development, :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
   gem 'rspec-rails'
