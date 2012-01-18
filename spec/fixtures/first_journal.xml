@@ -1,33 +1,103 @@
 <document type="journal">
   <header>
-    <id type="issn">00000043</id>
-    <create-date>20091203</create-date>
-    <update-date>20091203</update-date>
-    <title>Irregular serials + annuals</title>
-    <title-normalized>irregular serials annuals</title-normalized>
-    <holdings>ill</holdings>
+    <id type="issn">00014826</id>
+    <create-date>20110128</create-date>
+    <update-date>20120111</update-date>
+    <title>The Accounting review</title>
+    <title-normalized>the accounting review</title-normalized>
+    <holdings>local</holdings>
+    <database>dtuDADS</database>
   </header>
-  <entry name="tiborder_ill" local-id="12949438">
-    <title>Irregular serials + annuals</title>
-    <issn>00000043</issn>
-    <title-normalized>irregular serials annuals</title-normalized>
-    <issn-normalized>00000043</issn-normalized>
+  <entry name="ebsco" local-id="4214408">
+    <title>THE ACCOUNTING REVIEW.</title>
+    <issn>0001-4826</issn>
+    <title-normalized>the accounting review</title-normalized>
+    <issn-normalized>00014826</issn-normalized>
+    <title-abbreviated>Account. rev.</title-abbreviated>
+    <title-status>Active</title-status>
+    <language>English</language>
+    <corporate-name>American Accounting Association. American Association of University Instructors in Accounting.</corporate-name>
+    <description>Provides information on accounting theory and research, business problems, and the teaching of business and accounting subjects.</description>
+    <peer-reviewed>1</peer-reviewed>
+    <preceding>
+      <title>American Association of University Instructors in Accounting. Papers and Proceedings of the Annual Meeting</title>
+    </preceding>
     <publisher>
-      <name>Bowker</name>
-      <location>New York, NY [u.a.]</location>
+      <name>American Accounting Association</name>
     </publisher>
+    <classification>
+      <broader-term>BUSINESS AND ECONOMICS </broader-term>
+      <narrower-term> ACCOUNTING</narrower-term>
+      <lc-subject-heading>HF5601 .A6</lc-subject-heading>
+      <dewey>657</dewey>
+      <udc>65</udc>
+    </classification>
+  </entry>
+  <entry name="dads_jstor" local-id="00014826">
+    <title>Accounting Review</title>
+    <issn>00014826</issn>
+    <title-normalized>accounting review</title-normalized>
+    <issn-normalized>00014826</issn-normalized>
+    <locator>00014826</locator>
     <holdings>
-      <interval shelfmark="!Haus2!AA 9715 @ f">
+      <interval>
         <from>
-          <year>1967</year>
+          <year>1926</year>
           <volume>1</volume>
+          <issue>1</issue>
         </from>
         <to>
-          <year>1987</year>
-          <volume>13</volume>
+          <year>2003</year>
+          <volume>78</volume>
+          <issue>4</issue>
         </to>
       </interval>
     </holdings>
   </entry>
+  <entry name="dads_swets" local-id="00014826">
+    <title>Accounting Review</title>
+    <issn>00014826</issn>
+    <title-normalized>accounting review</title-normalized>
+    <issn-normalized>00014826</issn-normalized>
+    <locator>00014826</locator>
+    <holdings>
+      <interval>
+        <from>
+          <year>1999</year>
+          <volume>1</volume>
+        </from>
+        <to>
+          <year>2010</year>
+          <volume>85</volume>
+          <issue>6</issue>
+        </to>
+      </interval>
+    </holdings>
+  </entry>
+  <entry name="dtv_sfx" local-id="954921333014">
+    <title>The Accounting review</title>
+    <issn>0001-4826</issn>
+    <issn>1558-7967</issn>
+    <title-normalized>the accounting review</title-normalized>
+    <issn-normalized>00014826</issn-normalized>
+    <issn-normalized>15587967</issn-normalized>
+    <locator>00014826</locator>
+    <title-abbreviated>ACCOUNTING REVIEW</title-abbreviated>
+    <title-abbreviated>ACCOUNT REV</title-abbreviated>
+    <classification>
+      <broader-term>Business, Economy and Management</broader-term>
+      <narrower-term>Accounting and Auditing</narrower-term>
+      <narrower-term>Business Management</narrower-term>
+      <narrower-term>Finance</narrower-term>
+      <narrower-term>General and Others</narrower-term>
+      <narrower-term>Trade and Commerce</narrower-term>
+    </classification>
+    <holdings location="EBSCOhost Business Source Premier">
+      <interval>
+        <from>
+          <year>1926</year>
+        </from>
+      </interval>
+    </holdings>
+  </entry>
 </document>
-
