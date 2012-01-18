@@ -19,10 +19,9 @@ queue_name = ARGV[2] || 'search.index'
 
 limit_query = " LIMIT #{limit}" if limit
 offset_query = " OFFSET #{offset}" if offset
+order_query = " ORDER BY id" if limit_query || offset_query
 
- 
-
-sql = "SELECT id FROM #{Metastore.table_name} ORDER BY id#{limit_query}#{offset_query}"
+sql = "SELECT id FROM #{Metastore.table_name}#{order_query}#{limit_query}#{offset_query}"
 
 q = Carrot.queue(queue_name)
 conn = Metastore.connection
