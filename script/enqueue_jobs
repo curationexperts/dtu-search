@@ -5,25 +5,24 @@ require File.join(File.dirname(__FILE__), '../config/environment.rb')
 extend ActiveSupport::Benchmarkable
 if ARGV[0] == '--help'
   puts "Useage: "
-  puts "\tenqueue_jobs <starting id> <ending id> <queue name>"
-  puts "\tenqueue_jobs <starting id> <ending id>"
-  puts "\tenqueue_jobs <number of rows>\n\n"
-  puts "\tstarting_id is inclusive, ending id is exclusive"
+  puts "\tenqueue_jobs <numberOfRows> <offset> <queue name>"
+  puts "\tenqueue_jobs <numberOfRows> <offset>"
+  puts "\tenqueue_jobs <numberOfRows>\n\n"
   puts "\tdefault queue name is search.index\n\n"
   exit
 end
 
-if ARGV[1]
-  limit_query = " WHERE id >= #{ARGV[0]} AND id < #{ARGV[1]} ORDER BY id"
-else
-  limit = ARGV[0]
-  limit_query = " LIMIT #{limit}" if limit
-end
-
+limit = ARGV[0]
+offset = ARGV[1]
 queue_name = ARGV[2] || 'search.index'
+
+
+limit_query = " LIMIT #{limit}" if limit
+offset_query = " OFFSET #{offset}" if offset
+
  
 
-sql = "SELECT id FROM #{Metastore.table_name}#{limit_query}"
+sql = "SELECT id FROM #{Metastore.table_name} ORDER BY id#{limit_query}#{offset_query}"
 
 q = Carrot.queue('search.index')
 conn = Metastore.connection
