@@ -34,7 +34,7 @@ while msg = q.pop
       @buff.add(doc)
     rescue SystemExit, Interrupt, SignalException
       raise
-    rescue RSolr::Error::Http => exception
+    rescue RSolr::Error::Http, Errno::ECONNREFUSED => exception
       puts "Fatal #{exception.class}, exception see log"
       logger.fatal( "\n\n#{exception.class} (#{exception.message})\n\n")
       logger.flush
