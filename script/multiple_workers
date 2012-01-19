@@ -4,7 +4,7 @@
 NUM = ARGV[0] || 15
 
 workers = []
-NUM.times do |n|
+NUM.to_i.times do |n|
   workers << fork { system 'script/worker' } 
 end
 

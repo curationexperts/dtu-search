@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
-gem 'pg'
 
 gem 'blacklight'
 gem 'devise'
@@ -10,9 +9,12 @@ gem 'nokogiri'
 
 platforms :ruby do
   gem 'therubyracer'
+  gem 'pg'
 end
 platforms :jruby do
+  gem 'jruby-openssl'
   gem 'therubyrhino'
+  gem 'activerecord-jdbcpostgresql-adapter'
 end
 
 

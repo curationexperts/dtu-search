@@ -1,5 +1,6 @@
 module DTU
   class BufferedIndexer 
+    include ActiveSupport::Benchmarkable
     BUFFER_SIZE = 1000
     COMMIT_EVERY = 0
 
@@ -21,7 +22,9 @@ module DTU
     def try_to_add
       tries = 0
       begin 
-        solr.add @docs
+	benchmark "#{$$} -- #{Rails.env} update solr" do
+          solr.add @docs
+        end
       rescue TimeoutError 
         ## The timeout is set in this parameter.  It is 60 seconds by default.
         # rsolr.connection.connection.read_timeout = 60
