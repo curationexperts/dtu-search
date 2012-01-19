@@ -9,6 +9,15 @@
     Published by <%= render_document_show_field_value :document => document, :field => 'entry_publisher_name_t' %>
   </div>
   <p class="abstract"><%= render_document_show_field_value :document => document, :field => 'entry_description_t' %></p>
+  <h2 class="detailed-view">Detailed information</h2>
+  <dl class="detailed-view">
+    <% Journal.fields.each do |solr_fname, label| -%>
+      <% if document.has? solr_fname %>
+        <dt class="blacklight-<%= solr_fname.parameterize %>"><%= label %></dt>
+        <dd class="blacklight-<%= solr_fname.parameterize %>"><%= render_index_field_value :document => document, :field => solr_fname %></dd>
+      <% end -%>
+    <% end -%>
+  </dl>
   <ul class="tools short-view">
     <li>
       <%= render_index_doc_actions document %>
