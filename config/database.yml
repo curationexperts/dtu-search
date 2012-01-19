@@ -21,7 +21,7 @@ test:
   pool: 5
   timeout: 5000
 
-production:
+production: &production
   adapter: postgresql
   username: dtu_search_production
   database: metastore
@@ -30,3 +30,7 @@ production:
   host: mediashelf1.dtic.dk
   pool: 5
   timeout: 5000
+
+production2:
+  <<: *production
+
