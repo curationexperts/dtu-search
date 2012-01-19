@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-NUM = 15
+NUM = ARGV[0] || 15
 
 workers = []
 NUM.times do |n|
