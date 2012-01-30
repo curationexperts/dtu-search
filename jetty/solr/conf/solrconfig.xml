@@ -37,7 +37,7 @@
    <!-- Values here affect all index writers and act as a default unless overridden. -->
     <useCompoundFile>false</useCompoundFile>
 
-    <mergeFactor>1000</mergeFactor>
+    <mergeFactor>20</mergeFactor>
     <!--
      If both ramBufferSizeMB and maxBufferedDocs is set, then Lucene will flush based on whichever limit is hit first.
 
@@ -49,7 +49,7 @@
     If both ramBufferSizeMB and maxBufferedDocs is set, then Lucene will flush based on whichever limit is hit first.
 
     -->
-    <ramBufferSizeMB>1024</ramBufferSizeMB>
+    <ramBufferSizeMB>320</ramBufferSizeMB>
     <maxMergeDocs>2147483647</maxMergeDocs>
     <maxFieldLength>10000</maxFieldLength>
     <writeLockTimeout>1000</writeLockTimeout>
@@ -100,8 +100,8 @@
   <mainIndex>
     <!-- options specific to the main on-disk lucene index -->
     <useCompoundFile>false</useCompoundFile>
-    <ramBufferSizeMB>1024</ramBufferSizeMB>
-    <mergeFactor>1000</mergeFactor>
+    <ramBufferSizeMB>320</ramBufferSizeMB>
+    <mergeFactor>20</mergeFactor>
     <!-- Deprecated -->
     <!--<maxBufferedDocs>1000</maxBufferedDocs>-->
     <maxMergeDocs>2147483647</maxMergeDocs>
