@@ -414,12 +414,14 @@
        <str name="facet.limit">10</str>
        <str name="facet.field">format</str>
        
+       <!-- comment out spellcheck to address NPE on sharded queries
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
        <str name="spellcheck.onlyMorePopular">true</str>
        <str name="spellcheck.extendedResults">true</str>
        <str name="spellcheck.collate">false</str>
        <str name="spellcheck.count">5</str>
+       -->
 
      </lst>
     <!-- In addition to defaults, "appends" params can be specified
@@ -474,9 +476,12 @@
          <str>nameOfCustomComponent2</str>
        </arr>
       -->
+      
+    <!--
     <arr name="last-components">
       <str>spellcheck</str>
     </arr>
+    -->
       
   </requestHandler>
   
