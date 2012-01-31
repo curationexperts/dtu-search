@@ -9,11 +9,11 @@ require 'dtu'
 Thread.current[:carrot] = Carrot.new(:host=>'mediashelf1.dtic.dk')
 q = Carrot.queue('search.index')
 
-@buff = DTU::BufferedIndexer.new
+@buff = DTU::ShardedIndexer.new
 
 def shutdown_cleanly
   print "Finishing writes..."
-  @buff.flush(true)
+  @buff.flush()
   puts "Done."
   exit!
 end

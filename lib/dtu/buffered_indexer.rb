@@ -5,11 +5,11 @@ module DTU
     COMMIT_EVERY = 0
 
 
-
-    def initialize
+    def initialize(conn)
       @count = 0
       @batch_count = 0
       @docs = []
+      @solr = conn
     end
 
     def flush(commit = false)
@@ -58,7 +58,7 @@ module DTU
     end
 
     def solr
-      Blacklight.solr
+      @solr
     end
   end
 end

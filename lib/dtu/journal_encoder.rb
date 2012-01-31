@@ -15,8 +15,8 @@ module DTU
         #some journal records don't have publisher name
         doc['publisher_name_facet'] = doc['entry_publisher_name_t'].first
       end
-      doc['keywords_facet'] = doc['entry_classification_broader-term_t'] + doc['entry_classification_narrower-term_t']
-        
+      keywords = ([] << doc['entry_classification_broader-term_t'] << doc['entry_classification_narrower-term_t']).flatten
+      doc['keywords_facet'] = keywords       
     end
   end
 end
