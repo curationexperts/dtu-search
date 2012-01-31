@@ -10,7 +10,7 @@ module DTU
     end
 
     def add(doc)
-      buffer(doc[:id]).add(doc)
+      buffer(doc['id']).add(doc)
     end
 
     def flush(commit = false)
@@ -18,6 +18,7 @@ module DTU
     end
 
     def buffer(id)
+      raise "No id" unless id
       Digest::MD5.hexdigest(id.to_s).hex % @buffers.count
     end
 
