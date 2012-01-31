@@ -19,7 +19,8 @@ module DTU
 
     def buffer(id)
       raise "No id" unless id
-      Digest::MD5.hexdigest(id.to_s).hex % @buffers.count
+      n = Digest::MD5.hexdigest(id.to_s).hex % @buffers.count
+      @buffers[n]
     end
 
   end
