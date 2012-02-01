@@ -7,22 +7,16 @@ module DTU
       @q = Carrot.queue('search.index')
 
       @buff = DTU::ShardedIndexer.new
-      at_exit { shutdown_cleanly} 
-      # Signal.trap("INT") { shutdown_cleanly }
-      # Signal.trap("TERM") { shutdown_cleanly }
-      # Signal.trap("KILL") { shutdown_cleanly }
+      @stopped = false
     end
 
-    def shutdown_cleanly
-      print "Finishing writes..."
-      @buff.flush()
-      puts "Done."
-     # Thread.exit
+    def stop
+      puts "finishing writes"
+      @stopped=true
     end
-
 
     def run
-      while msg = @q.pop
+      while !@stopped && msg = @q.pop
         list = [msg]
         SELECT_SIZE.times do
           list << @q.pop
@@ -44,8 +38,10 @@ module DTU
           end
         end
       end
+      puts "flushing bufferes"
       @buff.flush(true)
       Carrot.stop
+      puts "done"
     end
   end
 end

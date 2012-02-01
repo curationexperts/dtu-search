@@ -7,10 +7,15 @@ require 'dtu'
 NUM = ARGV[0] || 15
 
 workers = []
+threads = []
 NUM.to_i.times do |n|
-  workers << Thread.new { DTU::QueueWorker.new.run }
+  worker = Worker.new
+  workers << worker
+  threads << Thread.new { worker.run }
 end
 
-workers.each do |thread|
+Signal.trap("INT") { workers.each {|w| w.stop} }
+
+threads.each do |thread|
   thread.join
 end
