@@ -19,3 +19,6 @@
 # Ignore vim tempfiles
 *.swp
 *.swo
+
+# OSX cruft
+.DS_Store
