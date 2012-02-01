@@ -1,11 +1,14 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
+require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
+require 'dtu'
+
 NUM = ARGV[0] || 15
 
 workers = []
 NUM.to_i.times do |n|
-  workers << Thread.new { load 'script/worker' } 
+  workers << Thread.new { DTU::QueueWorker.new.run }
 end
 
 workers.each do |thread|
