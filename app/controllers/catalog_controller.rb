@@ -7,8 +7,11 @@ class CatalogController < ApplicationController
 
   layout 'application'
 
+  shards = YAML.load_file(Rails.root + 'config/shards.yml')[Rails.env].map {|x|x.sub('http://', '')}
+
   configure_blacklight do |config|
     config.default_solr_params = { 
+      :shards=> shards.join(','),
       :qt => 'search',
       :rows => 10 
     }
