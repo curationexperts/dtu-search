@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 
-gem 'blacklight'
+gem 'blacklight', '~> 3.1.2'
 gem 'devise'
 gem 'jettywrapper'
 gem 'nokogiri'
