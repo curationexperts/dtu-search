@@ -16,7 +16,10 @@ logger.warn "title_t: " + document['title_t'].inspect
     author = CGI.escape(document['author_name_t'].first) if document['author_name_t'] 
     issue = document['journal_issue_t'].first if document['journal_issue_t']
     year = document['journal_year_t'].first if document['journal_year_t']
-    "http://sfx.cvt.dk/sfx_local?rft.jtitle=#{CGI.escape document['journal_title_t'].first}&amp;rft.issn=#{document['journal_issn_t'].first }&amp;rft.pages=#{document['journal_page_t'].first }&amp;rft.spage=#{document['journal_page_t'].first }&amp;rft.volume=#{document['journal_vol_t'].first }&amp;rft.issue=#{issue}&amp;rft.date=#{year}&amp;rft.atitle=#{title}&amp;rft.doi=#{ doi }&amp;rft.au=#{author}&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary".html_safe
+    vol = document['journal_vol_t'].first if document['journal_vol_t']
+    page = document['journal_page_t'].first if document['journal_page_t']
+    issn = document['journal_issn_t'].first if document['journal_issn_t']
+    "http://sfx.cvt.dk/sfx_local?rft.jtitle=#{title}&amp;rft.issn=#{issn}&amp;rft.pages=#{page}&amp;rft.spage=#{page}&amp;rft.volume=#{vol}&amp;rft.issue=#{issue}&amp;rft.date=#{year}&amp;rft.atitle=#{title}&amp;rft.doi=#{ doi }&amp;rft.au=#{author}&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary".html_safe
   end
 
   def show_authors(document)
