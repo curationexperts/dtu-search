@@ -6,7 +6,7 @@
     <a class="fulltext" target="_blank" href="<%=link_to_fulltext(document) %>"><%= render_document_show_field_value :document => document, :field => 'title_t' %></a>
   </h1>
   <div class="host-publication short-view">
-    <%= link_to(render_document_show_field_value( :document => document, :field => 'journal_title_t'), add_facet_params_and_redirect('journal_title_facet', document['journal_title_t'].first)) %> -
+    <%= link_to(render_document_show_field_value( :document => document, :field => 'journal_title_t'), add_facet_params_and_redirect('journal_title_facet', render_document_show_field_value(:document => document, :field => 'journal_title_t'))) %> -
       <%= render_document_show_field_value :document => document, :field => 'journal_year_t' %>, 
       Volume <%= render_document_show_field_value :document => document, :field => 'journal_vol_t' %>, 
       Issue <%= render_document_show_field_value :document => document, :field => 'journal_issue_t' %>, 
