@@ -1,7 +1,7 @@
 Dtu::Application.routes.draw do
   Blacklight.add_routes(self)
 
-  root :to => "welcome#index"
+  root :to => "catalog#index"
 
   devise_for :users
 
