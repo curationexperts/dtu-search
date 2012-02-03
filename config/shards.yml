@@ -1,10 +1,9 @@
 # This is only used by the indexer
 development:
   - http://localhost:8983/solr/core0
-  - http://localhost:8983/solr/core1
 test:
-  - http://localhost:8983/solr
+  - http://localhost:8983/solr/core0
 production:
-  - http://mediashelf1.dtic.dk:8080/solr_dtu_search
-  - http://mediashelf3.dtic.dk:8080/solr_dtu_search
+  - http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
+  - http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
 

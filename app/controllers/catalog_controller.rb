@@ -5,6 +5,8 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+  before_filter :clear_empty_format, :only=>:index
+
   layout 'application'
 
   shards = YAML.load_file(Rails.root + 'config/shards.yml')[Rails.env].map {|x|x.sub('http://', '')}
@@ -42,7 +44,7 @@ class CatalogController < ApplicationController
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
 
-    # config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20 
+    config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20, :show_in_facet_bar=>false
     # config.add_facet_field 'author_name_facet', :label => 'Author', :limit => 20 
     config.add_facet_field 'format', :label => 'Format', :limit => 20 
     config.add_facet_field 'keywords_facet', :label => 'Keywords', :limit => 20 
@@ -52,7 +54,7 @@ class CatalogController < ApplicationController
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
     # handler defaults, or have no facets.
-    config.default_solr_params[:'facet.field'] = config.facet_fields.keys
+    config.default_solr_params[:'facet.field'] = config.facet_fields.select{ |k, v| v[:show_in_facet_bar] != false}.keys
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display 
@@ -142,6 +144,11 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you 
     # mean") suggestion is offered.
     config.spell_max = 5
+  end
+
+
+  def clear_empty_format
+     params[:f].delete('format') if params[:f] && params[:f]['format'] == ['']
   end
 
 
