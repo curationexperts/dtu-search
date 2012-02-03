@@ -273,6 +273,7 @@
          local query request for each NamedList in sequence. -->
     <listener event="newSearcher" class="solr.QuerySenderListener">
       <arr name="queries">
+        <lst> <str name="q">gold</str> <str name="facet.field">format</str><str name="facet.field">pub_date</str><str name="facet.field">keywords_facet</str><str name="start">0</str> <str name="rows">10</str> </lst>
         <lst> <str name="q">*:*</str> <str name="facet.field">format</str><str name="facet.field">pub_date</str><str name="facet.field">keywords_facet</str><str name="start">0</str> <str name="rows">10</str> </lst>
       </arr>
     </listener>
@@ -282,8 +283,8 @@
          requests or to gain autowarming data from. -->
     <listener event="firstSearcher" class="solr.QuerySenderListener">
       <arr name="queries">
-        <lst> <str name="q">fast_warm</str> <str name="start">0</str> <str name="rows">10</str> </lst>
-        <lst><str name="q">static firstSearcher warming query from solrconfig.xml</str></lst>
+        <lst> <str name="q">gold</str> <str name="facet.field">format</str><str name="facet.field">pub_date</str><str name="facet.field">keywords_facet</str><str name="start">0</str> <str name="rows">10</str> </lst>
+        <lst> <str name="q">*:*</str> <str name="facet.field">format</str><str name="facet.field">pub_date</str><str name="facet.field">keywords_facet</str><str name="start">0</str> <str name="rows">10</str> </lst>
       </arr>
     </listener>
 
@@ -355,20 +356,9 @@
      If no qt is defined, the requestHandler that declares default="true"
      will be used.
   -->
-  <requestHandler name="standard" class="solr.SearchHandler" default="true">
-    <!-- default values for query parameters -->
-     <lst name="defaults">
-       <str name="echoParams">explicit</str>
-       <!-- 
-       <int name="rows">10</int>
-       <str name="fl">*</str>
-       <str name="version">2.1</str>
-        -->
-     </lst>
-  </requestHandler>
 
 
-  <requestHandler name="search" class="solr.SearchHandler" >
+  <requestHandler name="search" class="solr.SearchHandler" default="true" >
     <!-- default values for query parameters can be specified, these
          will be overridden by parameters in the request
       -->
