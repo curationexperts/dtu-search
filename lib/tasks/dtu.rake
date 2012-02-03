@@ -8,7 +8,7 @@ namespace :index do
 
   desc "index article fixtures"
   task :articles => :environment do
-    buff = DTU::BufferedIndexer.new
+    buff = DTU::ShardedIndexer.new
     Nokogiri::XML(File.open("spec/fixtures/records.txt")).root.xpath('/*/sf:art', {'sf'=>'http://schema.cvt.dk/art_oai_sf/2009'}).each do |l|
       buff.add(DTU::ArticleEncoder.solrize('article_fixture', l.to_xml))
     end
@@ -18,7 +18,7 @@ namespace :index do
 
   desc "index journal fixtures"
   task :journals => :environment do
-    buff = DTU::BufferedIndexer.new
+    buff = DTU::ShardedIndexer.new
     Nokogiri::XML(File.open("spec/fixtures/journal.xml")).root.xpath('/documents/document').each do |l|
       buff.add(DTU::JournalEncoder.solrize('journal_fixture', l.to_xml))
     end
@@ -28,7 +28,7 @@ namespace :index do
 
   desc "index book fixtures"
   task :books => :environment do
-    buff = DTU::BufferedIndexer.new
+    buff = DTU::ShardedIndexer.new
     Nokogiri::XML(File.open("spec/fixtures/book.xml")).root.xpath('/documents/ebk').each do |l|
       buff.add(DTU::BookEncoder.solrize('book_fixture', l.to_xml))
     end
