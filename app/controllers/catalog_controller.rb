@@ -46,8 +46,7 @@ class CatalogController < ApplicationController
 
     config.add_facet_field 'journal_title_facet', :label => 'Journal Title', :limit => 20, :show_in_facet_bar=>false
     # config.add_facet_field 'author_name_facet', :label => 'Author', :limit => 20 
-    config.add_facet_field 'format', :label => 'Format', :limit => 20 , :show_in_facet_bar=>false
-
+    config.add_facet_field 'format', :label => 'Format', :limit => 20 
     config.add_facet_field 'keywords_facet', :label => 'Keywords', :limit => 20 
     config.add_facet_field 'pub_date', :label => 'Publication Year' 
 
