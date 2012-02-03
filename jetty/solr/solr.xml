@@ -3,10 +3,12 @@
 <solr persistent="false" sharedLib="lib">
   <cores adminPath="/admin/cores">
     <core name="core0" instanceDir="multi-core" >
-      <property name="dataDir" value="/data/core0" />
+      <property name="dataDir" value="/san/solr-data" />
     </core>
+    <!-- Uncomment if you want to add more shards
     <core name="core1" instanceDir="multi-core">
       <property name="dataDir" value="/data/core1" />
     </core>
+    -->
   </cores>
 </solr>

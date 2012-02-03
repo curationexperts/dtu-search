@@ -16,7 +16,7 @@ development:
 test: &test
   url: http://127.0.0.1:8983/solr
 production:
-  url: http://mediashelf2.dtic.dk:8080/solr_dtu_search
+  url: http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
 production2:
   url: http://mediashelf2.dtic.dk:8080/solr_dtu_search2
 cucumber:
