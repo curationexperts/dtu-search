@@ -9,6 +9,8 @@ Install postgres.  See https://github.com/mediashelf/dtu-search/wiki/Database-Se
 
 h2. Install
 
+Comment out  <dataDir>${dataDir}</dataDir>  in jetty/solr/multi-core/conf/solrconfig.xml so solr will write to its default local data dir.
+
 <pre>
   bundle install
   rake db:migrate
