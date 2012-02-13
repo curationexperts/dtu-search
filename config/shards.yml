@@ -7,5 +7,6 @@ production: &prod
   - http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
   - http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
 production2:
-  <<: *prod
+  - http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
+  - http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
 
