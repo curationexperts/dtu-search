@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
+require 'dtu'
+@buff = DTU::ShardedIndexer.new
+
+
+sql = "SELECT id, xml FROM journals"
+
+count = 0
+ActiveRecord::Base.transaction do
+  conn.execute("declare csr cursor for #{sql}")
+
+  while rows = conn.execute("fetch 10000 from csr").collect {|row| row }
+    break if rows.size < 1
+
+    rows.each do |m|
+      import(m['id'], m['xml'])
+      count += 1
+      puts count if count % 10000 == 0
+    end
+  end
+  conn.execute('close csr')
+end
+
+
+def import(id, xml)
+  begin
+    doc = DTU::JournalEncoder.solrize(id, xml)
+    @buff.add(doc)
+  rescue RSolr::Error::Http, Errno::ECONNREFUSED => exception
+    puts "Fatal #{exception.class}, exception see log"
+    logger.fatal( "\n\n#{exception.class} (#{exception.message})\n\n")
+    logger.flush
+    exit!
+  rescue StandardError => exception
+    puts "Caught #{exception.class}, see log"
+    logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")
+    logger.flush
+  end
+  puts "flushing buffers"
+  @buff.flush(true)
+end
+
