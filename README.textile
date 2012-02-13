@@ -9,6 +9,8 @@ Install postgres.  See https://github.com/mediashelf/dtu-search/wiki/Database-Se
 
 h2. Install
 
+Comment out <dataDir>/san/solr-data</dataDir> in jetty/solr/conf/solrconfig.xml
+
 <pre>
   bundle install
   rake db:migrate
