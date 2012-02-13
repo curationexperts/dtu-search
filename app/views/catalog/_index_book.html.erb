@@ -27,10 +27,5 @@
       <% end -%>
     <% end -%>
   </dl>
-  <ul class="tools short-view">
-    <li>
-      <%= render_index_doc_actions document %>
-    </li>
-
-  </ul>
+  <%= render :partial=>"index_tools", :locals=>{:document=>document}%>
 

@@ -14,7 +14,7 @@ development:
   jetty_path: './jetty'
   url: http://127.0.0.1:8983/solr/core0
 test: &test
-  url: http://127.0.0.1:8983/solr
+  url: http://127.0.0.1:8983/solr/core0
 production:
   url: http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
 production2:

@@ -28,9 +28,4 @@
     <% end -%>
   </dl>
     
-  <ul class="tools short-view"><li><a class="disabled" target="_blank" title="Download full text" href="<%= link_to_fulltext(document) %>"><span class="download-disabled"></span>Full text</a></li>
-    <li>
-      <%= render_index_doc_actions document %>
-    </li>
-
-  </ul>
+  <%= render :partial=>"index_tools", :locals=>{:document=>document}%>
