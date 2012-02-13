@@ -92,6 +92,12 @@ body {
 
   h2.detailed-view {
     clear: both;
+    background: url("/assets/collapse.jpg") no-repeat left center transparent;
+    padding-left: 15px;
+    padding-top: 2px;
+  }
+  h2.detailed-view.collapsed {
+    background: url("/assets/expand.jpg") no-repeat left center transparent;
   }
   dl.detailed-view {
     dt {
