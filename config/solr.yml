@@ -18,6 +18,6 @@ test: &test
 production:
   url: http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
 production2:
-  url: http://mediashelf3.dtic.dk:8080/solr_dtu_search
+  url: http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
 cucumber:
   <<: *test
