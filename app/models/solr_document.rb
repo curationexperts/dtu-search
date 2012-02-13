@@ -12,6 +12,12 @@ class SolrDocument
     document.key?( :marc_display  )
   end
   
+  use_extension( DTU::DocumentExtensions) do |document|
+    document.key?( :pub_date  )
+  end
+  
+  
+  
   # Email uses the semantic field mappings below to generate the body of an email.
   SolrDocument.use_extension( Blacklight::Solr::Document::Email )
   
