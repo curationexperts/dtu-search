@@ -1,12 +1,15 @@
 <ul class="tools short-view">
   <li><a class="disabled" target="_blank" title="Download full text" href="<%= link_to_fulltext(document) %>"><span class="download-disabled"></span>Full text</a></li>
   
-  <%# if document.export_formats.keys.include?( :refworks ) %>
-    <li class="refworks">
-      <%= link_to "Export to RefWorks", catalog_path(document, :format => 'refworks') %>
-      <%#= link_to "Export to RefWorks", refworks_export_url(:id => @document) %>        
+  <% if document.export_formats.keys.include?( :ris ) && document[:format] != "journal"%>
+    <li class="export">
+      <%= link_to "Export", catalog_path(document, :format => 'ris') %>
     </li>
-  <%# end %>
+  <% else %>
+    <li class="export disabled">
+      <%= link_to "Export", catalog_path(document, :format => 'ris') %>
+    </li>
+  <% end %>
   
   <li>
     <%= render_index_doc_actions document %>
