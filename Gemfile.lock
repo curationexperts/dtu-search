@@ -1,6 +1,7 @@
 GIT
-  remote: git@github.com:jcoyne/blacklight.git
-  revision: 82ea3c5333defcd94524ef2d5a867c0eae189f04
+  remote: git@github.com:projectblacklight/blacklight.git
+  revision: 213224770f3f0aabcffca475156358185e8b13d1
+  ref: 2132247
   specs:
     blacklight (3.2.2)
       compass (>= 0.12.alpha.2)
@@ -131,7 +132,7 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
-    rsolr (1.0.6)
+    rsolr (1.0.7)
       builder (>= 2.1.2)
     rsolr-ext (1.0.3)
       rsolr (>= 1.0.2)
@@ -170,7 +171,7 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    unicode (0.4.0)
+    unicode (0.4.1)
     unicorn (4.2.0)
       kgio (~> 2.6)
       rack
