@@ -7,7 +7,7 @@
     </li>
   <% else %>
     <li class="export disabled">
-      <%= link_to "Export", catalog_path(document, :format => 'ris') %>
+      <%= link_to "Export", catalog_path(document, :format => 'ris'), :class=>"disabled" %>
     </li>
   <% end %>
   
