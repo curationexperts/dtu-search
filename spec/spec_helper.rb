@@ -30,3 +30,37 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 end
+
+
+# a solr query method
+# retrieve a solr document, given the doc id
+def get_solr_response_for_doc_id(id=nil, extra_controller_params={})
+  solr_response = force_to_utf8(Blacklight.solr.find solr_doc_params(id).merge(extra_controller_params))
+  raise Blacklight::Exceptions::InvalidSolrID.new if solr_response.docs.empty?
+  document = SolrDocument.new(solr_response.docs.first, solr_response)
+  [solr_response, document]
+end
+
+# returns a params hash for finding a single solr document (CatalogController #show action)
+# If the id arg is nil, then the value is fetched from params[:id]
+# This method is primary called by the get_solr_response_for_doc_id method.
+def solr_doc_params(id=nil)
+  id ||= params[:id]
+  # just to be consistent with the other solr param methods:
+  {
+    :qt => :document,
+    :id => id # this assumes the document request handler will map the 'id' param to the unique key field
+  }
+end
+
+def force_to_utf8(value)
+  case value
+  when Hash
+    value.each { |k, v| value[k] = force_to_utf8(v) }
+  when Array
+    value.each { |v| force_to_utf8(v) }
+  when String
+    value.force_encoding("utf-8")  if value.respond_to?(:force_encoding) 
+  end
+  value
+end

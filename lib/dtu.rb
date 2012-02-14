@@ -9,6 +9,7 @@ module DTU
     autoload :BufferedIndexer
     autoload :QueueWorker
     autoload :ShardedIndexer
+    autoload :DocumentExtensions
   end
   
 
