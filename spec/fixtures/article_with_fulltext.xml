@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+  <sf:localinfo>
+    <sf:systemno>130140113</sf:systemno>
+    <sf:source>elsevier</sf:source>
+    <sf:cdate>20090422</sf:cdate>
+    <sf:udate>20101117</sf:udate>
+    <sf:fileid>2009/oxm17650.elsevier.sdos</sf:fileid>
+    <sf:orderref>/elsevier/00179310/2009/52/13-14/0</sf:orderref>
+    <sf:key>S0017-9310(09)00076-3</sf:key>
+    <sf:oldkey>0017931020095213143314904125772512</sf:oldkey>
+    <sf:rank>12388788495920370</sf:rank>
+    <sf:jobrokey>00179310|000011|000052|000013|</sf:jobrokey>
+    <sf:dedupkey>122463274</sf:dedupkey>
+  </sf:localinfo>
+  <sf:fulltext>
+    <sf:local>/elsevier/0017/9310/00520013/09000763.pdf</sf:local>
+    <sf:media>electronic</sf:media>
+  </sf:fulltext>
+  <sf:recordid>
+    <sf:artid>6925</sf:artid>
+    <sf:pii>S0017-9310(09)00076-3</sf:pii>
+    <sf:rectypecode>02</sf:rectypecode>
+    <sf:rectypetxt>journal article</sf:rectypetxt>
+    <sf:copyright>Elsevier Ltd</sf:copyright>
+    <sf:doi>10.1016/j.ijheatmasstransfer.2008.12.027</sf:doi>
+  </sf:recordid>
+  <sf:article>
+    <sf:title>Modeling of turbulent reacting flows on the base of the equation for the scalar field correlation function</sf:title>
+    <sf:language>English</sf:language>
+    <sf:isolanguage>eng</sf:isolanguage>
+  </sf:article>
+  <sf:abstract>
+    <sf:text>A model based on an equation for the scalar correlation function is used for calculating the interaction between chemical reactions and micromixing in a turbulent flow of constant density. The Prandtl hypothesis for the terms responsible for turbulence affect the scalar field structure and the simplest approximation for the terms depending on chemical reactions are used to close the equation for the correlation function. The closure proposed is shown to be statistically reliable. To determine the effect of chemical reactions on the averaged field and the correlation function, the probability density function (PDF) is found in the presumed form which has allowed one to obtain the data on the averaged field and the correlation function. The admixture is assumed to be passive, i.e., it does not affect the parameters of turbulence and turbulent diffusivity, and the required parameters of the homogeneous turbulent field &#x2013; to be known. The characteristic features of the transport phenomena in a 2D layer with a given value of a scalar at its boundaries are considered. Results on the effect of the chemical reaction on the distributions of an averaged scalar, a scalar fluctuation intensity, and a scalar dissipation rate are obtained. The process of developing a reaction zone is calculated.</sf:text>
+    <sf:language>English</sf:language>
+    <sf:isolanguage>eng</sf:isolanguage>
+  </sf:abstract>
+  <sf:author>
+    <sf:name>Babenko, V.A.</sf:name>
+    <sf:affref>a&#x204E;</sf:affref>
+  </sf:author>
+  <sf:author>
+    <sf:name>Frost, V.A.</sf:name>
+    <sf:affref>b</sf:affref>
+  </sf:author>
+  <sf:affiliation>
+    <sf:ref>a</sf:ref>
+    <sf:name>The Luikov Heat and Mass Transfer Inst., NAS, Minsk, P. Brovka St, 15, 220072, Belarus</sf:name>
+  </sf:affiliation>
+  <sf:affiliation>
+    <sf:ref>b</sf:ref>
+    <sf:name>Institute for Problems in Mechanics, RAS, Moscow. pr Vernadskogo, 101, K1, 117526, Russia</sf:name>
+  </sf:affiliation>
+  <sf:journal>
+    <sf:issn>00179310</sf:issn>
+    <sf:coden>IJHMAK</sf:coden>
+    <sf:title>International Journal of Heat and Mass Transfer</sf:title>
+    <sf:vol>52</sf:vol>
+    <sf:issue>13-14</sf:issue>
+    <sf:year>2009</sf:year>
+    <sf:month>06</sf:month>
+    <sf:page>3314-3319</sf:page>
+    <sf:titleid>HMT</sf:titleid>
+  </sf:journal>
+  <sf:ctrlt>
+    <sf:text>Turbulent reacting flows</sf:text>
+    <sf:text>Scalar correlation function</sf:text>
+    <sf:text>Micromixing</sf:text>
+    <sf:text>Scalar dissipation</sf:text>
+    <sf:text>PDF</sf:text>
+  </sf:ctrlt>
+</sf:art>
