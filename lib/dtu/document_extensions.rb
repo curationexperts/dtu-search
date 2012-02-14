@@ -19,6 +19,7 @@ module DTU::DocumentExtensions
     case format
       when "book" 
         # Common
+        reference_type = "Book, Whole"
         years = fetch("publication_year_t", [])
         start_page = "1"
         end_page =  fetch("publication_pages_t", ["1"]).first
@@ -29,6 +30,7 @@ module DTU::DocumentExtensions
         abstracts = fetch("abstract_text_t", [])
       when "article"
         # Common
+        reference_type = "Journal Article"
         years = fetch("journal_year_t", [])
         start_page = fetch("journal_page_t", ["1"]).first
         num_pages = fetch("journal_ppage_t", ["1"]).first.to_i
@@ -46,6 +48,7 @@ module DTU::DocumentExtensions
         journal_issues = fetch("journal_issue_t", [])
       when "journal"
         # Common
+        reference_type = "Journal, Electronic"
         years = []
         # start_page = []
         # end_page = []
@@ -63,7 +66,7 @@ module DTU::DocumentExtensions
     dois = fetch("recordid_doi_t", [])
     
     
-    export_text << "TY  - #{format.upcase}\n"
+    export_text << "RT  - #{reference_type}\n"
     export_text << titles.map {|v| "T1  - #{v}\n" }.join
     export_text << authors.map {|v| "A1  - #{v}\n" }.join
     export_text << years.map {|v| "Y1  - #{v}\n" }.join
