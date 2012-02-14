@@ -16,7 +16,7 @@ Comment out  <dataDir>${dataDir}</dataDir>  in jetty/solr/multi-core/conf/solrco
   rake db:migrate
   rake jetty:start
   rake index  # Indexes all fixtures
-  unicorn_rails  # instead of rails server.  Default port: 8080
+  rails server # runs on port 3000
 </pre>
 
 h2. Pulling in Sample Data
