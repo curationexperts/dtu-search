@@ -12,9 +12,7 @@ class SolrDocument
     document.key?( :marc_display  )
   end
   
-  use_extension( DTU::DocumentExtensions) do |document|
-    document.key?( :pub_date  )
-  end
+  use_extension( DTU::DocumentExtensions) 
   
   
   
