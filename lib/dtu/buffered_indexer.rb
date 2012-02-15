@@ -8,13 +8,16 @@ module DTU
     def initialize(conn)
       @count = 0
       @batch_count = 0
-      @docs = []
+      @add_buffer = []
+      @delete_buffer = []
       @solr = conn
     end
 
     def flush(commit = false)
       try_to_add
-      @docs = []
+      @add_buffer = []
+      try_to_delete
+      @delete_buffer = []
       @count = 0
       maybe_commit
     end
@@ -23,7 +26,24 @@ module DTU
       tries = 0
       begin 
 	benchmark "#{$$} -- #{Rails.env} update solr" do
-          solr.add @docs
+          solr.add @add_buffer
+        end
+      rescue TimeoutError 
+        ## The timeout is set in this parameter.  It is 60 seconds by default.
+        # rsolr.connection.connection.read_timeout = 60
+        tries += 1 
+        puts "Timeout #{tries}" 
+        sleep(10 * tries) # wait a little longer each time through
+        retry if tries < 5 
+        raise "Adding docs timed out #{tries} times. Qutting." 
+      end
+    end
+
+    def try_to_delete
+      tries = 0
+      begin 
+	benchmark "#{$$} -- #{Rails.env} update solr" do
+          solr.delete_by_id @delete_buffer
         end
       rescue TimeoutError 
         ## The timeout is set in this parameter.  It is 60 seconds by default.
@@ -46,7 +66,11 @@ module DTU
     end
 
     def add(doc)
-      @docs << doc
+      @add_buffer << doc
+      increment
+    end
+    def delete_by_id(doc)
+      @delete_buffer << doc
       increment
     end
 
