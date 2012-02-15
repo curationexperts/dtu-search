@@ -1,7 +1,5 @@
 module DTU
   class QueueDedupWorker
-    SELECT_SIZE = 1000
-
     def initialize
       Thread.current[:carrot] = Carrot.new(:host=>'mediashelf1.dtic.dk')
       @q = Carrot.queue('search.dedup')
@@ -18,26 +16,19 @@ module DTU
 
     def run
       while !@stopped && msg = @q.pop
-        list = [msg]
-        SELECT_SIZE.times do
-          list << @q.pop
-        end
-        l = Metastore.find(list)
-        l.each do |m|
-          begin
-            @dup_finder.find_duplicates(m['dedup']).each do |duplicate|
-              @buff.delete(duplicate)
-            end
-          rescue RSolr::Error::Http, Errno::ECONNREFUSED => exception
-            puts "Fatal #{exception.class}, exception see log"
-            logger.fatal( "\n\n#{exception.class} (#{exception.message})\n\n")
-            logger.flush
-            exit!
-          rescue StandardError => exception
-            puts "Caught #{exception.class}, see log"
-            logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")
-            logger.flush
+        begin
+          @dup_finder.find_duplicates(msg).each do |duplicate|
+            @buff.delete(duplicate)
           end
+        rescue RSolr::Error::Http, Errno::ECONNREFUSED => exception
+          puts "Fatal #{exception.class}, exception see log"
+          logger.fatal( "\n\n#{exception.class} (#{exception.message})\n\n")
+          logger.flush
+          exit!
+        rescue StandardError => exception
+          puts "Caught #{exception.class}, see log"
+          logger.fatal( "\n\n#{exception.class} (#{exception.message}):\n    " + exception.backtrace.join("\n    ") + "\n\n")
+          logger.flush
         end
       end
       puts "flushing bufferes"
