@@ -14,12 +14,12 @@ module DTU
     end
 
     def flush(commit = false)
-      try_to_add
+      try_to_add unless @add_buffer.empty?
       @add_buffer = []
-      try_to_delete
+      try_to_delete unless @delete_buffer.empty?
       @delete_buffer = []
       @count = 0
-      maybe_commit(commit)
+      maybe_commit()
     end
 
     def try_to_add
@@ -56,7 +56,7 @@ module DTU
       end
     end
 
-    def maybe_commit(force)
+    def maybe_commit(force=false)
       return if COMMIT_EVERY == 0 && !force
       @batch_count += 1
       if force || @batch_count > COMMIT_EVERY

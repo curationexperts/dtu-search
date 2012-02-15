@@ -38,7 +38,7 @@ module DTU
           end
         end
       end
-      puts "flushing bufferes"
+      puts "flushing buffers"
       @buff.flush(true)
       Carrot.stop
       puts "done"
