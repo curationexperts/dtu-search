@@ -25,7 +25,7 @@ module DTU
     def try_to_add
       tries = 0
       begin 
-	benchmark "#{$$} -- #{Rails.env} update solr" do
+	benchmark "#{$$} -- #{Rails.env} solr add" do
           solr.add @add_buffer
         end
       rescue TimeoutError 
@@ -42,7 +42,7 @@ module DTU
     def try_to_delete
       tries = 0
       begin 
-	benchmark "#{$$} -- #{Rails.env} update solr" do
+	benchmark "#{$$} -- #{Rails.env} solr delete" do
           solr.delete_by_id @delete_buffer
         end
       rescue TimeoutError 
