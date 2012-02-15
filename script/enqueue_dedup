@@ -13,7 +13,7 @@ end
 queue_name = ARGV[0] || 'search.dedup'
 
 
-sql = "SELECT unique(dedup_key) FROM #{Metastore.table_name}"
+sql = "SELECT distinct(dedup) as dedup FROM #{Metastore.table_name}"
 
 q = Carrot.queue(queue_name)
 conn = Metastore.connection
@@ -24,7 +24,7 @@ ActiveRecord::Base.transaction do
     break if rows.size < 1
 
     rows.each do |m|
-      q.publish(m['id'])
+      q.publish(m['dedup'])
     end
   end
   conn.execute('close csr')
