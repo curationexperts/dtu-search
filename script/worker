@@ -4,7 +4,7 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
 require 'dtu'
 
-@worker = DTU::QueueWorker.new
+@worker = DTU::QueueIndexWorker.new
 Signal.trap("INT") { @worker.stop }
 
 @worker.run

@@ -1,5 +1,5 @@
 module DTU
-  class QueueWorker
+  class QueueIndexWorker
     SELECT_SIZE = 1000
 
     def initialize
