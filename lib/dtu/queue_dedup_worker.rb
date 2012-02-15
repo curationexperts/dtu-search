@@ -18,7 +18,6 @@ module DTU
       while !@stopped && msg = @q.pop
         begin
           @dup_finder.find_duplicates(msg).each do |duplicate|
-puts "deleting #{duplicate.inspect}"
             @buff.delete(duplicate)
           end
         rescue RSolr::Error::Http, Errno::ECONNREFUSED => exception

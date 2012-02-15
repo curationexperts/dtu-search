@@ -19,7 +19,7 @@ module DTU
       try_to_delete
       @delete_buffer = []
       @count = 0
-      maybe_commit
+      maybe_commit(commit)
     end
 
     def try_to_add
@@ -56,10 +56,10 @@ module DTU
       end
     end
 
-    def maybe_commit
-      return if COMMIT_EVERY == 0
+    def maybe_commit(force)
+      return if COMMIT_EVERY == 0 && !force
       @batch_count += 1
-      if commit || @batch_count > COMMIT_EVERY
+      if force || @batch_count > COMMIT_EVERY
         solr.commit
         @batch_count =0
       end

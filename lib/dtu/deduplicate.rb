@@ -21,8 +21,7 @@ module DTU
 
     def self.duplicates(all_docs)
       ranked = sort(all_docs)
-      kept = ranked.shift # keep the first one
-puts "KEEPING: #{kept.inspect}"
+      ranked.shift # keep the first one
       ranked
     end
 
