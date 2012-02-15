@@ -31,11 +31,6 @@ gem 'jquery-rails'
 
 gem 'carrot'
 
-# Use unicorn as the web server (unless it's jruby)
-platforms :ruby do
-  gem 'unicorn'
-end
-
 # http://blog.wyeworks.com/2011/11/1/ruby-1-9-3-and-ruby-debug
 #https://gist.github.com/1331533
 #gem install ~/Downloads/linecache19-0.5.13.gem

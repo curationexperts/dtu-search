@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require File.join(File.dirname(__FILE__), '../config/environment.rb')
+extend ActiveSupport::Benchmarkable
+if ARGV[0] == '--help'
+  puts "Useage: "
+  puts "\tenqueue_dedup <queue name>\n\n"
+  puts "\tdefault queue name is search.dedup\n\n"
+  exit
+end
+
+queue_name = ARGV[0] || 'search.dedup'
+
+
+sql = "SELECT unique(dedup_key) FROM #{Metastore.table_name}"
+
+q = Carrot.queue(queue_name)
+conn = Metastore.connection
+ActiveRecord::Base.transaction do
+  conn.execute("declare csr cursor for #{sql}")
+
+  while rows = conn.execute("fetch 10000 from csr").collect {|row| row }
+    break if rows.size < 1
+
+    rows.each do |m|
+      q.publish(m['id'])
+    end
+  end
+  conn.execute('close csr')
+end
+
+
+
+Carrot.stop

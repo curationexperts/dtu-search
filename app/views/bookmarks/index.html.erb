@@ -1,0 +1,33 @@
+<h1>My Library</h1>
+
+<%- if current_user.blank? -%>
+  
+  <h2>Please log in to see your library.</h2>
+  
+<%- elsif @bookmarks.blank? -%>
+  
+  <h2>You have no items in your library.</h2>
+  
+<%- else -%>
+
+<%= paginate @bookmarks, :theme => 'blacklight' %>
+  <div id="userBookmarks">
+    <p>
+      <%= link_to "Clear Items", clear_bookmarks_path, :method => :delete, :confirm => "Clear your bookmarks?" %>
+    </p>
+    
+    <h2>Items:</h2>
+    
+    <table class="zebra">
+      <% @bookmarks.each do |bm| %>
+      <tr>
+    	<td><%= link_to h(bm.title), catalog_path(CGI.escape(bm.document_id)) %></td>
+    	<td><%= button_to 'Remove', {:controller => "bookmarks", :action => "destroy", :id => CGI.escape(bm.document_id)}, 
+	  :method => :delete, :confirm => 'Remove this item?' %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+
+<% end %>
+  
