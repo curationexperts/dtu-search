@@ -7,6 +7,7 @@ module DTU
     autoload :ArticleEncoder
     autoload :BookEncoder
     autoload :BufferedIndexer
+    autoload :Deduplicate
     autoload :QueueIndexWorker
     autoload :QueueDedupWorker
     autoload :ShardedIndexer
