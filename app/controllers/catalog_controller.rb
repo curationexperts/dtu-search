@@ -7,8 +7,6 @@ class CatalogController < ApplicationController
 
   before_filter :clear_empty_format, :only=>:index
 
-  layout 'application'
-
   shards = YAML.load_file(Rails.root + 'config/shards.yml')[Rails.env].map {|x|x.sub('http://', '')}
 
   configure_blacklight do |config|
