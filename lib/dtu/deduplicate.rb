@@ -12,6 +12,16 @@ module DTU
       @shards = shards.map {|x|x.sub('http://', '')}
     end
 
+    ## Search the database and return the best solr document with the given dedup key.
+    def find_best(dedup_key)
+      all_docs = Metastore.find_all_by_dedup(dedup_key).map do |m|
+        DTU::ArticleEncoder.solrize(m.id, m.xml)
+      end
+      ranked = self.class.sort(all_docs)
+      ranked.shift # return the first one
+    end
+
+    ## Search solr and return those documents that are duplicates (and can be discarded from the results)
     def find_duplicates(dedup_key)
       response = Blacklight.solr.select( :params=> {:shards=> @shards.join(','), :fl=>'id,localinfo_source_t,localinfo_dedupkey_t', :q=>"{!lucene}localinfo_dedupkey_t:#{dedup_key}"})
       all_docs = response["response"]["docs"]

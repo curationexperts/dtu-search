@@ -17,9 +17,7 @@ module DTU
     def run
       while !@stopped && msg = @q.pop
         begin
-          @dup_finder.find_duplicates(msg).each do |duplicate|
-            @buff.delete(duplicate)
-          end
+          @buff.add @dup_finder.find_best(msg)
         rescue RSolr::Error::Http, Errno::ECONNREFUSED => exception
           puts "Fatal #{exception.class}, exception see log"
           logger.fatal( "\n\n#{exception.class} (#{exception.message})\n\n")
