@@ -44,5 +44,10 @@ group :development, :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
   gem 'rspec-rails'
+  gem 'capybara'
+  # Use unicorn as the web server (unless it's jruby)
+  platforms :ruby do
+    gem 'unicorn'
+  end
 end
 

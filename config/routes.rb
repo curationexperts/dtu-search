@@ -4,5 +4,6 @@ Dtu::Application.routes.draw do
   root :to => "catalog#index"
 
   devise_for :users
+  resources :advanced, :as => :advanced_searches
 
 end

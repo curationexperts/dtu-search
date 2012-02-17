@@ -4,9 +4,12 @@ development:
 test:
   - http://localhost:8983/solr/core0
 production: &prod
-  - http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
-  - http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
-production2:
-  - http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
-  - http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
+  - http://mediashelf2.dtic.dk:8180/solr_dtu_search1
+  - http://mediashelf2.dtic.dk:8280/solr_dtu_search2
+  - http://mediashelf2.dtic.dk:8380/solr_dtu_search3
+  # - http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
+  # - http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
+# production2:
+#   - http://mediashelf1.dtic.dk:8080/solr_dtu_search/core0
+#   - http://mediashelf3.dtic.dk:8080/solr_dtu_search/core0
 
