@@ -9,12 +9,12 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="HOST" elementType="Argument">
             <stringProp name="Argument.name">HOST</stringProp>
-            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.value">${__P(host,localhost)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PORT" elementType="Argument">
             <stringProp name="Argument.name">PORT</stringProp>
-            <stringProp name="Argument.value">8983</stringProp>
+            <stringProp name="Argument.value">${__P(port,8080)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="THREADS" elementType="Argument">
@@ -30,6 +30,21 @@
           <elementProp name="LOOP" elementType="Argument">
             <stringProp name="Argument.name">LOOP</stringProp>
             <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SOLR_SELECT_PATH" elementType="Argument">
+            <stringProp name="Argument.name">SOLR_SELECT_PATH</stringProp>
+            <stringProp name="Argument.value">solr_dtu_search/core0/select/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SHARDS_PARAM" elementType="Argument">
+            <stringProp name="Argument.name">SHARDS_PARAM</stringProp>
+            <stringProp name="Argument.value">firth.cvt.dk:8080/solr_dtu_search/core0,pianth.cvt.dk:8080/solr_dtu_search/core0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SOLR_CONTEXT" elementType="Argument">
+            <stringProp name="Argument.name">SOLR_CONTEXT</stringProp>
+            <stringProp name="Argument.value">/solr_dtu_search/</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -269,7 +284,15 @@
       <hashTree/>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-          <collectionProp name="Arguments.arguments"/>
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="shards" elementType="HTTPArgument">
+              <boolProp name="HTTPArgument.always_encode">true</boolProp>
+              <stringProp name="Argument.value">${SHARDS_PARAM}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              <stringProp name="Argument.name">shards</stringProp>
+            </elementProp>
+          </collectionProp>
         </elementProp>
         <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
         <stringProp name="HTTPSampler.port">${PORT}</stringProp>
@@ -297,6 +320,16 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="DEFAULT_numFound" elementType="Argument">
+              <stringProp name="Argument.name">DEFAULT_numFound</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="/solr/ HTTP Request Defaults" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -307,7 +340,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/solr/</stringProp>
+          <stringProp name="HTTPSampler.path">${SOLR_CONTEXT}</stringProp>
           <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
         </ConfigTestElement>
         <hashTree/>
@@ -441,14 +474,13 @@
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/solr/select/</stringProp>
+            <stringProp name="HTTPSampler.path">${SOLR_SELECT_PATH}</stringProp>
             <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
           </ConfigTestElement>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Default Response: numFound" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="-23272116">&apos;numFound&apos;=&gt;694</stringProp>
-              <stringProp name="0"></stringProp>
+              <stringProp name="-1038652784">&apos;numFound&apos;=&gt;${__P(DEFAULT_NUM_FOUND,694)}</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
@@ -667,7 +699,7 @@
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/solr/select/</stringProp>
+            <stringProp name="HTTPSampler.path">${SOLR_SELECT_PATH}</stringProp>
             <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
           </ConfigTestElement>
           <hashTree/>
@@ -715,7 +747,7 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response: numFound" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="-970582203">&apos;numFound&apos;=&gt;11</stringProp>
+                <stringProp name="-1285626674">&apos;numFound&apos;=&gt;${__P(FACET_SCIENCE_NUM_FOUND,11)}</stringProp>
               </collectionProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
@@ -825,8 +857,7 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response: numFound" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="-970582171">&apos;numFound&apos;=&gt;22</stringProp>
-                <stringProp name="0"></stringProp>
+                <stringProp name="-67145078">&apos;numFound&apos;=&gt;${__P(FACET_PUB_DATE_NUM_FOUND,11)}</stringProp>
               </collectionProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
@@ -922,7 +953,7 @@
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">/solr/select/</stringProp>
+            <stringProp name="HTTPSampler.path">${SOLR_SELECT_PATH}</stringProp>
             <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
           </ConfigTestElement>
           <hashTree/>
@@ -965,7 +996,7 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response: numFound" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="-23276952">&apos;numFound&apos;=&gt;184</stringProp>
+                <stringProp name="-305376022">&apos;numFound&apos;=&gt;${__P(FACET_FORMAT_JOURNAL_NUM_FOUND,184)}</stringProp>
               </collectionProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
@@ -1012,7 +1043,7 @@
             <hashTree/>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response: numFound" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="-23273360">&apos;numFound&apos;=&gt;500</stringProp>
+                <stringProp name="65748764">&apos;numFound&apos;=&gt;${__P(FACET_FORMAT_BOOK_NUM_FOUND,500)}</stringProp>
               </collectionProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
               <boolProp name="Assertion.assume_success">false</boolProp>
