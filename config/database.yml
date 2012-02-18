@@ -28,7 +28,7 @@ production: &production
   schema_search_path: dtu_search_production
   password: R7m40YuyIQ
   host: mediashelf1.dtic.dk
-  pool: 5
+  pool: 16 
   timeout: 5000
 
 production2:
