@@ -1,8 +1,8 @@
 module DTU
   class QueueDedupWorker
-    def initialize
+    def initialize(name = 'search.dedup')
       Thread.current[:carrot] = Carrot.new(:host=>'mediashelf1.dtic.dk')
-      @q = Carrot.queue('search.dedup')
+      @q = Carrot.queue(name)
 
       @buff = DTU::ShardedIndexer.new
       @dup_finder = DTU::Deduplicate.new(@buff.shards)

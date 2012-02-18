@@ -9,7 +9,7 @@ NUM = ARGV[0] || 15
 workers = []
 threads = []
 NUM.to_i.times do |n|
-  worker = DTU::QueueDedupWorker.new
+  worker = DTU::QueueDedupWorker.new('search.index')
   workers << worker
   threads << Thread.new { worker.run }
 end
