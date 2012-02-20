@@ -39,7 +39,7 @@
           </elementProp>
           <elementProp name="SHARDS_PARAM" elementType="Argument">
             <stringProp name="Argument.name">SHARDS_PARAM</stringProp>
-            <stringProp name="Argument.value">firth.cvt.dk:8080/solr_dtu_search/core0,pianth.cvt.dk:8080/solr_dtu_search/core0</stringProp>
+            <stringProp name="Argument.value">${__P(SHARDS,localhost:8080/solr_dtu_search)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SOLR_CONTEXT" elementType="Argument">
