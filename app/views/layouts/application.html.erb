@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><%= h(@page_title || application_name) %></title>
+    <title><%= h(application_name) %></title>
     <link href="<%= opensearch_catalog_path(:format => 'xml', :only_path => false) %>" title="<%= application_name%>" type="application/opensearchdescription+xml" rel="search"/>
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag    "application" %>
@@ -11,21 +11,22 @@
   </head>
   <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
   <body onload="<%= onload_text %>" class="<%= render_body_class.html_safe %>">
-    <div id="page">
-      <div id="hd" class="row">
+    <div id="page" class="">
+      <div id="head" class="row-fluid">
         <div id="user_util_links">
           <%= render :partial=>'/user_util_links' %>
         </div>
       </div>
-      <div id="bd" class="row">
-        <div id="sidebar" class="span4">
+      <div id="body" class="row-fluid">
+
+        <div id="sidebar" class="span3">
           <div id="logo">
             <h1 class="site_title"><%= link_to application_name, "/" %><%= (params[:controller] == "catalog" and !params[:id]) ? "<span id='results_text'>Search Results</span>".html_safe : "" %></h1>
             <%= image_tag 'dlib-logo.png' %>
           </div>
            <%= sidebar_items.join('').html_safe %>
         </div>
-        <div id="main" class="span12">
+        <div id="main" class="span9">
           <div id="main_container">
             <%= render :partial=>'/flash_msg' %>
             <%= yield %>

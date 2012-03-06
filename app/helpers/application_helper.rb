@@ -1,8 +1,4 @@
 module ApplicationHelper
-  def application_name
-    'DTU Digital Library - Technical University of Denmark'
-  end
-
   def link_to_fulltext(document)
     # grab the info for generating local urls if it's in the document
     document_source = document.fetch("localinfo_source_t", []).first  # case sensitive field name!  localinfo_source_t NOT localInfo_source_t

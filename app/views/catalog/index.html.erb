@@ -14,14 +14,13 @@
 	
 	<%= render :partial => 'did_you_mean' %>
 
-	<%= render 'constraints', :localized_params=>params %>
   
-  <div class="pageEntriesInfo">
+  <div class="pageEntriesInfo well">
     <%= render_pagination_info @response, :entry_name=>'item' %>
     <%=link_to "start over", catalog_index_path, :id=>"startOverLink" , :class=>'btn primary'%>
+	  <%= render 'sort_and_per_page' %>
   </div>
   
-	<%= render 'sort_and_per_page' %>
   
         <%= render 'results_pagination' %>
   

@@ -1,6 +1,11 @@
 body {
     background: url("/assets/blacklight/bg.png") repeat-x scroll left top #707070;
-    font: 0.7em/1.4 Verdana,"Lucida Grande","Lucida Sans Unicode","Arial Unicode MS",Arial,sans-serif;
+    font: .7em/1.4 Verdana,"Lucida Grande","Lucida Sans Unicode","Arial Unicode MS",Arial,sans-serif;
+    padding: 0
+}
+
+p {
+  font-size: 1em;
 }
 
 #q {
@@ -8,6 +13,9 @@ body {
   height: auto;
 }
 
+#head {
+  text-align: right;
+}
 #startOverLink {
   background-color: #900;
   background-image: -moz-linear-gradient(center top , #500, #900);
@@ -17,9 +25,17 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#500', endColorstr='#900', GradientType=0);
 }
 
+.well {
+  padding: 8px;
+}
+
 #sortAndPerPage {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 3px;
   label {
-    float: none;
+    display: inline;
   }
   form#sort_form {
     margin-left: 10px;
@@ -70,11 +86,13 @@ body {
       position: relative;
       top: -0.2em;
   }
+  
   .cover-image {
     float: left;
-    margin-right: 10px;
     height: 160px;
-    width: 120px;
+    width: 100px;
+    margin: 0 10px 0 0;
+    border: 1px solid #C8C8C8;
 
     .no-image {
       background-image: url("/assets/no_icon.gif");
@@ -114,33 +132,14 @@ body {
   background-image: -o-linear-gradient(top, #500, #900);
   background-image: linear-gradient(top, #500, #900);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#500', endColorstr='#900', GradientType=0);
+  color: white;
+  margin-bottom: 8px;
 } 
 
 input:focus, textarea:focus {
     border-color: rgba(236, 168, 82, 0.8);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(236, 168, 82, 0.6);
     outline: 0 none;
-}
-
-.appliedFilter {
-    background-color: #900;
-    background-image: -moz-linear-gradient(center top , #500, #900);
-    background-image: -webkit-linear-gradient(top, #500, #900);
-    background-image: -o-linear-gradient(top, #500, #900);
-    background-image: linear-gradient(top, #500, #900);
-    border: 1px solid #500;
-    color: white;
-}
-
-.appliedFilter .btnRemove {
-    background: url("/assets/delete.png") no-repeat scroll center center transparent;
-    border-bottom: medium none;
-    border-left: 1px solid #500;
-}
-
-.appliedFilter .queryName, .appliedFilter .filterName {
-    background: url("/assets/arrow.png") no-repeat right 2px;
-    padding-right: 9px;
 }
 
 #main_container {
@@ -151,7 +150,7 @@ input:focus, textarea:focus {
 #page {
   border-top: 3px solid #606;
   background: white;
-  width: 960px;
+  width: 100%;
 }
 
 h1 {
@@ -182,31 +181,58 @@ h1.site_title {
   height: 123px;
   width: 163px;
 }
-#hd {
-  padding: .3em 0;
-}
 
-#bd {
-  margin: 0;
+#sidebar {
+  #logo {
+    img {
+      margin-left: 10px;
+    }
+  }
 }
-
-#bd #sidebar {
-  width: 220px;
-  margin-right: 0;
-}
-#bd #main {
-  padding: 0;
-  margin: 0;
-}
-
 
 #facets .label {
   white-space: normal;
   background: none;
 }
 
-#search label {
-  float:none
+#search {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  label {
+    display: inline;
+  }
+  form {
+    margin: 0 0 5px;
+  }
+}
+
+#appliedParams {
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 5px 0 0;
+  margin: 0;
+  .appliedFilter {
+      background-color: #900;
+      background-image: -moz-linear-gradient(center top , #500, #900);
+      background-image: -webkit-linear-gradient(top, #500, #900);
+      background-image: -o-linear-gradient(top, #500, #900);
+      background-image: linear-gradient(top, #500, #900);
+      border: 1px solid #500;
+      color: white;
+      margin-bottom: 0;
+  }
+
+  .appliedFilter .btnRemove {
+      background: url("/assets/delete.png") no-repeat scroll center center transparent;
+      border-bottom: medium none;
+      border-left: 1px solid #500;
+  }
+
+  .appliedFilter .queryName, .appliedFilter .filterName {
+      background: url("/assets/arrow.png") no-repeat right 2px;
+      padding-right: 9px;
+  }
 }
 
 
