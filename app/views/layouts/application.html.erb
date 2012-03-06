@@ -8,6 +8,9 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= raw(render_head_content) %>
+    <script>
+      var configuration = {"google.analytics.tracking.account":"UA-13171051-1","export.max":"500","enabledFeatures":{"":true},"docdel.url":"https://docdel.cvt.dk"};
+    </script>
   </head>
   <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
   <body onload="<%= onload_text %>" class="<%= render_body_class.html_safe %>">
