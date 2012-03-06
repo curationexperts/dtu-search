@@ -3,6 +3,7 @@
  * This is the default theme. You can modify many of the settings 
  * by editing your local app/assets/stylesheets/blacklight_themes/standard.css
  *= require 'blacklight_themes/standard'         
+ *= require twitter/bootstrap
  *
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
