@@ -19,10 +19,10 @@
     <%= render_pagination_info @response, :entry_name=>'item' %>
     <%=link_to "start over", catalog_index_path, :id=>"startOverLink" , :class=>'btn primary'%>
 	  <%= render 'sort_and_per_page' %>
+    <%= render 'results_pagination' %>
   </div>
   
   
-        <%= render 'results_pagination' %>
   
 	<%= render :partial => 'document_list' %>
 
