@@ -1,4 +1,4 @@
-<div id="search" class="search">
+<div id="search" class="search well">
   <%= form_tag catalog_index_path, :method => :get do %>
     <h2 class="search"><%= label_tag(:q, "Search ") %></h2>
     <%= text_field_tag :q, params[:q], :class => "q" %>
@@ -6,7 +6,7 @@
       <%#= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => "Targeted search options", :class=>"search_field small") %>
       <%= hidden_field_tag :search_field, 'all_fields' %>
     
-    <%= select_tag('f[format][]', options_for_select({'All'=>'', 'Books'=>'book', 'Journals' => 'journal', 'Articles'=>'article'}, params[:f] && params[:f][:format] ? h(params[:f][:format].first): ''), :title => "Targeted search options", :class=>"search_field small") %>
+    <%= select_tag('f[format][]', options_for_select({'All'=>'', 'Books'=>'book', 'Journals' => 'journal', 'Articles'=>'article'}, params[:f] && params[:f][:format] ? h(params[:f][:format].first): ''), :title => "Targeted search options", :class=>"search_field span2") %>
 
     <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page, {:f =>:format}]).html_safe %>        
     
@@ -14,4 +14,5 @@
   <% end %>
 
   <hr/>
+	<%= render 'constraints', :localized_params=>params %>
 </div>

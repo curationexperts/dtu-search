@@ -1,6 +1,13 @@
 require 'spec_helper'
 
 describe ApplicationHelper do
+  describe "link_to_recommendations"  do
+    it "should default to generating sfx links" do
+      doc = DTU::ArticleEncoder.solrize('article_without_fulltext', File.open("spec/fixtures/first_article.xml"))
+      recommendation_url = helper.link_to_recommendations(doc)
+      CGI.unescape(recommendation_url).should == "http://digitallibrary.dtu.dk/BXProxy/recommend?rft.jtitle=Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile&amp;rft.issn=00207233&amp;rft.pages=403&amp;rft.spage=403&amp;rft.volume=61&amp;rft.issue=4&amp;rft.date=2004-2008&amp;rft.atitle=Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile&amp;rft.doi=&amp;rft.au=Khalifa, Nehad&amp;rfr_id=info:sid/dlib.dtu.dk:DTUDigitalLibrary"
+    end
+  end
 
   describe "link_to_fulltext"  do
     it "should default to generating sfx links" do

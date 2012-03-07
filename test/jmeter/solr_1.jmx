@@ -19,32 +19,32 @@
           </elementProp>
           <elementProp name="THREADS" elementType="Argument">
             <stringProp name="Argument.name">THREADS</stringProp>
-            <stringProp name="Argument.value">${__P(THREADS,1)}</stringProp>
+            <stringProp name="Argument.value">${__P(threads,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="RAMPUP" elementType="Argument">
             <stringProp name="Argument.name">RAMPUP</stringProp>
-            <stringProp name="Argument.value">${__P(RAMPUP,1)}</stringProp>
+            <stringProp name="Argument.value">${__P(rampup,1)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LOOP" elementType="Argument">
             <stringProp name="Argument.name">LOOP</stringProp>
-            <stringProp name="Argument.value">${__P(LOOP,1)}</stringProp>
+            <stringProp name="Argument.value">${__P(loop,10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SOLR_SELECT_PATH" elementType="Argument">
             <stringProp name="Argument.name">SOLR_SELECT_PATH</stringProp>
-            <stringProp name="Argument.value">solr_dtu_search/core0/select/</stringProp>
+            <stringProp name="Argument.value">${__P(select,solr_dtu_search/core0/select/)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SHARDS_PARAM" elementType="Argument">
             <stringProp name="Argument.name">SHARDS_PARAM</stringProp>
-            <stringProp name="Argument.value">${__P(SHARDS,localhost:8080/solr_dtu_search)}</stringProp>
+            <stringProp name="Argument.value">${__P(shards,localhost:8080/solr_dtu_search)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SOLR_CONTEXT" elementType="Argument">
             <stringProp name="Argument.name">SOLR_CONTEXT</stringProp>
-            <stringProp name="Argument.value">/solr_dtu_search/</stringProp>
+            <stringProp name="Argument.value">${__P(context,/solr_dtu_search/)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>

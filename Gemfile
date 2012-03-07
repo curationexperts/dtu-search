@@ -28,6 +28,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "bootstrap-sass-rails", "~> 2.0.1.2"
 
 gem 'carrot'
 
