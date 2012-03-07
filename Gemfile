@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.2.1'
 
 gem 'blacklight', :git=>'git@github.com:projectblacklight/blacklight.git', :ref=>'2132247'
+gem "blacklight_range_limit"
 gem 'devise'
 gem 'jettywrapper'
 gem 'nokogiri'

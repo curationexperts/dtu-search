@@ -197,6 +197,10 @@ h1.site_title {
       color: #990000;
     }
   }
+  #range_pub_date_begin, #range_pub_date_end {
+    width: 4em;
+    height: 2em;
+  }
 }
 
 
@@ -238,6 +242,14 @@ h1.site_title {
       background: url("/assets/arrow.png") no-repeat right 2px;
       padding-right: 9px;
   }
+}
+
+.facet_extended_list {
+  .label {
+    color: black;
+    background-color: transparent;
+  }
+
 }
 
 
