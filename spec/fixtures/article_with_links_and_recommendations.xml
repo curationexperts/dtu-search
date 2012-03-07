@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<sf:art xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="http://schema.cvt.dk/art_oai_sf/2009" xsi:schemaLocation="http://schema.cvt.dk/art_oai_sf/2009 http://schema.cvt.dk/art_oai_sf/2009.xsd">
+  <sf:localinfo>
+    <sf:systemno>246126879</sf:systemno>
+    <sf:source>isi</sf:source>
+    <sf:cdate>20101124</sf:cdate>
+    <sf:udate>20101124</sf:udate>
+    <sf:fileid>2010/20101122211315.isi.isi::asc</sf:fileid>
+    <sf:orderref>/isi/1532298x/2010/22/4/0</sf:orderref>
+    <sf:key>000278414900005</sf:key>
+    <sf:oldkey>1532298x2010224997913674042730</sf:oldkey>
+    <sf:rank>11260130209280997</sf:rank>
+    <sf:dedupkey>3666133</sf:dedupkey>
+  </sf:localinfo>
+  <sf:recordid>
+    <sf:rectypecode>@</sf:rectypecode>
+    <sf:rectypetxt>Article</sf:rectypetxt>
+    <sf:doi>10.1105/tpc.109.072736</sf:doi>
+    <sf:refid>0134683614</sf:refid>
+  </sf:recordid>
+  <sf:article>
+    <sf:title>Mapping Plant Interactomes Using Literature Curated and Predicted Protein-Protein Interaction Data Sets</sf:title>
+    <sf:nrref>39</sf:nrref>
+    <sf:language>English</sf:language>
+    <sf:isolanguage>eng</sf:isolanguage>
+    <sf:url>http://ws.isiknowledge.com/cps/openurl/service?url_ver=Z39.88-2004&amp;rft_id=info%3Aut%2F000278414900005</sf:url>
+  </sf:article>
+  <sf:abstract>
+    <sf:text>Most cellular processes are enabled by cohorts of interacting proteins that form dynamic networks within the plant proteome. The study of these networks can provide insight into protein function and provide new avenues for research. This article informs the plant science community of the currently available sources of protein interaction data and discusses how they can be useful to researchers. Using our recently curated IntAct Arabidopsis thaliana protein-protein interaction data set as an example, we discuss potentials and limitations of the plant interactomes generated to date. In addition, we present our efforts to add value to the interaction data by using them to seed a proteome-wide map of predicted protein subcellular locations.</sf:text>
+  </sf:abstract>
+  <sf:author>
+    <sf:name>Lee, KiYoung</sf:name>
+    <sf:role>Author, Reprint Author</sf:role>
+    <sf:affref>3</sf:affref>
+  </sf:author>
+  <sf:author>
+    <sf:name>Thorneycroft, David</sf:name>
+    <sf:role>Author</sf:role>
+    <sf:affref>4</sf:affref>
+  </sf:author>
+  <sf:author>
+    <sf:name>Achuthan, Premanand</sf:name>
+    <sf:role>Author</sf:role>
+    <sf:affref>4</sf:affref>
+  </sf:author>
+  <sf:author>
+    <sf:name>Hermjakob, Henning</sf:name>
+    <sf:role>Author</sf:role>
+    <sf:affref>4</sf:affref>
+  </sf:author>
+  <sf:author>
+    <sf:name>Ideker, Trey</sf:name>
+    <sf:role>Author</sf:role>
+    <sf:affref>3</sf:affref>
+  </sf:author>
+  <sf:affiliation>
+    <sf:ref>1</sf:ref>
+    <sf:name>Ajou Univ, Sch Med, Dept Biomed Informat, Suwon 443749, South Korea</sf:name>
+  </sf:affiliation>
+  <sf:affiliation>
+    <sf:ref>2</sf:ref>
+    <sf:name>Univ Calif San Diego, Dept Med, La Jolla, CA 92093 USA</sf:name>
+  </sf:affiliation>
+  <sf:affiliation>
+    <sf:ref>3</sf:ref>
+    <sf:name>Univ Calif San Diego, Dept Bioengn, La Jolla, CA 92093 USA</sf:name>
+  </sf:affiliation>
+  <sf:affiliation>
+    <sf:ref>4</sf:ref>
+    <sf:name>European Bioinformat Inst, European Mol Biol Lab, Cambridge CB10 1SD, England</sf:name>
+  </sf:affiliation>
+  <sf:journal>
+    <sf:issn>1040-4651</sf:issn>
+    <sf:issn>10404651</sf:issn>
+    <sf:eissn>1532298x</sf:eissn>
+    <sf:coden>PLCEEW</sf:coden>
+    <sf:title>PLANT CELL</sf:title>
+    <sf:atitle>Plant Cell</sf:atitle>
+    <sf:atitle>PL CELL</sf:atitle>
+    <sf:atitle>PLANT CELL</sf:atitle>
+    <sf:atitle>PLANT CELL</sf:atitle>
+    <sf:vol>22</sf:vol>
+    <sf:issue>4</sf:issue>
+    <sf:year>2010</sf:year>
+    <sf:page>997-1005</sf:page>
+    <sf:ppage>9</sf:ppage>
+    <sf:publisher>AMER SOC PLANT BIOLOGISTS</sf:publisher>
+  </sf:journal>
+  <sf:ctrlt>
+    <sf:text>BIOCHEMISTRY</sf:text>
+    <sf:text>PLANT</sf:text>
+    <sf:text>CELL</sf:text>
+    <sf:text>ARABIDOPSIS-THALIANA</sf:text>
+    <sf:text>BIOLOGICAL NETWORKS</sf:text>
+    <sf:text>GENE ONTOLOGY</sf:text>
+    <sf:text>INTEGRATION</sf:text>
+    <sf:text>CYTOSCAPE</sf:text>
+    <sf:text>IDENTIFICATION</sf:text>
+    <sf:text>PEROXISOMES</sf:text>
+    <sf:text>CURVES</sf:text>
+    <sf:text>UPDATE</sf:text>
+    <sf:text>TEXT</sf:text>
+  </sf:ctrlt>
+  <sf:citation>
+    <sf:refid>0133516523</sf:refid>
+    <sf:text>DOI=[10.1093/nar/gkp878] ARANDA, B, NUCLEIC ACIDS RES S1, 2010, 38, D525,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0128651051</sf:refid>
+    <sf:text>DOI=[10.1105/tpc.109.066050] BRADY, SM, PLANT CELL, 2009, 21, 1034,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0117966619</sf:refid>
+    <sf:text>DOI=[10.1093/nar/gkm1001] BREITKREUTZ, BJ, NUCLEIC ACIDS RES, 2008, 36, D637,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0112606034</sf:refid>
+    <sf:text>BROWN, JWS, NUCLEIC ACIDS RES, 2005, 33, 633,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0118154192</sf:refid>
+    <sf:text>DOI=[10.1038/nprot.2007.324] CLINE, MS, NAT PROTOC, 2007, 2, 2366,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0117966726</sf:refid>
+    <sf:text>DOI=[10.1093/nar/gkm844] CUI, J, NUCLEIC ACIDS RES, 2008, 36, D999,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0125942759</sf:refid>
+    <sf:text>DOI=[10.1038/NMETH.1284] CUSICK, ME, NAT METHODS, 2009, 6, 39,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0131555037</sf:refid>
+    <sf:text>DOI=[10.1038/nmeth1209-934] CUSICK, ME, NAT METHODS, 2009, 6, 934,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0130217435</sf:refid>
+    <sf:text>ARTN=[288] DOI=[10.1186/1471-2164-10-288] DEBODT, S, BMC GENOMICS, 2009, 10,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0125425445</sf:refid>
+    <sf:text>DOI=[10.1104/pp.108.129999] EUBEL, H, PLANT PHYSIOL, 2008, 148, 1809,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0131950986</sf:refid>
+    <sf:text>DOI=[10.1016/j.cbpa.2009.09.022] FUKUSHIMA, A, CURR OPIN CHEM BIOL, 2009, 13, 532,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0116590837</sf:refid>
+    <sf:text>GEISLERLEE, J, PLANT PHYSIOL, 2007, 145, 317,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0113462197</sf:refid>
+    <sf:text>DOI=[10.1093/nar/gkl863] HEAZLEWOOD, JL, NUCLEIC ACIDS RES, 2007, 35, D213,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0116089198</sf:refid>
+    <sf:text>DOI=[10.1002/pmic.200700135] JORRIN, JV, PROTEOMICS, 2007, 7, 2947,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0130172403</sf:refid>
+    <sf:text>ARTN=[233] DOI=[10.1186/1471-2105-10-233] KABILJO, R, BMC BIOINFORMATICS, 2009, 10,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0082358878</sf:refid>
+    <sf:text>LALOI, C, P NATL ACAD SCI USA, 2001, 98, 14144,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0123246212</sf:refid>
+    <sf:text>DOI=[10.1074/mcp.M700535-MCP200] LEE, CP, MOL CELL PROTEOMICS, 2008, 7, 1297,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0125024211</sf:refid>
+    <sf:text>ARTN=[e136] DOI=[10.1093/nar/gkn619] LEE, K, NUCLEIC ACIDS RES, 2008, 36,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0130236349</sf:refid>
+    <sf:text>DOI=[10.1104/pp.109.141317] LIN, MZ, PLANT PHYSIOL, 2009, 151, 34,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0131510889</sf:refid>
+    <sf:text>DOI=[10.1093/bib/bbp047] LYSENKO, A, BRIEF BIOINFORM, 2009, 10, 676,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0107728835</sf:refid>
+    <sf:text>DOI=[10.1093/bioinformatics/bti551] MAERE, S, BIOINFORMATICS, 2005, 21, 3448,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0125014922</sf:refid>
+    <sf:text>DOI=[10.1104/pp.108.125385] MAES, L, PLANT PHYSIOL, 2008, 148, 1453,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0129832000</sf:refid>
+    <sf:text>DOI=[10.1105/tpc.109.066019] MILLAR, AH, PLANT CELL, 2009, 21, 1625,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0112528984</sf:refid>
+    <sf:text>DOI=[10.1002/bimj.200610223] MOLODIANOVITCH, K, BIOMETRICAL J, 2006, 48, 745,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0119520766</sf:refid>
+    <sf:text>DOI=[10.1016/j.tplants.2008.01.006] MORSY, M, TRENDS PLANT SCI, 2008, 13, 183,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0119008882</sf:refid>
+    <sf:text>ORCHARD, S, PROTEOMICS, 2007, 7, 28,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0128957697</sf:refid>
+    <sf:text>DOI=[10.1016/j.nbt.2008.12.001] ORCHARD, S, NEW BIOTECHNOL, 2009, 25, 171,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0119406607</sf:refid>
+    <sf:text>POOLE, RL, METH MOL B, 2007, 406, 179,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0104071509</sf:refid>
+    <sf:text>DOI=[10.1104/pp.104.043695] REUMANN, S, PLANT PHYSIOL, 2004, 136, 2587,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0122844517</sf:refid>
+    <sf:text>DOI=[10.1038/nrg2363] RHEE, SY, NAT REV GENET, 2008, 9, 509,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0129574240</sf:refid>
+    <sf:text>DOI=[10.1021/pr900023z] RODRIGUEZ, H, J PROTEOME RES, 2009, 8, 3689,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0131554999</sf:refid>
+    <sf:text>DOI=[10.1038/nmeth1209-860] SALWINSKI, L, NAT METHODS, 2009, 6, 860,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0096488528</sf:refid>
+    <sf:text>DOI=[10.1101/gr.1239303] SHANNON, P, GENOME RES, 2003, 13, 2498,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0130586086</sf:refid>
+    <sf:text>DOI=[10.1111/j.1742-4658.2009.07251.x] STEIN, A, FEBS J, 2009, 276, 5390,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0113849409</sf:refid>
+    <sf:text>STREINER, DL, CAN J PSYCHIAT, 2007, 52, 121,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0116984753</sf:refid>
+    <sf:text>DOI=[10.1093/bioinformatics/btm401] SUDERMAN, M, BIOINFORMATICS, 2007, 23, 2651,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0111801096</sf:refid>
+    <sf:text>DOI=[10.1007/s00425-006-0260-x] UHRIG, JF, PLANTA, 2006, 224, 771,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0125731754</sf:refid>
+    <sf:text>DOI=[10.1093/bib/bbn043] WINNENBURG, R, BRIEF BIOINFORM, 2008, 9, 466,</sf:text>
+  </sf:citation>
+  <sf:citation>
+    <sf:refid>0125731810</sf:refid>
+    <sf:text>DOI=[10.1093/bioinformatics/btn597] YU, JK, BIOINFORMATICS, 2009, 25, 105,</sf:text>
+  </sf:citation>
+  <sf:note>
+    <sf:text>K.L. was supported by the Brain Korea 21 Project for Medical Science, Ajou University and the Korea Food &amp; Drug Administration in 2010 (Grant 10182KFDA992). T. I. was supported by Grant GM070743 from the National Institute of General Medical Sciences. D. T., P. A., and the IntAct database team are funded by EU Grant QLRI-CT-2001-00015 under the Research and Technological Development program "Quality of Life and Management of Living Resources" and EU Contract 21902 "Felics-Free European Life-Science Information and Computational Services."Brain Korea 21 Project for Medical Science Ajou University Korea Food &amp; Drug Administration 10182KFDA992 National Institute of General Medical Sciences GM070743 EU QLRI-CT-2001-00015 21902</sf:text>
+  </sf:note>
+</sf:art>
