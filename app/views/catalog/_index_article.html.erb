@@ -29,5 +29,7 @@
       <% end -%>
     <% end -%>
   </dl>
+
+  <div class="recommendations detailed-view"><h2>Other users also downloaded</h2><p><a rel="related" href="<%= link_to_recommendations(document) %>">Search for related documents.</a></p></div>
     
   <%= render :partial=>"catalog/index_tools", :locals=>{:document=>document}%>
