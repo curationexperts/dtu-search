@@ -4,7 +4,6 @@ require 'blacklight/catalog'
 class CatalogController < ApplicationController  
 
   include Blacklight::Catalog
-  layout 'application'
 
   before_filter :clear_empty_format, :only=>:index
 

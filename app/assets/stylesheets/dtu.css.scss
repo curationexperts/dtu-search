@@ -188,12 +188,17 @@ h1.site_title {
       margin-left: 10px;
     }
   }
+  #facets {
+    .label {
+      white-space: normal;
+      background: none;
+    }
+    .label:hover {
+      color: #990000;
+    }
+  }
 }
 
-#facets .label {
-  white-space: normal;
-  background: none;
-}
 
 #search {
   border: 1px solid rgba(0, 0, 0, 0.05);
