@@ -2,7 +2,9 @@
   <div class="cover-image" record_id="<%= document['metastore_id_s'] %>" type="journal" title="<%= render_document_show_field_value :document => document, :field => 'journal_title_t' %>">
     <img class="cover-image normal-view" src="http://dtu-ftc.cvt.dk/coverimage/<%= render_document_show_field_value :document => document, :field => 'header_id_t' %>" alt="<%= render_document_show_field_value :document => document, :field => 'title_t' %>">
   </div>
-  <h1 class="short-view"><span class="document-type">[Journal] </span>
+  <h1 class="short-view">
+    <%= render :partial=>'expand' %>
+    <span class="document-type">[Journal] </span>
     <a class="fulltext" target="_blank" href="https://docdel.cvt.dk/request?source=dlib.dtu.dk:DTUDigitalLibrary&amp;journal=Accounting%2C%20Auditing%20%26%20Accountability%20Journal&amp;issn=<%= render_document_show_field_value :document => document, :field => 'header_id_t' %>"><%= render_document_show_field_value :document => document, :field => 'title_t' %></a>
   </h1>
   <div class="publisher">
