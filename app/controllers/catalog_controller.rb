@@ -89,7 +89,7 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise. 
     
     config.add_search_field 'all_fields', :label => 'All Fields' do |field|
-      field.solr_parameters = { :qf => 'ebook_title_t article_title_t entry_title_t author_name_t abstract_text_t abstract_abstract_t' }
+      field.solr_parameters = { :qf => 'journal_issn_t ebook_title_t article_title_t entry_title_t author_name_t abstract_text_t abstract_abstract_t' }
     end
     
 
@@ -135,8 +135,8 @@ class CatalogController < ApplicationController
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
-    config.add_sort_field 'pub_date_sort desc, score desc, title_sort asc', :label => 'year'
     config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', :label => 'relevance'
+    config.add_sort_field 'pub_date_sort desc, score desc, title_sort asc', :label => 'year'
     config.add_sort_field 'author_sort asc, title_sort asc', :label => 'author'
     config.add_sort_field 'title_sort asc, pub_date_sort desc', :label => 'title'
 
