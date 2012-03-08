@@ -1,0 +1,10 @@
+<div id="appliedParams">
+
+	<h3 class="label">You searched for:</h3>
+  
+  <%= render_constraints(localized_params) %>  
+
+  <%= button_to "Save search", save_search_path(session[:history].first), :method => :put, :class=>'btn primary' %>
+  
+		
+</div>

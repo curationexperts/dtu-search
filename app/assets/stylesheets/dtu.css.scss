@@ -210,8 +210,18 @@ h1.site_title {
   label {
     display: inline;
   }
-  form {
+  form.search_form {
     margin: 0 0 5px;
+  }
+  a.advanced {
+    font-size: x-small;
+  }
+  form.button_to {
+    display: inline-block;
+    margin-bottom: 0;
+    input {
+      margin: 0;
+    }
   }
 }
 
@@ -230,6 +240,7 @@ h1.site_title {
       border: 1px solid #500;
       color: white;
       margin-bottom: 5px;
+      margin-top: 2px;
   }
 
   .appliedFilter .btnRemove {
