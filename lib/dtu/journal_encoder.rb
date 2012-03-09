@@ -17,6 +17,7 @@ module DTU
       end
       keywords = ([] << doc['entry_classification_broader-term_t'] << doc['entry_classification_narrower-term_t']).flatten
       doc['keywords_facet'] = keywords       
+      doc['identifier_s'] = [doc['entry_issn_t'], doc['entry_issn-normalized_t'], doc['id']].flatten.compact.uniq
     end
   end
 end

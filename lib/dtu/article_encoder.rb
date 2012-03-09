@@ -11,6 +11,7 @@ module DTU
       doc['title_sort'] = doc['title_t'].first
       doc['journal_title_facet'] = doc['journal_title_t'].first if doc['journal_title_t']
       pub_date('journal_year_t', doc)
+      doc['identifier_s'] = [doc['recordid_doi_t'], doc['journal_issn_t'], doc['journal_eissn_t'], doc['id'], doc['recordid_pii_t']].flatten.compact
       doc['keywords_facet'] = doc['ctrlt_text_t']
     end
   end

@@ -12,6 +12,7 @@ class CatalogController < ApplicationController
   configure_blacklight do |config|
     config.default_solr_params = { 
       :shards=> shards.join(','),
+      :defType=>'edismax',
       :qt => 'search',
       :rows => 10 
     }

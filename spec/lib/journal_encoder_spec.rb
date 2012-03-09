@@ -11,6 +11,8 @@ describe DTU::JournalEncoder do
       doc['publisher_name_facet'].should == 'American Accounting Association'
       doc['title_t'].should == ["The Accounting review"]
       doc['title_sort'].should == 'The Accounting review'
+      doc['entry_issn-normalized_t'].should == ["00014826", "00014826", "00014826", "00014826", "15587967"]
+      doc['identifier_s'].should == ["0001-4826", "00014826", "1558-7967", "15587967"]
       doc['keywords_facet'].should == ["BUSINESS AND ECONOMICS ", "Business, Economy and Management", " ACCOUNTING", "Accounting and Auditing", "Business Management", "Finance", "General and Others", "Trade and Commerce"]
     end
   end

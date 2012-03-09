@@ -4,7 +4,9 @@
   
   <%= render_constraints(localized_params) %>  
 
-  <%= button_to "Save search", save_search_path(session[:history].first), :method => :put, :class=>'btn primary' %>
+  <% if params[:f] || params[:q] %> 
+    <%= button_to "Save search", save_search_path(session[:history].first), :method => :put, :class=>'btn primary' %>
+  <% end %>
   
 		
 </div>

@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery
+
 //= require jquery_ujs
 //
 // Required by Blacklight

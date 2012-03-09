@@ -1,5 +1,5 @@
 <div id="search" class="search well">
-  <%= form_tag catalog_index_path, :method => :get do %>
+  <%= form_tag catalog_index_path, :method => :get, :class=>'search_form' do %>
     <h2 class="search"><%= label_tag(:q, "Search ") %></h2>
     <%= text_field_tag :q, params[:q], :class => "q" %>
     <%= label_tag('f[format][]', " in ") %>
@@ -11,6 +11,7 @@
     <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page, {:f =>:format}]).html_safe %>        
     
     <%= submit_tag 'Search', :class=>'btn primary' %>
+    <%= link_to 'advanced', advanced_searches_path(), :class=>'advanced' %>
   <% end %>
 
   <hr/>

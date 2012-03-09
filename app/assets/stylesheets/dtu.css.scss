@@ -1,7 +1,13 @@
 body {
     background: url("/assets/blacklight/bg.png") repeat-x scroll left top #707070;
     font: .7em/1.4 Verdana,"Lucida Grande","Lucida Sans Unicode","Arial Unicode MS",Arial,sans-serif;
-    padding: 0
+    padding: 0;
+}
+
+input {
+    -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: content-box;    /* Firefox, other Gecko */
+    box-sizing: content-box;         /* Opera/IE 8+ */
 }
 
 p {

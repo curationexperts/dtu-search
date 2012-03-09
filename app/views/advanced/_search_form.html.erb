@@ -1,16 +1,37 @@
-<div id="search" class="search">
-  <%= form_tag advanced_search_path, :method => :get do %>
-    <h2 class="search"><%= label_tag(:q, "Search ") %></h2>
-    <%= text_field_tag :q, params[:q], :class => "q" %>
-    <%= label_tag('f[format][]', " in ") %>
-      <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => "Targeted search options", :class=>"search_field small") %>
-      <%= hidden_field_tag :search_field, 'all_fields' %>
-    
-    <%= select_tag('f[format][]', options_for_select({'All'=>'', 'Books'=>'book', 'Journals' => 'journal', 'Articles'=>'article'}, params[:f] && params[:f][:format] ? h(params[:f][:format].first): ''), :title => "Targeted search options", :class=>"search_field small") %>
+<div id="advsearch" class="">
+  <%= form_tag advanced_search_path, :method => :get, :class=>'form-horizontal' do %>
+    <fieldset>
+      <legend>Articles</legend>
+      <div class="control-group">
+        <%= label_tag('text', "free text", :class=>'control-label') %>
+        <div class="controls">
+          <%= text_field_tag 'text', params[:text], :class => "input-xlarge" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= label_tag('author', "Author", :class=>'control-label') %>
+        <div class="controls">
+          <%= text_field_tag 'author', params[:author], :class => "input-xlarge" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= label_tag('title', "Title", :class=>'control-label') %>
+        <div class="controls">
+          <%= text_field_tag 'title', params[:title], :class => "input-xlarge" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= label_tag('year', "Year", :class=>'control-label') %>
+        <div class="controls">
+          <%= text_field_tag 'year', params[:year], :class => "input-xlarge" %>
+        </div>
+      </div>
 
-    <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page, {:f =>:format}]).html_safe %>        
-    
-    <%= submit_tag 'Search', :class=>'btn primary' %>
+      <div class="form-actions">
+        <%= hidden_field_tag('f[format][]', 'article') %>
+        <%= submit_tag 'Search', :class=>'btn primary' %>
+      </div>
+    </fieldset>
   <% end %>
 
   <hr/>
