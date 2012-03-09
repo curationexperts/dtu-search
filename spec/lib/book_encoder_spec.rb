@@ -14,6 +14,7 @@ describe DTU::BookEncoder do
       doc['pub_date'].should == '2013'
       doc['identifier_s'].should == ["0131851373", "0032316769777"]
       doc['keywords_facet'].should == ['RFID', 'Radio frequency']
+      doc['abstract_text_t'].should == ['Lorem Ipsum sit ament dolorum.']
     end
   end
 end

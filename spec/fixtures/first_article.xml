@@ -19,6 +19,11 @@
   <sf:article>
     <sf:title>Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile</sf:title>
   </sf:article>
+  <sf:abstract>
+    <sf:text>Lorem Ipsum sit ament dolorum.</sf:text>
+    <sf:language>English</sf:language>
+    <sf:isolanguage>eng</sf:isolanguage>
+  </sf:abstract>
   <sf:author>
     <sf:name>Khalifa, Nehad</sf:name>
   </sf:author>

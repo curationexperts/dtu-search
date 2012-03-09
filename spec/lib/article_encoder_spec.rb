@@ -12,6 +12,7 @@ describe DTU::ArticleEncoder do
       doc['title_sort'].should == 'Short-term effects of planktonic rotifers and cladocerans on phytoplankton of the River Nile'
       doc['author_sort'].should == 'Khalifa, Nehad'
       doc['keywords_facet'].should == ['Plankton', 'Rotifers']
+      doc['abstract_text_t'].should == ['Lorem Ipsum sit ament dolorum.']
       doc['pub_date'].should == '2004'
     end
   end
