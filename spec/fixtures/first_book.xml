@@ -17,6 +17,9 @@
     <language>English</language>
     <isolanguage>eng</isolanguage>
   </ebook>
+  <abstract>
+    <abstract>Lorem Ipsum sit ament dolorum.</abstract>
+  </abstract>
   <author>
     <name>Lahiri, Sandip.</name>
   </author>

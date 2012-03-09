@@ -90,7 +90,7 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise. 
     
     config.add_search_field 'all_fields', :label => 'All Fields' do |field|
-      field.solr_parameters = { :qf => 'ebook_title_t article_title_t entry_title_t author_name_t abstract_text_t abstract_abstract_t journal_issn_t journal_eissn_t entry_issn_t publication_isbn_t publication_newisbn_t recordid_doi_t' }
+      field.solr_parameters = { :qf => 'title_t author_name_t abstract_text_t identifier_s' }
     end
     
 
