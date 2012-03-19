@@ -197,8 +197,8 @@
          -->
     <filterCache
       class="solr.LRUCache"
-      size="10000"
-      initialSize="5000"
+      size="40000"
+      initialSize="10000"
       autowarmCount="512"/>
 
    <!-- queryResultCache caches results of searches - ordered lists of
