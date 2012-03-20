@@ -10,7 +10,6 @@ production: &prod
   - http://mediashelf2.dtic.dk:8280/solr_dtu_search2/core4
   - http://mediashelf2.dtic.dk:8380/solr_dtu_search3/core5
   - http://mediashelf2.dtic.dk:8380/solr_dtu_search3/core6
-  - http://mediashelf2.dtic.dk:8380/solr_dtu_search3/core6
   - http://mediashelf3.dtic.dk:8180/solr_dtu_search1/core7
   - http://mediashelf3.dtic.dk:8180/solr_dtu_search1/core8
   - http://mediashelf3.dtic.dk:8280/solr_dtu_search2/core9
