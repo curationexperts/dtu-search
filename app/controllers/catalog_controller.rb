@@ -156,7 +156,6 @@ class CatalogController < ApplicationController
     start = solr_parameters[:q].dup
     start.gsub!(/\bauthor:/, 'author_name_t:')
     start.gsub!(/\btitle:/, 'title_t:')
-    start.gsub!(/\byear:/, 'pub_date:')
     start.gsub!(/\bidentifier:/, 'identifier_s:')
     start.gsub!(/\bkeywords:/, 'ctrlt_text_t:')
     start.gsub!(/\bjournal:/, 'journal_title_t:')

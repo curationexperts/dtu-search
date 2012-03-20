@@ -21,9 +21,11 @@
         </div>
       </div>
       <div class="control-group">
-        <%= label_tag('year', "Year", :class=>'control-label') %>
+        <%= label_tag('range[pub_date][begin]', "Year", :class=>'control-label') %>
         <div class="controls">
-          <%= text_field_tag 'year', params[:year], :class => "input-xlarge" %>
+          <%= text_field_tag 'range[pub_date][begin]', '', :class => "span1" %>
+          -
+          <%= text_field_tag 'range[pub_date][end]', '', :class => "span1" %>
         </div>
       </div>
       <div class="control-group">
@@ -55,6 +57,7 @@
 
 
       <div class="form-actions">
+        <%= hidden_field_tag :search_field, 'all_fields' %>
         <%= submit_tag 'Search', :class=>'btn primary' %>
       </div>
     </fieldset>

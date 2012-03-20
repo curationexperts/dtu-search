@@ -45,18 +45,6 @@ describe CatalogController do
         @user_params[:q].should == 'title:(Nature)'
       }
     end
-    describe "with a year" do
-      before {
-        controller.params[:q] = "year:(1980)"
-        @solr_params = controller.params
-        @user_params = {:q=>controller.params[:q]}
-      }
-      it {
-        controller.transform_variable_names(@solr_params, @user_params)
-        @solr_params[:q].should == 'pub_date:(1980)'
-        @user_params[:q].should == 'year:(1980)'
-      }
-    end
     describe "with a journal title" do
       before {
         controller.params[:q] = "journal:(Nature)"

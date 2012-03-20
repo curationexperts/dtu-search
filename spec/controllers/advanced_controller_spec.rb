@@ -14,20 +14,16 @@ describe AdvancedController do
       it {should render_template('advanced/index')}
     end
     describe "with freetext" do
-      subject {get :index, :q=>'rhizome', :title=>'', :author=>'', :year=>'' }
+      subject {get :index, :q=>'rhizome', :title=>'', :author=>'', :keywords=>'' }
       it {should redirect_to catalog_index_path(:q=>'rhizome')}
     end
     describe "with title" do
-      subject {get :index, :title=>'All about science', :q=>'', :author=>'', :year=>'' }
+      subject {get :index, :title=>'All about science', :q=>'', :author=>'', :keywords=>'' }
       it {should redirect_to catalog_index_path(:q=>'title:(All about science)')}
     end
     describe "with author" do
-      subject {get :index, :author=>'Yeats', :title=>'', :q=>'', :year=>'' }
+      subject {get :index, :author=>'Yeats', :title=>'', :q=>'', :keywords=>'' }
       it {should redirect_to catalog_index_path(:q=>'author:(Yeats)')}
-    end
-    describe "with year" do
-      subject {get :index, :year=>'1970', :author=>'', :title=>'', :q=>'' }
-      it {should redirect_to catalog_index_path(:q=>'year:(1970)')}
     end
     describe "with identifier" do
       subject {get :index, :identifier=>'12345-123', :author=>'', :title=>'', :q=>'' }
@@ -41,13 +37,17 @@ describe AdvancedController do
       subject {get :index, :journal=>'Nature', :author=>'', :title=>'', :q=>'' }
       it {should redirect_to catalog_index_path(:q=>'journal:(Nature)')}
     end
+    describe "with multiple fields" do
+      subject {get :index, :author=>'Yeats', :title=>'Nature', :q=>'rhizome' }
+      it {should redirect_to catalog_index_path(:q=>'rhizome author:(Yeats) title:(Nature)')}
+    end
     describe "with type" do
       subject {get :index, :journal=>'Nature', :f=>{:format=>['journal']}, :author=>'', :title=>'', :q=>'' }
       it {should redirect_to catalog_index_path(:q=>'journal:(Nature)', :f=>{:format=>['journal']})}
     end
-    describe "with everything" do
-      subject {get :index, :year=>'1970', :author=>'Yeats', :title=>'Nature', :q=>'rhizome' }
-      it {should redirect_to catalog_index_path(:q=>'rhizome author:(Yeats) title:(Nature) year:(1970)')}
+    describe "with year" do
+      subject {get :index, :range=>{:pubdate=>{:begin=>'1970', :end=>'1980'}}, :author=>'', :title=>'', :q=>'' }
+      it {should redirect_to catalog_index_path(:q=>'', :range=>{:pubdate=>{:begin=>'1970', :end=>'1980'}})}
     end
   end
 
