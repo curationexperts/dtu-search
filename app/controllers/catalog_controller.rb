@@ -151,6 +151,16 @@ class CatalogController < ApplicationController
      params[:f].delete('format') if params[:f] && params[:f]['format'] == ['']
   end
 
+  def transform_variable_names(solr_parameters, user_params)
+    return if solr_parameters[:q].nil?
+    start = solr_parameters[:q].dup
+    start.gsub!(/\bauthor:/, 'author_name_t:')
+    start.gsub!(/\btitle:/, 'title_t:')
+    start.gsub!(/\byear:/, 'pub_date:')
+    solr_parameters[:q] = start 
+  end
+
+  self.solr_search_params_logic << :transform_variable_names
 
 
 end 
