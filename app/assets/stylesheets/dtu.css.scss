@@ -10,6 +10,10 @@ input {
     box-sizing: content-box;         /* Opera/IE 8+ */
 }
 
+input.input-xlarge {
+  width: 270px; /*restore bootstrap default, overridden by standard.css*/
+}
+
 p {
   font-size: 1em;
 }

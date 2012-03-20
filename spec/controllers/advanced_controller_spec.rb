@@ -18,8 +18,8 @@ describe AdvancedController do
       it {should redirect_to catalog_index_path(:q=>'rhizome')}
     end
     describe "with title" do
-      subject {get :index, :title=>'Nature', :q=>'', :author=>'', :year=>'' }
-      it {should redirect_to catalog_index_path(:q=>'title:(Nature)')}
+      subject {get :index, :title=>'All about science', :q=>'', :author=>'', :year=>'' }
+      it {should redirect_to catalog_index_path(:q=>'title:(All about science)')}
     end
     describe "with author" do
       subject {get :index, :author=>'Yeats', :title=>'', :q=>'', :year=>'' }
@@ -28,6 +28,22 @@ describe AdvancedController do
     describe "with year" do
       subject {get :index, :year=>'1970', :author=>'', :title=>'', :q=>'' }
       it {should redirect_to catalog_index_path(:q=>'year:(1970)')}
+    end
+    describe "with identifier" do
+      subject {get :index, :identifier=>'12345-123', :author=>'', :title=>'', :q=>'' }
+      it {should redirect_to catalog_index_path(:q=>'identifier:(12345-123)')}
+    end
+    describe "with keywords" do
+      subject {get :index, :keywords=>'frog amphibian', :author=>'', :title=>'', :q=>'' }
+      it {should redirect_to catalog_index_path(:q=>'keywords:(frog amphibian)')}
+    end
+    describe "with journal title" do
+      subject {get :index, :journal=>'Nature', :author=>'', :title=>'', :q=>'' }
+      it {should redirect_to catalog_index_path(:q=>'journal:(Nature)')}
+    end
+    describe "with type" do
+      subject {get :index, :journal=>'Nature', :f=>{:format=>['journal']}, :author=>'', :title=>'', :q=>'' }
+      it {should redirect_to catalog_index_path(:q=>'journal:(Nature)', :f=>{:format=>['journal']})}
     end
     describe "with everything" do
       subject {get :index, :year=>'1970', :author=>'Yeats', :title=>'Nature', :q=>'rhizome' }

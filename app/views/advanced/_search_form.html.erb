@@ -1,11 +1,11 @@
 <div id="advsearch" class="">
   <%= form_tag advanced_search_path, :method => :get, :class=>'form-horizontal' do %>
     <fieldset>
-      <legend>Articles</legend>
+      <legend>Advanced search</legend>
       <div class="control-group">
-        <%= label_tag('text', "free text", :class=>'control-label') %>
+        <%= label_tag(:q, "Free text", :class=>'control-label') %>
         <div class="controls">
-          <%= text_field_tag 'text', params[:text], :class => "input-xlarge" %>
+          <%= text_field_tag :q, params[:q], :class => "input-xlarge" %>
         </div>
       </div>
       <div class="control-group">
@@ -26,9 +26,35 @@
           <%= text_field_tag 'year', params[:year], :class => "input-xlarge" %>
         </div>
       </div>
+      <div class="control-group">
+        <%= label_tag('identifier', "Identifier", :class=>'control-label') %>
+        <div class="controls">
+          <%= text_field_tag 'identifier', params[:identifier], :class => "input-xlarge" %>
+          <p class="help-block">(ISSN, ISBN, etc.)</p>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= label_tag('keywords', "Keywords", :class=>'control-label') %>
+        <div class="controls">
+          <%= text_field_tag 'keywords', params[:keywords], :class => "input-xlarge" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= label_tag('journal', "Journal Title", :class=>'control-label') %>
+        <div class="controls">
+          <%= text_field_tag 'journal', params[:journal], :class => "input-xlarge" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= label_tag('f[format][]', "Type", :class=>'control-label') %>
+        <div class="controls">
+          <%= select_tag('f[format][]', options_for_select({'All'=>'', 'Books'=>'book', 'Journals' => 'journal', 'Articles'=>'article'}, params[:f] && params[:f][:format] ? h(params[:f][:format].first): ''), :title => "Targeted search options", :class=>"span2") %>
+        </div>
+      </div>
+
 
       <div class="form-actions">
-        <%= hidden_field_tag('f[format][]', 'article') %>
         <%= submit_tag 'Search', :class=>'btn primary' %>
       </div>
     </fieldset>

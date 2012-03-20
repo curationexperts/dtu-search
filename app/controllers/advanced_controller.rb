@@ -1,13 +1,15 @@
 class AdvancedController < CatalogController
 
   def index
-    if (params[:author] || params[:q] || params[:year] || params[:title])
+    types = [:author, :title, :identifier, :keywords, :journal]
+    if ([:q, :year, :f] + types).any?{|t| params[t].present?} 
       clauses =[] 
       clauses << params[:q] if params[:q].present?
-      clauses << "author:(#{params[:author]})" if params[:author].present?
-      clauses << "title:(#{params[:title]})" if params[:title].present?
+      types.each do |type|
+        clauses << "#{type}:(#{params[type]})" if params[type].present?
+      end
       clauses << "year:(#{params[:year]})" if params[:year].present?
-      redirect_to catalog_index_path(:q =>clauses.join(' '))
+      redirect_to catalog_index_path(:q =>clauses.join(' '), :f=>params[:f])
     end
   end
 
