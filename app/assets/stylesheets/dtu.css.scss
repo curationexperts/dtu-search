@@ -72,6 +72,13 @@ p {
 
   .icon-expand, .icon-collapse {
   }
+  a:link, a:visited, a:active {
+    color: #282828;
+    border-bottom:none;
+  }
+  a:hover {
+    color: #900;
+  }
 
   ul.tools {
     clear:left;
@@ -86,6 +93,10 @@ p {
 
     .documentFunctions {
       float: none;
+    }
+    a:link, a:visited, a:active {
+      color: #900;
+      border-bottom: 1px dotted #AAA;
     }
   }
 
@@ -165,17 +176,13 @@ input:focus, textarea:focus {
 
 h1 {
   font-size: 1.2em;
+  line-height: 1.4em;
   color: #909090;
   margin-bottom: auto;
 }
 h2 {
   font-size: 1em;
 
-}
-
-.index_title a:link, .index_title a:visited, .index_title a:active {
-  color: #282828;
-  font-size: 14px;
 }
 
 a:link, a:visited, a:active {
@@ -202,8 +209,16 @@ h1.site_title {
     .label {
       white-space: normal;
       background: none;
+      color: #666;
+      font-weight: normal;
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
     }
     .label:hover {
+      color: #990000;
+    }
+    .label.selected {
       color: #990000;
     }
   }
